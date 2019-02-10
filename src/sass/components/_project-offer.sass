@@ -1,0 +1,265 @@
+.g-offer
+  padding: 40px 0 73px
+  &__desc
+    font-family: $light
+    color: $fontColor
+    margin-top: 30px
+    font-size: 22px
+  &__slider
+    padding: 32px 30px 0
+    max-width: 1074px
+    margin: 0 auto
+    // margin: 0 -100px
+    // width: calc(100% + 200px)
+    font-size: 0
+  &__item
+    padding: 0 8px
+  &__item-container
+    background: #fff
+    border-radius: 3px
+    border-bottom-left-radius: 0px
+    border-bottom-right-radius: 0px
+    border: 1px solid #cacaca
+    border-bottom: 3px solid #cacaca
+    width: 100%
+    min-height: 260px
+    position: relative
+    padding: 20px 10px
+    text-align: center
+    max-width: 350px
+    margin: 0 auto
+    overflow: hidden
+  &__star
+    position: absolute
+    top: 15px
+    right: 15px
+    font-size: 16px
+    transition: all $transitionSpeed $ease
+    color: $fontColor
+    opacity: 0.7
+    font-family: $regular
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    z-index: 2
+    img
+      height: 14px
+      margin-right: 5px
+    span
+      font-size: 16px
+    &:hover
+      opacity: 1
+  &__image
+    min-height: 130px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 3px
+    max-width: 215px
+    margin: 0 auto 
+    img
+      max-width: 90%
+      max-height: 90%
+      height: auto
+  &__price
+    font-size: 24px
+    font-family: $medium
+    color: #c6142d
+    margin-top: 20px
+    margin-bottom: 20px
+    line-height: 1
+    span
+      font-size: 14px
+      display: block
+  // &__detail
+  //   font-size: 13px
+  //   color: #999999
+  //   opacity: 0.9
+  //   transition: all $transitionSpeed $ease
+  //   font-family: $medium
+  //   border-bottom: 1px solid #999999
+  //   cursor: pointer
+  //   display: inline-block
+  //   margin-top: 18px
+  //   line-height: 1
+  //   &:hover
+  //     opacity: 1
+  //     border-color: transparent
+  &__button
+    font-size: 14px
+    font-family: $montserrat
+    font-weight: 500
+    color: #999999
+    text-transform: none
+    width: 100%
+    margin: 20px auto 0
+    background: #fff
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 200px
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    position: relative
+    padding-top: 15px
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      left: 50%
+      margin-left: -500px
+      top: 0
+      width: 1000px
+      height: 1px 
+      background: #cacaca
+    span
+      width: 10px
+      height: 10px
+      border: 2px solid #bcbcbc
+      transform: rotate(45deg)
+      border-bottom: none
+      border-left: none
+      margin-left: 10px
+      transition: all $transitionSpeed $ease
+    &:hover
+      background: 
+      color: $fontColor
+      span
+        border-color: $fontColor
+
+
+  .slick-arrow
+    position: absolute
+    width: 50px
+    height: 50px
+    background: rgba($fontColor, 0.3)
+    transition: all $transitionSpeed $ease
+    top: 50%
+    transform: translateY(-50%)
+    border: none
+    font-size: 0
+    color: transparent
+    cursor: pointer
+    z-index: 3
+    &:hover
+      background: rgba($fontColor, 0.7)
+    &.slick-prev
+      left: -30px
+      &:before
+        border-top: none
+        border-right: none
+        left: 57%
+    &.slick-next
+      right: -30px
+      &:before
+        border-bottom: none
+        border-left: none
+        left: 43%
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      width: 15px
+      height: 15px
+      border: 2px solid #fff
+      transform: translate(-50%, -50%) rotate(45deg)
+      top: 50%
+      left: 50%
+
+  &__btn-container
+    text-align: center
+    width: 100%
+    padding-top: 60px
+  &__btn
+    font-size: 14px
+    text-transform: uppercase
+    color: $fontColor
+    padding: 15px 25px
+    border: 1px solid $fontColor
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: $fontColor
+      color: #fff
+
+
++r($tablet)
+  .g-offer
+    padding: 30px 0 40px
+    &__desc
+      font-size: 16px
+    &__slider
+      padding: 20px 0 0
+      margin-bottom: 30px
+    .slick-dots
+      position: absolute
+      margin: 0 auto
+      bottom: -36px
+      left: 50%
+      transform: translateX(-50%)
+      line-height: 0
+      height: auto
+      font-size: 0
+      padding: 0
+      li
+        margin: 0 8px
+        &.slick-active
+          button
+            background: $hoverRed
+      button
+        font-size: 0
+        padding: 0
+        margin: 0
+        line-height: 0
+        background: #fff
+        width: 7px
+        height: 7px
+        border-radius: 50%
+        border: none
+        transition: all $transitionSpeed $ease
+    &__btn-container
+      padding-top: 40px
+    &__btn
+      font-size: 12px
+      padding: 12px 17px
+      max-width: 320px
+      width: 100%
+      display: inline-block
+    .slick-arrow
+      position: absolute
+      width: 35px
+      height: 35px
+      background: rgba($fontColor, 0.3)
+      transition: all $transitionSpeed $ease
+      top: auto
+      transform: translateY(0)
+      bottom: -50px
+      border: none
+      font-size: 0
+      color: transparent
+      cursor: pointer
+      z-index: 2
+      &:hover
+        background: rgba($fontColor, 0.7)
+      &.slick-prev
+        left: 8px
+        &:before
+          border-top: none
+          border-right: none
+          left: 57%
+      &.slick-next
+        right: 8px
+        &:before
+          border-bottom: none
+          border-left: none
+          left: 43%
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 10px
+        height: 10px
+        border: 2px solid #fff
+        transform: translate(-50%, -50%) rotate(45deg)
+        top: 50%
+        left: 50%

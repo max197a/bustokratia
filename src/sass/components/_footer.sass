@@ -1,0 +1,192 @@
+// FOOTER
+.footer
+  padding: 25px 0 50px
+  background: #514d4b
+  overflow: hidden
+  .container
+    max-width: 1280px
+  &__grid
+    display: flex
+    // align-items: center
+    justify-content: space-between
+  &__left
+    max-width: 250px
+    flex: 1 0 250px
+    p
+      font-size: 13px
+      color: #fff
+      margin-top: 12px
+      letter-spacing: 0.5px
+    
+    a
+      color: #fff
+      &:hover
+        span
+          border-color: transparent
+      span
+        display: inline
+        border-bottom: 1px solid #fff
+        transition: all $transitionSpeed $ease
+        font-size: 13px
+
+  &__logo
+    width: 139px
+    height: 82px
+    // margin-top: -104px
+    margin-top: -25px
+    img
+      width: 139px
+      height: 82px
+  &__phone
+    font-size: 24px
+    margin-top: 24px
+    display: inline-block
+    letter-spacing: 0.7px
+  &__map
+    margin-top: 8px
+    display: inline-block
+    span
+      display: inline
+      border-bottom: 1px solid #fff
+      transition: all $transitionSpeed $ease
+      font-size: 13px
+      color: #fff
+    &:hover
+      span
+        border-color: transparent
+  &__minisol
+    display: none
+    color: #ffffff
+    font-size: 12px
+    border-bottom: 1px solid transparent
+    transition: all $transitionSpeed $ease
+    &:hover
+      border-bottom: 1px solid #fff
+  &__polit
+    margin-top: 80px
+    p
+      color: #ffffff
+      font-size: 12px
+    a
+      color: #ffffff
+      font-size: 12px
+      display: inline
+      border-bottom: 1px solid #fff
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: transparent
+  &__menu
+    margin-left: auto
+    display: flex
+    align-items: flex-start
+    justify-content: start
+    flex-wrap: wrap
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    margin-left: 30px
+    margin-top: 20px
+    a
+      text-transform: uppercase
+      color: #fff
+      font-size: 18px
+      font-family: $regular
+      width: auto
+      display: block
+      border-bottom: 1px solid transparent
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: #fff
+      &.open-drop
+        display: none
+      
+  &__drop
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    a
+      font-size: 11px
+      margin-top: 15px
+      display: inline-block
+
++r($tablet)
+  .footer
+    padding-bottom: 23px
+    &__wrapper
+      flex-wrap: wrap
+    &__left
+      width: 100%
+      max-width: 100%
+      flex: 1 0 210px
+      // order: 2
+      p
+        margin-top: 23px
+    &__logo
+      width: 121px
+      height: auto
+      img
+        width: 127px
+        height: auto
+    &__phone
+      margin-top: 9px
+    &__map
+      margin-top: 6px
+
+    &__minisol
+      display: inline-block
+      font-size: 13px
+      margin-top: 27px
+    &__menu
+      margin-left: 30px
+    &__item
+      width: 48%
+      margin: 20px 1%
+      a
+        font-size: 14px
+    &__drop
+      a
+        font-size: 10px
+
++r($mobile)
+  .footer
+    &__grid
+      flex-wrap: wrap
+    &__left
+      max-width: 100%
+    &__menu
+      width: 100%
+      margin-left: 0
+      margin: 20px 0
+    &__item
+      width: 100%
+      margin: 20px 0 0
+      a
+        font-size: 16px
+        border-bottom: none
+        &.open-drop
+          display: inline
+          margin-left: 10px
+          transform-origin: center center
+          font-size: 22px
+          transition: all $transitionSpeed $ease
+          line-height: 0.6
+          border-bottom: none
+          &.is-open
+            transform: rotate(45deg)
+            margin-left: 8px
+
+    &__item-head
+      display: flex
+      align-items: center
+      justify-content: flex-start
+    &__drop
+      display: none
+      a
+        display: block
+        font-size: 11px
+        margin-top: 7px
+    &__polit
+      margin-top: 20px

@@ -1,0 +1,513 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: firstscreen
+  section
+    .firstscreen
+      .firstscreen__carousel(js-firstscreen-slider)
+        .firstscreen__carousel-item(style="background-image: url(img/bg-main.jpg)")
+        .firstscreen__carousel-item(style="background-image: url(img/bg-main2.jpg)")
+      img.firstscreen__pattern(src="img/pattern-1.svg", alt="")
+      .container
+        .firstscreen__content
+          img(src="img/image-1.svg", alt="" data-aos="fade-up")
+          a.btn(href="#" data-aos="fade-up") рассчитать стоимость
+  
+  // END SECTION :: firstscreen
+
+  // BEGIN SECTION :: dom
+  section.dom
+    img.dom__pattern(src="img/pattern-2.svg", alt="")
+    .container
+      p.dom__title(data-aos="fade-up") 
+        span теплый и современный 
+        br
+        | ДОМ ТЕХНОНИКОЛЬ -
+      p.dom__info(data-aos="fade-up") это сумма лучших строительных материалов компании 
+        span ТЕХНОНИКОЛЬ
+        | , самые эффективные среди канадских и скандинавских технологий, и знания ведущих российский инженеров  в одном проекте ДОМа, которого мы так долго ждали.
+      .dom__grid
+        .dom__item.dom__item--logo(data-aos="fade-up")
+          .dom__image
+            img(src="img/logo.svg", alt="")
+        .dom__item.dom__item--eq(data-aos="fade-up")
+          .dom__eq
+            img(src="img/eq.svg", alt="")
+        .dom__item.dom__item--formula(data-aos="fade-up")
+          .dom__image
+            img(src="img/formula.svg", alt="")
+      a.dom__btn.btn(href="/about.html") подробнее о нас
+  // END SECTION :: dom
+
+
+  // BEGIN SECTION :: advantages
+  section.advantages
+    .container
+      p.advantages__title(data-aos="fade-up") Преимущества
+      .advantages__item(data-aos="fade-up")
+        .advantages__left
+          .advantages__image
+            img(src="img/step-1.png", alt="")
+        .advantages__right
+          .advantages__icon
+            img(src="img/adv-icon-1.svg", alt="")
+          p.advantages__head-info Технология и стандарты
+          p.advantages__info Основанные на лучших строительных практиках северных стран мира, 
+            span стандарты ДОМА ТЕХНОНИКОЛЬ
+            |  разрабатывались специалистами Канадской Ассоциации каркасного домостроения и ведущими инженерами российских домостроительных комбинатов, при участии инженеров Института пассивного дома, которые 
+            span сделали дом энергоэффективным
+            | .
+      .advantages__item(data-aos="fade-up")
+        .advantages__left
+          .advantages__image
+            img(src="img/step-2.png", alt="")
+        .advantages__right
+          .advantages__icon
+            img(src="img/adv-icon-2.svg", alt="")
+          p.advantages__head-info Качественные материалы
+          p.advantages__info 
+            span ТЕХНОНИКОЛЬ 
+            |  является одним из крупнейших международных производителей надежных и эффективных строительных материалов. Компания 
+            span предлагает рынку новейшие технологии, 
+            |  сочетающие в себе мировой опыт и разработки собственных Научных центров.  Именно для 
+            span  ДОМА ТЕХНОНИКОЛЬ был создан сбалансированный набор строительных материалов 
+            | для комплектации домов «под ключ».
+      .advantages__item(data-aos="fade-up")
+        .advantages__left
+          .advantages__image
+            img(src="img/step-3-1.png", alt="")
+        .advantages__right
+          .advantages__icon
+            img(src="img/adv-icon-3.svg", alt="")
+          p.advantages__head-info до 70% экономия на отоплении и эксплуатации
+          p.advantages__info Применение энергоэффективных технологий позволяет 
+            span  до 70% снизить затраты  
+            |  на отопление при эксплуатации. При этом в вашем доме всегда будет тепло и комфортно.
+      .advantages__item(data-aos="fade-up")
+        .advantages__left
+          .advantages__image
+            img(src="img/step-4.png", alt="")
+        .advantages__right
+          .advantages__icon
+            img(src="img/adv-icon-4.svg", alt="")
+          p.advantages__head-info Готовый тёплый дом за 3 месяца
+          p.advantages__info Четкое следование разработанным стандартам и привлечение к строительству 
+            span сертифицированных подрядчиков
+            | существенно снижает риск ошибки, благодаря чему повышается качество и оптимизируется время выполнения работ. К тому же, каркасный дом не требует усадки и жить в нем можно сразу по окончанию строительства.
+
+  // END SECTION :: advantages
+
+  // BEGIN SECTION :: energy
+  section.energy
+    .container
+      .energy__grid
+        .energy__left(data-aos="fade-up")
+          p Энергоэффективный дом
+          p
+            span от 25 000 р/м
+              sup 2
+        .energy__right(data-aos="fade-up" data-aos-delay="150")
+          p Благодаря оптимизации бизнес-процессов вы экономите за счет:
+          .energy__list
+            p оптимизации выработки бригады;
+            p готовой проектной документации; 
+            p автоматизации документооборота;
+            p прямой поставке материалов от  производителя.
+            
+  // END SECTION :: energy
+
+  // BEGIN SECTION :: price
+  section.price__container
+    .price
+      .price__grid
+        .price__left(data-aos="fade-up")
+          .price__left-container
+            p.price__title Узнайте стоимость 
+              br
+              | строительства дома 
+            p.price__desc прямо сейчас на нашем калькуляторе
+            p.price__info Технология строительства ДОМ ТЕХНОНИКОЛЬ позволяет построить и затейливый разноуровневый коттедж, облицованный кирпичом, и «домик в деревне», отделанный блокхаусом, и ультрамодный дом в экостиле с панорамными окнами любой планировки.
+            a.btn(href="#")
+              img(src="img/calculator.svg", alt="")
+              span рассчитать стоимость
+        .price__right(data-aos="fade-up" data-aos-delay="150")
+          .price__image
+            img(src="img/price.jpg", alt="")
+      
+  // END SECTION :: price
+
+  // BEGIN SECTION :: projects
+  section.projects
+    .container
+      img.projects__pattern(src="img/pattern-3.svg", alt="")
+      p.projects__title Выберите дом, в котором хотите жить
+      .projects__grid(js-pr-slider)
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                p.projects__name sine 2
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+              .projects__line
+              .projects__row
+                p.projects__time от 5 месяцев
+                p.projects__price от 490 000 Р
+      
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                p.projects__name Axiom 4
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 44 м²
+              .projects__line
+              .projects__row
+                p.projects__time от 2 месяцев
+                p.projects__price от 1 250 000 Р
+      
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                p.projects__name cos 3
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 91 м²
+              .projects__line
+              .projects__row
+                p.projects__time от 2 месяцев
+                p.projects__price от 1 820 000 Р
+
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                p.projects__name cos 3
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 91 м²
+              .projects__line
+              .projects__row
+                p.projects__time от 2 месяцев
+                p.projects__price от 1 820 000 Р
+
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                p.projects__name cos 3
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 91 м²
+              .projects__line
+              .projects__row
+                p.projects__time от 2 месяцев
+                p.projects__price от 1 820 000 Р
+      .projects__button
+        a.btn(href="#") смотреть все проекты
+  // END SECTION :: projects
+
+  // BEGIN SECTION :: scheme
+  section.scheme
+    .container
+      h2.scheme__title Схема создания
+        br
+        span ДОМА ТЕХНОНИКОЛЬ
+      .scheme__top
+        .scheme__left
+          p.scheme__number 1
+          p.scheme__desc Вы выбираете   
+            a(href="#") индивидуальный
+            |  или   
+            a(href="#")  типовой
+            |  проект дома
+        .scheme__right
+          p.scheme__number 5
+          p.scheme__desc Сдача ДОМА ТЕХНОНИКОЛЬ и оформление гарантии
+        .scheme__grid
+          .scheme__item
+            .scheme__head
+              p.scheme__number 2
+              p.scheme__desc Предоставляем проверенного и обученного подрядчика
+            p.scheme__info Специализированные подрядные организации и частные бригады, прошедшие обуение стандартам ДОМ ТЕХНОНИКОЛЬ.
+            p.scheme__info Все подрядчики проходят обязательную сертификацию и получают досуск на работы.
+            .scheme__links
+              a.scheme__link(href="#") 
+                span Каталог подрядчиков
+          .scheme__item
+            .scheme__head
+              p.scheme__number 3
+              p.scheme__desc Составляем смету, которая не изменится в течении строительства
+            p.scheme__info Подрядчик по вашему желанию скорректирует проект согласно стандартам ДОМ ТЕХНОНИКОЛЬ, чтобы подготовить подробную смету.
+            p.scheme__info Посмотрите проект в нашем каталоге и смету по нему.
+            .scheme__links
+              a.scheme__link(href="#") 
+                span Скачать смету
+              a.scheme__link(href="#") 
+                span Посмотреть проект
+          .scheme__item
+            .scheme__head
+              p.scheme__number 4
+              p.scheme__desc Осуществляем технадзор: контролируем подрядчика и проверяем соблюдение технологии строительства
+            p.scheme__info Помогаем заказчику следить за ходом строительства.
+            p.scheme__info Сами контролируем и обеспечиваем прозрачность процесса приёмки клиентом результатов работы — под каждый этап чёткая и простая инструкция, что и по каким критериям прнимать.
+            .scheme__links
+              a.scheme__link(href="#") 
+                span Подробнее о нас
+
+  // END SECTION :: scheme
+
+
+  // BEGIN SECTION :: want-form
+  section.want-form
+    .want-form__container
+      .container
+        .want-form__lines
+          .want-form__top
+          .want-form__bottom
+        p.want-form__title Хотите узнать больше об энергоэфективном
+          br
+          | проекте 
+          span
+          | ДОМ ТЕХНОНИКОЛЬ?
+        form.js-form-want(action="#")
+          .want-form__grid
+            .input-container
+              input(type="text" name="name" placeholder="Имя*")
+            .input-container
+              input(type="text" name="phone" placeholder="Телефон*")
+            .input-container
+              input(type="text" name="mail" placeholder="Электронная почта")
+            .input-container
+              input.btn(type="submit" value="хочу все знать")
+          p.want-form__personal Отправляя данную форму, я даю  
+            a(href="#")  согласие на обработку персональных данных
+          
+
+  // END SECTION :: want-form
+
+  // BEGIN SECTION :: reviews
+  section.reviews
+    .container
+      p.reviews__title Отзывы клиентов
+      .reviews__slider(js-reviews-slider)
+        .reviews__item
+          .reviews__item-container
+            .reviews__review-container
+              p.reviews__review Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. 
+            .reviews__info
+              .reviews__top
+                p.reviews__name Петр Иванович Кондратенко
+                p.reviews__city Московская область
+              .reviews__photo
+                a.no-barba(href="img/proj-1.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-1.jpg")
+                a.no-barba(href="img/proj-2.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-2.jpg")
+                a.no-barba(href="img/proj-3.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-3.jpg")
+
+        .reviews__item
+          .reviews__item-container
+            .reviews__review-container
+              p.reviews__review Огромное спасибо ребятам из ДОМ ТЕХНОНИКОЛЬ за качественную работу, отличное отношение к своей работе. Они мне строили дом в Тульской области, все сделали быстро и качественно, нареканий нет. Вот у них руки действительно растут из плечей. Ребята, удачи вам в работе!!!
+            .reviews__info
+              .reviews__top
+                p.reviews__name Константин Константинопольский
+                p.reviews__city Тульская область
+              .reviews__photo
+                a.no-barba.video-link(href="https://www.youtube.com/watch?v=LTvFsTbyILg&t=6s" js-popup-video data-effect="mfp-zoom-in")
+                  img(src="img/proj-1.jpg")
+
+        .reviews__item
+          .reviews__item-container
+            .reviews__review-container
+              p.reviews__review Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. 
+            .reviews__info
+              .reviews__top
+                p.reviews__name Петр Иванович Кондратенко
+                p.reviews__city Московская область
+              .reviews__photo
+                a.no-barba(href="img/proj-1.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-1.jpg")
+                a.no-barba(href="img/proj-2.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-2.jpg")
+                a.no-barba(href="img/proj-3.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-3.jpg")
+
+
+  // END SECTION :: reviews
+
+  // BEGIN SECTION :: blog
+  section.blog
+    .container
+      .blog__title Блог
+      .blog__slider(js-blog-slider)
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-1.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-help.html") полезные статьи
+                p.blog--page__head-date 10.11.2018
+              a.blog--page__i-title(href="#") 
+                span ТЕХНОНИКОЛЬ  
+                |  формирует «стандарты красоты» в частном домостроении домостроении домостроении домостроении домостроении домостроении 
+              a.btn(href="#") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-2.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 30.10.2018
+              a.blog--page__i-title(href="#") 
+                span ДОМ ТЕХНОНИКОЛЬ 
+                |  открыл свои двери для журналистов
+              a.btn(href="#") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-3.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-faq.html") FAQ
+                p.blog--page__head-date 05.10.2018
+              a.blog--page__i-title(href="#")  Мифы каркасного домостроения.  Чему верить?
+              a.btn(href="#") Читать далее
+                span
+      a.blog__button(href="#") все статьи
+  // END SECTION :: blog
+
+  // BEGIN SECTION :: awards
+  section.awards
+    .container
+      p.awards__h-title(data-aos="fade-up") Наши награды
+      .awards__slider-container(data-aos="fade-up")
+        .awards__slider(js-awards-slider)
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-1.png", alt="")
+              p.awards__title ENES-2015
+              p.awards__info Лучший малоэтажный энергоэффективный жилой дом
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-2.png", alt="")
+              p.awards__title Конкурс на лучший инновационный проект 2016
+              p.awards__info Лучший проект с применением энергоэффективных решений
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-3.png", alt="")
+              p.awards__title Конкурс "Красивые деревянные дома 2017"
+              p.awards__info Лучший архитектурный объект по итогам онлайн голосования
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-4.png", alt="")
+              p.awards__title Благодарность от World Skills (WSI)
+              p.awards__info Международная ассоциация повышение статуса и стандартов профессиональной подготовки рабочих профессий
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-1.png", alt="")
+              p.awards__title ENES-2015
+              p.awards__info Лучший малоэтажный энергоэффективный жилой дом
+  // END SECTION :: awards
