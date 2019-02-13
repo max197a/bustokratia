@@ -3,8 +3,67 @@ section#section-top
 header.header
   .container
     .header__wrapper
+      .header__left
+        a(href="#") О Бюстократии
+        a(href="#") Наши магазины
+      .header__logotype
+        a(href="#")
+          img(src="img/logo-header.svg", alt="")
+          span бюстократия
+      .header__sale
+        img(src="img/sale.png", alt="")
+      .header__right
+        a.header__rules(href="#") Правила подбора белья
+        .header__icons
+          a.show-points(href="#" js-show-points)
+            .header__icons-points 1
+            img(src="img/icon-pack.svg", alt="")
+          a.show-points(href="#" js-show-points)
+            .header__icons-points 2
+            img(src="img/icon-like.svg", alt="")
+          a(href="#")
+            //- .header__icons-points 250
+            img(src="img/icon-people.svg", alt="")
       .hamburger.hamburger--slider(js-hamburger)
         .hamburger-box
           .hamburger-inner
+  nav
+    .container
+      .header__icons
+        a.show-points(href="#" js-show-points)
+          .header__icons-points 2
+          img(src="img/icon-like.svg", alt="")
+        a(href="#")
+          img(src="img/icon-people.svg", alt="")
+      .header__nav-wrapper
+        .header__left
+          a(href="#") О Бюстократии
+          a(href="#") Наши магазины
+        ul
+          li
+            a(href="#") По размеру
+          li
+            a(href="#") Бюстгальтеры
+          li
+            a(href="#") Трусики
+          li
+            a(href="#") Купальники
+          li
+            a(href="#") Корректирующее
+          li
+            a(href="#") Аксессуары
+          li
+            a(href="#") Домашняя одежда
+          li
+            a(href="#") Чулки и колготки
+        a.header__rules(href="#") Правила подбора белья
+        a.header__sale(href="#")
+          img(src="img/sale.png", alt="")
+        .header__search
+          .search__box
+            input.search__field(type='text' placeholder='Поиск')
+            button.search__btn
+              img(src="img/search-black.svg", alt="")
+      
 
 // HEADER :: END

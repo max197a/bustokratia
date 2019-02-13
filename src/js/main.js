@@ -66,6 +66,17 @@ $(document).ready(function() {
       return false;
     })
 
+    ///
+    /// можно удалять, для того  что бы показать цифры у иконок
+
+    .on("click", "[js-show-points]", function(e) {
+      e.preventDefault();
+      $(this).toggleClass("show-points");
+    })
+
+    /// можно удалять, для того  что бы показать цифры у иконок
+    ///
+
     .on("click", "[js-top-button]", function(e) {
       e.preventDefault();
       var $self = $(this),
@@ -78,10 +89,6 @@ $(document).ready(function() {
         .css("display", "none")
         .eq(tabIndex)
         .fadeIn();
-      // $(".top10__tab")
-      //   .removeClass("is-active")
-      //   .eq(tabIndex)
-      //   .addClass("is-active");
     });
 
   function scrollToSection(el) {
@@ -208,19 +215,11 @@ $(document).ready(function() {
   // HAMBURGER TOGGLER
   _document.on("click", "[js-hamburger]", function() {
     $(this).toggleClass("is-active");
-    $(".header__menu").toggleClass("is-open");
+    $("nav").toggleClass("is-open");
     $(".header__calc").toggleClass("is-open");
     $("body").toggleClass("is-fixed");
     $("html").toggleClass("is-fixed");
   });
-
-  // _document.on("click", ".hamburger.is-active", function() {
-  //   $(this).removeClass("is-active");
-  //   $(".header__menu").removeClass("is-open");
-  //   $("body").removeClass("is-fixed");
-  //   $("html").removeClass("is-fixed");
-  //   $(".enter").removeClass("is-active");
-  // });
 
   ////////////////////
   // SHOW PASSWORD TOGGLE

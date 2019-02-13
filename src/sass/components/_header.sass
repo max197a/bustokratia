@@ -5,52 +5,481 @@
   right: 0
   left: 0
   background: #fff
-  height: 86px
+  height: auto
   z-index: 100
   transform: translate3d(0,0,0)
   // border-bottom: 1px solid #b3b3b3
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+  // box-shadow: 0px 0px 5px rgba(0,0,0,0.1)
   .container
-    max-width: 1920px
-    padding: 0 40px
+    // outline: 1px solid red
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 34px 0 32px
   .hamburger
     display: none
+  &__left
+    a
+      font-size: 14px
+      color: #000
+      font-family: $book
+      margin-right: 36px
+      text-transform: uppercase
+      position: relative
+      &:before
+        width: 0
+        height: 1px
+        position: absolute
+        display: block
+        content: ''
+        left: 0
+        bottom: -2px
+        background: #000
+        transition: all $transitionSpeed $ease
+      &:hover
+        &:before
+          width: 100%
+      &:last-child
+        margin-right: 20px
+  &__logotype
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    font-size: 32px
+    font-family: $logo
+    color: #904c96
+    text-transform: uppercase
+    letter-spacing: 0.6px
+    line-height: 1
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    img
+      height: 41px
+      width: auto
+      margin-right: 15px
+      margin-top: -3px
+      margin-bottom: -10px
+    span
+      margin-top: -10px
 
-+r($hd1600)
-  .header
-    height: 80px
+  &__right
+    display: flex
+    align-items: center
 
-+r($hd)
+  &__rules
+    display: inline-block
+    padding: 8px 15px
+    line-height: 1
+    font-size: 14px
+    text-transform: uppercase
+    color: #000
+    font-family: $book
+    border: 1px solid #e1e1e1
+    border-radius: 3px
+    margin-right: 16px
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: #904c96
+      color: #fff
+      border-color: #904c96
+  
+  &__icons
+    a
+      margin-left: 24px
+      display: inline-block
+      position: relative
+      img
+        height: 25px
+        width: auto
+      &.show-points
+        .header__icons-points
+          top: -10px
+          opacity: 1
+    &-points
+      position: absolute
+      right: -10px
+      top: -100px
+      background: #f06eaa
+      border-radius: 50%
+      font-size: 12px
+      font-family: $book
+      line-height: 1
+      color: #fff
+      padding: 3px
+      min-width: 18px
+      min-height: 18px
+      text-align: center
+      transition: all $transitionSpeed $ease
+      opacity: 1
+
+  nav
+    border-top: 1px solid #eee8ee
+    border-bottom: 1px solid #e7dbde
+
+    .header__icons
+      display: none
+
+    .header__left
+      display: none
+
+  &__nav-wrapper
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 13px 30px 10px 0
+    position: relative
+    .header__rules
+      display: none
+    ul
+      padding: 0
+      margin: 0
+      li
+        font-size: 0
+        margin: 0
+        padding: 0
+    
+    a
+      font-size: 14px
+      color: #000
+      font-family: $demi
+      text-transform: uppercase
+      position: relative
+      margin-right: 25px
+      &:before
+        width: 0
+        height: 1px
+        position: absolute
+        display: block
+        content: ''
+        left: 0
+        bottom: -2px
+        background: #000
+        transition: all $transitionSpeed $ease
+      &:hover
+        &:before
+          width: 100%
+
+  &__sale
+    margin-left: 14px
+    &:before
+      display: none !important
+  &__search
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+  .search
+    &__box
+      // background-color: #1B1464
+      padding: 2px
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      margin-left: auto
+      
+      &:hover
+        .search__field
+          width: 180px
+          border-color: #e1e1e1
+          color: #000
+          padding: 7px 10px
+          
+    
+        .search__btn
+          background-color: #fff
+
+    &__field
+      outline: none
+      border: none
+      background: transparent
+      color: #fff
+      font-size: 14px
+      font-family: $book
+      margin: 0
+      width: 0
+      transition: all ease-in 400ms
+      border: 1px solid #fff
+      background: #fff
+      padding: 7px 0
+      transition: all $transitionSpeed $ease
+      &::placeholder
+        color: #e1e1e1
+
+    &__btn
+      border: none
+      outline: none
+      background-color: transparent
+      color: #000
+      height: 24px
+      width: 24px
+      display: grid
+      place-items: center
+      font-size: 18px
+      border-radius: 50%
+      transition: all ease-out 300ms
+      transition-delay: 380ms
+      cursor: pointer
+      text-align: center
+      padding: 0
+      img
+        width: 18px
+        height: 18px
+        margin: 0 auto
+
+  .header__sale
+    display: none
+
++r($wide)
   .header
-    height: 80px
+    &__nav-wrapper
+      padding: 10px 30px 10px 0
+      a
+        font-size: 11px
+        margin-right: 10px
+    &__sale
+      img
+        height: 20px
+    .search
+      &__box
+        &:hover
+          .search__field
+            width: 150px
+            padding: 4px 10px
+      &__field
+        padding: 4px 0
+    &__left
+      a
+        margin-right: 25px
+    &__wrapper
+      padding: 20px 0
+    &__logotype
+      position: static
+      left: 300px
+      transform: translateX(0)
+      font-size: 24px
+      img
+        height: 28px
+        margin-bottom: -5px
+    &__icons
+      a
+        img
+          height: 22px
+    &__rules
+      font-size: 12px
+      padding: 6px 12px
 
 +r($desktop)
   .header
-    height: 70px
-    &__logotype
-      margin-bottom: -20px
+    border-bottom: 1px solid #e1e1e1
     .hamburger
       display: block
       order: 4
       padding: 0
       margin-right: 0px
       width: 30px
+      height: 24px
       opacity: 1
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
       .hamburger-inner
         border-radius: 0
-        background: $hoverRed
+        background: #904c96
         width: 30px
         &:before,
         &:after
           border-radius: 0
-          background: $hoverRed
+          background: #904c96
           width: 100%
         &:before
-          width: 20px
+          width: 30px
         &:after
+    &__rules
+      display: none
+    &__nav-wrapper
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      padding: 0
+      
+      .header__sale
+        display: none
+      .header__rules
+        display: inline-block
+        font-size: 13px
+        margin-top: 20px
+        margin-bottom: 40px
+        &:before
+          display: none
+    &__wrapper
+      position: relative
+      padding-right: 60px
+    &__logotype
+      position: static
+      font-size: 20px
+      img
+        height: 24px
+        margin-bottom: -3px
+        margin-top: -4px
+    &__left
+      a
+        font-size: 13px
+    nav
+      position: absolute
+      top: 63px
+      width: 100%
+      background: #fff
+      transform: translateX(-100%)
+      transition: all $transitionSpeed $ease
+      &.is-open
+        transform: translateX(0)
+      ul
+        width: calc(100% + 80px)
+        margin: 0 -40px
+        border-top: 1px solid #e1e1e1
+        li
+          display: block
+          width: 100%
+          a
+            font-size: 14px
+            padding: 20px 40px
+            display: block
+            width: 100%
+            &:before
+              display: none
+            &:hover
+              background: #fdebf3
+
+            
+
+    &__icons
+      margin-bottom: -4px
+      a
+        margin-left: 18px
+    
+    &__search
+      position: static
+      order: -1
+      top: 0
+      transform: translateY(0)
+      padding: 10px 0
+
+    .search
+      &__field
+        padding: 7px 0
+        font-size: 14px
+        margin-left: 10px
+      &__box
+        flex-direction: row-reverse
+        &:hover
+          .search__field
+            padding: 7px 10px
+            width: 280px
+
+      
 
 +r($tablet)
   .header
-    height: 57px
+    .header__sale
+      display: block
+      font-size: 0
+      margin: 0
+      img
+        height: 25px
     .container
       padding: 0 20px
+    &__wrapper
+      padding: 15px 0
+    .hamburger
+      position: static
+      transform: translateY(0)
+    &__left
+      display: none
+    &__logotype
+      a
+        font-size: 0
+      img
+        width: 52px
+        height: 25px
+        margin: 0
+      span
+        display: none
+    &__right
+      height: 24px
+    &__icons
+      height: 24px
+      a
+        font-size: 0
+        margin: 0
+        img
+          height: 23px
+        &:nth-child(2)
+          display: none
+        &:nth-child(3)
+          display: none
+    nav
+      top: 55px
+      overflow: scroll
+      height: calc(100vh - 55px)
+      padding-right: 30px
+      width: calc(100% + 30px)
+      .header__icons
+        display: block
+        margin: 0 -20px
+        padding: 17px 20px 14px
+        border-bottom: 1px solid #e1e1e1
+        height: auto
+        text-align: right
+
+        a
+          display: inline-block
+          margin-left: 30px
+          img
+            height: 26px
+
+      .header__left
+        display: block
+        a
+          &:before
+            display: none
+
+      .header__sale
+        display: none
+
+      ul
+        margin: 0 -20px
+        width: calc(100% + 40px)
+        border: none
+        li
+          a
+            padding: 20px
+      .header__left
+        display: block
+        border-top: 1px solid #e1e1e1
+        width: calc(100% + 40px)
+        margin: 0 -20px
+        padding: 0 20px
+        a
+          font-size: 14px
+          font-family: $book
+          padding: 30px 0 20px
+          display: inline-block
+    &__search
+      width: 100%
+    .search
+      &__field
+        margin-left: 0
+        margin-right: 0
+      &__btn
+        margin-right: 15px
+        min-width: 24px
+      &__box
+        justify-content: flex-end
+        padding: 0
+        &:hover
+          .search__field
+            width: 100%
