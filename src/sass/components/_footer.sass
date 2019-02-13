@@ -1,192 +1,192 @@
 // FOOTER
 .footer
-  padding: 25px 0 50px
-  background: #514d4b
   overflow: hidden
   .container
-    max-width: 1280px
+    max-width: 1240px
+  &__top
+    text-align: center
+    background: $pink
+    font-size: 16px
+    color: #000
+    display: block
+    padding: 12px 11px 10px
+    line-height: 1
+    text-transform: uppercase
+    font-weight: 600
+    transition: all $transitionSpeed $ease
+    i
+      margin-right: 5px
+    &:hover
+      background: $darkpink
+  &__wrapper
+    // padding: 46px 0 50px
+    padding: 40px 0 57px
+    background: #56205c
+  &__logotype
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    font-size: 24px
+    font-family: $logo
+    color: #fff
+    text-transform: uppercase
+    letter-spacing: 0.6px
+    line-height: 1
+    img
+      width: 62px
+      height: auto
+      margin-right: 15px
+      margin-top: -5px
+    &:hover
+      span
+        &:before
+          width: 100%
   &__grid
     display: flex
-    // align-items: center
+    align-items: flex-start
     justify-content: space-between
-  &__left
-    max-width: 250px
-    flex: 1 0 250px
-    p
-      font-size: 13px
-      color: #fff
-      margin-top: 12px
-      letter-spacing: 0.5px
-    
-    a
-      color: #fff
-      &:hover
-        span
-          border-color: transparent
-      span
-        display: inline
-        border-bottom: 1px solid #fff
-        transition: all $transitionSpeed $ease
-        font-size: 13px
-
-  &__logo
-    width: 139px
-    height: 82px
-    // margin-top: -104px
-    margin-top: -25px
-    img
-      width: 139px
-      height: 82px
-  &__phone
+    position: relative
+  &__item-title
     font-size: 24px
-    margin-top: 24px
-    display: inline-block
-    letter-spacing: 0.7px
-  &__map
-    margin-top: 8px
-    display: inline-block
+    color: #fff
+    font-family: $book
+    margin-bottom: 12px
+  &__item
+    padding: 0 15px
+    // margin: 0 -15px
+    display: flex
+    flex-direction: column
     span
-      display: inline
-      border-bottom: 1px solid #fff
+      position: relative
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        height: 1px
+        background: #fff
+        left: 0
+        bottom: -2px
+        width: 0
+        transition: all $transitionSpeed $ease
+      &:hover
+        &:before
+          width: 100%
+    &:first-child
+      padding-top: 6px
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+    &--absolute
+      position: absolute
+      left: 77px
+      top: 60px
+      max-width: 240px
+      padding-left: 0
+      p
+        font-size: 14px
+        font-family: $book
+        color: #fff
+        letter-spacing: 0.5px
+
+  &__link
+    font-size: 16px
+    color: #fff
+    line-height: 1
+    font-family: $light
+    display: inline
+    width: auto
+    margin-top: 22px
+
+  &__socials
+    margin-top: 12px
+    a
+      margin-right: 18px
+    i
+      font-size: 25px
+      color: $pink
       transition: all $transitionSpeed $ease
-      font-size: 13px
-      color: #fff
-    &:hover
-      span
-        border-color: transparent
-  &__minisol
-    display: none
-    color: #ffffff
-    font-size: 12px
-    border-bottom: 1px solid transparent
+      &:last-child
+        margin-right: 0
+      &:hover
+        color: #fff
+  &__info
+    margin-top: 16px
+    font-size: 14px
+    font-family: $book
+    color: #fff
+    margin-left: auto
+    letter-spacing: 0.4px
+  &__map
+    color: $pink
+    font-family: $book
+    margin-top: 34px
+    letter-spacing: 0.3px
+    font-size: 14px
+    margin-left: auto
     transition: all $transitionSpeed $ease
     &:hover
-      border-bottom: 1px solid #fff
-  &__polit
-    margin-top: 80px
-    p
-      color: #ffffff
-      font-size: 12px
-    a
-      color: #ffffff
-      font-size: 12px
-      display: inline
-      border-bottom: 1px solid #fff
-      transition: all $transitionSpeed $ease
-      &:hover
-        border-color: transparent
-  &__menu
-    margin-left: auto
-    display: flex
-    align-items: flex-start
-    justify-content: start
-    flex-wrap: wrap
-  &__item
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    justify-content: flex-start
-    margin-left: 30px
-    margin-top: 20px
-    a
-      text-transform: uppercase
       color: #fff
-      font-size: 18px
-      font-family: $regular
-      width: auto
-      display: block
-      border-bottom: 1px solid transparent
-      transition: all $transitionSpeed $ease
-      &:hover
-        border-color: #fff
-      &.open-drop
-        display: none
-      
-  &__drop
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    justify-content: flex-start
-    a
-      font-size: 11px
-      margin-top: 15px
-      display: inline-block
+      span
+        &:before
+          width: 0
+          background: #fff
+    span
+      &:before
+        width: 100%
+        background: $pink
+
++r($desktop1068)
+  .footer
+    &__logotype
+      font-size: 22px
+      img
+        width: 50px
+    &__grid
+      flex-wrap: wrap
+    &__item
+      &--absolute
+        left: 65px
+        max-width: 190px
+      &:last-child
+        width: 100%
+        text-align: left
+        margin-top: -20px
+        padding-left: 65px
+    &__map
+      margin-left: 0
+    &__info
+      margin-left: 0
+    &__socials
+      max-width: 120px
+      line-height: 1.5
+      a
+        font-size: 28px
+        margin-right: 12px
 
 +r($tablet)
   .footer
-    padding-bottom: 23px
-    &__wrapper
-      flex-wrap: wrap
-    &__left
-      width: 100%
-      max-width: 100%
-      flex: 1 0 210px
-      // order: 2
-      p
-        margin-top: 23px
-    &__logo
-      width: 121px
-      height: auto
-      img
-        width: 127px
-        height: auto
-    &__phone
-      margin-top: 9px
-    &__map
-      margin-top: 6px
-
-    &__minisol
-      display: inline-block
-      font-size: 13px
-      margin-top: 27px
-    &__menu
-      margin-left: 30px
-    &__item
-      width: 48%
-      margin: 20px 1%
-      a
-        font-size: 14px
-    &__drop
-      a
-        font-size: 10px
-
-+r($mobile)
-  .footer
     &__grid
       flex-wrap: wrap
-    &__left
-      max-width: 100%
-    &__menu
-      width: 100%
-      margin-left: 0
-      margin: 20px 0
     &__item
       width: 100%
-      margin: 20px 0 0
+      margin-bottom: 40px
+      &:last-child
+        padding-left: 77px
+      &--absolute
+        position: static
+        max-width: 100%
+        order: 5
+    &__wrapper
+      padding: 30px 0
+    &__logotype
+      font-size: 24px
+      img
+        width: 62px
+    &__item
+      padding-left: 77px
+    &__item-title
+      margin-bottom: 2px
+    &__socials
+      max-width: 100%
       a
-        font-size: 16px
-        border-bottom: none
-        &.open-drop
-          display: inline
-          margin-left: 10px
-          transform-origin: center center
-          font-size: 22px
-          transition: all $transitionSpeed $ease
-          line-height: 0.6
-          border-bottom: none
-          &.is-open
-            transform: rotate(45deg)
-            margin-left: 8px
-
-    &__item-head
-      display: flex
-      align-items: center
-      justify-content: flex-start
-    &__drop
-      display: none
-      a
-        display: block
-        font-size: 11px
-        margin-top: 7px
-    &__polit
-      margin-top: 20px
+        margin-right: 15px

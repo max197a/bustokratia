@@ -1,5 +1,5 @@
 ---
-title: DOM Technonicol
+title: Bustokratia
 ---
 extends shared/_layout
 block content
@@ -8,506 +8,327 @@ block content
   section
     .firstscreen
       .firstscreen__carousel(js-firstscreen-slider)
-        .firstscreen__carousel-item(style="background-image: url(img/bg-main.jpg)")
-        .firstscreen__carousel-item(style="background-image: url(img/bg-main2.jpg)")
-      img.firstscreen__pattern(src="img/pattern-1.svg", alt="")
-      .container
-        .firstscreen__content
-          img(src="img/image-1.svg", alt="" data-aos="fade-up")
-          a.btn(href="#" data-aos="fade-up") рассчитать стоимость
+        .firstscreen__carousel-item
+          p.firstscreen__title у нас есть
+            br 
+            |  все размеры
+          img.firstscreen__desktop(src="img/slide-1.jpg", alt="")
+          img.firstscreen__mobile(src="img/slide-1-mobile.png", alt="")
+        .firstscreen__carousel-item
+          p.firstscreen__title у нас есть
+            br 
+            |  все размеры
+          img.firstscreen__desktop(src="img/slide-1.jpg", alt="")
+          img.firstscreen__mobile(src="img/slide-1-mobile.png", alt="")
+        .firstscreen__carousel-item
+          p.firstscreen__title у нас есть
+            br 
+            |  все размеры
+          img.firstscreen__desktop(src="img/slide-1.jpg", alt="")
+          img.firstscreen__mobile(src="img/slide-1-mobile.png", alt="")
+        .firstscreen__carousel-item
+          p.firstscreen__title у нас есть
+            br 
+            |  все размеры
+          img.firstscreen__desktop(src="img/slide-1.jpg", alt="")
+          img.firstscreen__mobile(src="img/slide-1-mobile.png", alt="")
   
   // END SECTION :: firstscreen
 
-  // BEGIN SECTION :: dom
-  section.dom
-    img.dom__pattern(src="img/pattern-2.svg", alt="")
+  // BEGIN SECTION :: main-grid-size
+
+  section.main-grid
     .container
-      p.dom__title(data-aos="fade-up") 
-        span теплый и современный 
-        br
-        | ДОМ ТЕХНОНИКОЛЬ -
-      p.dom__info(data-aos="fade-up") это сумма лучших строительных материалов компании 
-        span ТЕХНОНИКОЛЬ
-        | , самые эффективные среди канадских и скандинавских технологий, и знания ведущих российский инженеров  в одном проекте ДОМа, которого мы так долго ждали.
-      .dom__grid
-        .dom__item.dom__item--logo(data-aos="fade-up")
-          .dom__image
-            img(src="img/logo.svg", alt="")
-        .dom__item.dom__item--eq(data-aos="fade-up")
-          .dom__eq
-            img(src="img/eq.svg", alt="")
-        .dom__item.dom__item--formula(data-aos="fade-up")
-          .dom__image
-            img(src="img/formula.svg", alt="")
-      a.dom__btn.btn(href="/about.html") подробнее о нас
-  // END SECTION :: dom
+      .main-grid__grid
+        .main-grid__item.main-grid__item--big
+          .main-grid__image-container
+            a(href="#")
+              img(src="img/image-size.jpg", alt="")
+        .main-grid__item
+          .main-grid__consult
+            img(src="img/logo-header.svg", alt="")
+            p Консультация стилиста —
+              br 
+              | бесплатно!
+            form(action="#" method="#")
+              .input-container
+                input(type="text", name="" placeholder="Ваше имя")
+              .input-container
+                input(type="tel", name="" placeholder="+7 (___) ___ - __ - __")
+              .input-container
+                input.btn(type="submit" value="Получить консультацию")
 
+  // END SECTION :: main-grid-size
 
-  // BEGIN SECTION :: advantages
-  section.advantages
+  // BEGIN SECTION :: main-grid-size
+  section.main-search
     .container
-      p.advantages__title(data-aos="fade-up") Преимущества
-      .advantages__item(data-aos="fade-up")
-        .advantages__left
-          .advantages__image
-            img(src="img/step-1.png", alt="")
-        .advantages__right
-          .advantages__icon
-            img(src="img/adv-icon-1.svg", alt="")
-          p.advantages__head-info Технология и стандарты
-          p.advantages__info Основанные на лучших строительных практиках северных стран мира, 
-            span стандарты ДОМА ТЕХНОНИКОЛЬ
-            |  разрабатывались специалистами Канадской Ассоциации каркасного домостроения и ведущими инженерами российских домостроительных комбинатов, при участии инженеров Института пассивного дома, которые 
-            span сделали дом энергоэффективным
-            | .
-      .advantages__item(data-aos="fade-up")
-        .advantages__left
-          .advantages__image
-            img(src="img/step-2.png", alt="")
-        .advantages__right
-          .advantages__icon
-            img(src="img/adv-icon-2.svg", alt="")
-          p.advantages__head-info Качественные материалы
-          p.advantages__info 
-            span ТЕХНОНИКОЛЬ 
-            |  является одним из крупнейших международных производителей надежных и эффективных строительных материалов. Компания 
-            span предлагает рынку новейшие технологии, 
-            |  сочетающие в себе мировой опыт и разработки собственных Научных центров.  Именно для 
-            span  ДОМА ТЕХНОНИКОЛЬ был создан сбалансированный набор строительных материалов 
-            | для комплектации домов «под ключ».
-      .advantages__item(data-aos="fade-up")
-        .advantages__left
-          .advantages__image
-            img(src="img/step-3-1.png", alt="")
-        .advantages__right
-          .advantages__icon
-            img(src="img/adv-icon-3.svg", alt="")
-          p.advantages__head-info до 70% экономия на отоплении и эксплуатации
-          p.advantages__info Применение энергоэффективных технологий позволяет 
-            span  до 70% снизить затраты  
-            |  на отопление при эксплуатации. При этом в вашем доме всегда будет тепло и комфортно.
-      .advantages__item(data-aos="fade-up")
-        .advantages__left
-          .advantages__image
-            img(src="img/step-4.png", alt="")
-        .advantages__right
-          .advantages__icon
-            img(src="img/adv-icon-4.svg", alt="")
-          p.advantages__head-info Готовый тёплый дом за 3 месяца
-          p.advantages__info Четкое следование разработанным стандартам и привлечение к строительству 
-            span сертифицированных подрядчиков
-            | существенно снижает риск ошибки, благодаря чему повышается качество и оптимизируется время выполнения работ. К тому же, каркасный дом не требует усадки и жить в нем можно сразу по окончанию строительства.
-
-  // END SECTION :: advantages
-
-  // BEGIN SECTION :: energy
-  section.energy
-    .container
-      .energy__grid
-        .energy__left(data-aos="fade-up")
-          p Энергоэффективный дом
-          p
-            span от 25 000 р/м
-              sup 2
-        .energy__right(data-aos="fade-up" data-aos-delay="150")
-          p Благодаря оптимизации бизнес-процессов вы экономите за счет:
-          .energy__list
-            p оптимизации выработки бригады;
-            p готовой проектной документации; 
-            p автоматизации документооборота;
-            p прямой поставке материалов от  производителя.
-            
-  // END SECTION :: energy
-
-  // BEGIN SECTION :: price
-  section.price__container
-    .price
-      .price__grid
-        .price__left(data-aos="fade-up")
-          .price__left-container
-            p.price__title Узнайте стоимость 
+      .main-search__grid
+        .main-search__item
+          .main-search__item-container
+            p.main-search__title Поиск по размеру
+            form(action="#" method="#")
+              .main-search__form
+                .input-container
+                  input(type="text", name="" placeholder="Укажите свой размер")
+                .input-container
+                  input.btn(type="submit", value="")
+                  img.main-search__search(src="img/search.svg", alt="")
+            img(src="img/image-size-3.jpg", alt="")
+        .main-search__item
+          .main-search__item-container
+            p.main-search__title Хотите точно знать 
               br
-              | строительства дома 
-            p.price__desc прямо сейчас на нашем калькуляторе
-            p.price__info Технология строительства ДОМ ТЕХНОНИКОЛЬ позволяет построить и затейливый разноуровневый коттедж, облицованный кирпичом, и «домик в деревне», отделанный блокхаусом, и ультрамодный дом в экостиле с панорамными окнами любой планировки.
-            a.btn(href="#")
-              img(src="img/calculator.svg", alt="")
-              span рассчитать стоимость
-        .price__right(data-aos="fade-up" data-aos-delay="150")
-          .price__image
-            img(src="img/price.jpg", alt="")
-      
-  // END SECTION :: price
+              |  свой размер?
+            p.main-search__info Просто запишитесь на бесплатную консультацию стилиста длительностью 30 минут для правильного определения размера и подгона до идеальной посадки.
+            a.btn(href="#") Выбрать дату и время
+        .main-search__item
+          .main-search__image-container
+            a(href="#")
+              img(src="img/image-size-2.jpg", alt="")
 
-  // BEGIN SECTION :: projects
-  section.projects
+  // END SECTION :: main-grid-size
+
+  // BEGIN SECTION :: top10
+
+  section.top10
     .container
-      img.projects__pattern(src="img/pattern-3.svg", alt="")
-      p.projects__title Выберите дом, в котором хотите жить
-      .projects__grid(js-pr-slider)
-        .projects__item-slider
-          .projects__item
-            .projects__slider(js-projects-slider)
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-1.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-2.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-2.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-            .projects__info
-              .projects__row
-                p.projects__name sine 2
-                p.projects__kv 
-                  img(src="img/typical.svg", alt="")
-                  | 186 м²
-              .projects__line
-              .projects__row
-                p.projects__time от 5 месяцев
-                p.projects__price от 490 000 Р
-      
-        .projects__item-slider
-          .projects__item
-            .projects__slider(js-projects-slider)
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-2.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-1.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-2.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-            .projects__info
-              .projects__row
-                p.projects__name Axiom 4
-                p.projects__kv 
-                  img(src="img/typical.svg", alt="")
-                  | 44 м²
-              .projects__line
-              .projects__row
-                p.projects__time от 2 месяцев
-                p.projects__price от 1 250 000 Р
-      
-        .projects__item-slider
-          .projects__item
-            .projects__slider(js-projects-slider)
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-1.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-2.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-1.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-            .projects__info
-              .projects__row
-                p.projects__name cos 3
-                p.projects__kv 
-                  img(src="img/typical.svg", alt="")
-                  | 91 м²
-              .projects__line
-              .projects__row
-                p.projects__time от 2 месяцев
-                p.projects__price от 1 820 000 Р
+      .top10__container
+        .top10__head
+          p.top10__title ТОП-10
+          .top10__buttons
+            a.is-active(href="#" js-top-button) базовое бельё
+            a(href="#" js-top-button) будуарное бельё
+            a(href="#" js-top-button) спортивное бельё
+            a(href="#" js-top-button) домашняя одежда
+        .top10__tabs
+          .top10__text
+              p Наш топ-10 мы открываем изысканными, легкими и утонченными бюстгальтерами французского бренда Empreinte. Элегантный крой, аккуратные детали и самые последние инновации покорят любую, даже самую требовательную женщину! Модели представлены до чашки G.
+          .top10__tab.is-active
+            p.top10__tab-title базовое бельё
+            .top10__carousel(js-mobile-slider)
+              .top10__item
+                .top10__image
+                  img(src="img/model-1.jpg", alt="")
+                p.top10__info 1) Nessa Tatuaz (Black/Nude)
+              .top10__item
+                .top10__image
+                  img(src="img/model-2.jpg", alt="")
+                p.top10__info 2) Empreinte Carolyn (Caviar)
+              .top10__item
+                .top10__image
+                  img(src="img/model-3.jpg", alt="")
+                p.top10__info 3) Empreinte Cassiopee Bra (Rose Sauvage)
+              .top10__item
+                .top10__image
+                  img(src="img/model-4.jpg", alt="")
+                p.top10__info 4) Empreinte Thalia Bra (Encre Bleue)
+              .top10__item
+                .top10__image
+                  img(src="img/model-5.jpg", alt="")
+                p.top10__info 5) Curvy Kate Smoothie Soul Plunge Bra (Black)
+              .top10__item
+                .top10__image
+                  img(src="img/model-6.jpg", alt="")
+                p.top10__info 6) Freya Chi Bra (Grey)
+              .top10__item
+                .top10__image
+                  img(src="img/model-7.jpg", alt="")
+                p.top10__info 7) Curvy Kate Smoothie Soul Plunge Bra (Latte)
+              .top10__item
+                .top10__image
+                  img(src="img/model-8.jpg", alt="")
+                p.top10__info 8) Elomi Matilda (Cafe au Lait)
+              .top10__item
+                .top10__image
+                  img(src="img/model-9.jpg", alt="")
+                p.top10__info 9) Elomi Matilda (Red)
+              .top10__item
+                .top10__image
+                  img(src="img/model-10.jpg", alt="")
+                p.top10__info 10) Elomi Matilda (Black)
+          .top10__tab
+            p.top10__tab-title Будуарное бельё
+            .top10__carousel(js-mobile-slider)
+              .top10__item
+                .top10__image
+                  img(src="img/model-2.jpg", alt="")
+                p.top10__info 2) Empreinte Carolyn (Caviar)
+              .top10__item
+                .top10__image
+                  img(src="img/model-3.jpg", alt="")
+                p.top10__info 3) Empreinte Cassiopee Bra (Rose Sauvage)
+              .top10__item
+                .top10__image
+                  img(src="img/model-4.jpg", alt="")
+                p.top10__info 4) Empreinte Thalia Bra (Encre Bleue)
+              .top10__item
+                .top10__image
+                  img(src="img/model-5.jpg", alt="")
+                p.top10__info 5) Curvy Kate Smoothie Soul Plunge Bra (Black)
+              .top10__item
+                .top10__image
+                  img(src="img/model-6.jpg", alt="")
+                p.top10__info 6) Freya Chi Bra (Grey)
+              .top10__item
+                .top10__image
+                  img(src="img/model-7.jpg", alt="")
+                p.top10__info 7) Curvy Kate Smoothie Soul Plunge Bra (Latte)
+              .top10__item
+                .top10__image
+                  img(src="img/model-8.jpg", alt="")
+                p.top10__info 8) Elomi Matilda (Cafe au Lait)
+              .top10__item
+                .top10__image
+                  img(src="img/model-9.jpg", alt="")
+                p.top10__info 9) Elomi Matilda (Red)
+              .top10__item
+                .top10__image
+                  img(src="img/model-10.jpg", alt="")
+                p.top10__info 10) Elomi Matilda (Black)
+              .top10__item
+                .top10__image
+                  img(src="img/model-1.jpg", alt="")
+                p.top10__info 1) Nessa Tatuaz (Black/Nude)
+          .top10__tab
+            p.top10__tab-title Спортивное бельё
+            .top10__carousel(js-mobile-slider)
+              .top10__item
+                .top10__image
+                  img(src="img/model-3.jpg", alt="")
+                p.top10__info 3) Empreinte Cassiopee Bra (Rose Sauvage)
+              .top10__item
+                .top10__image
+                  img(src="img/model-4.jpg", alt="")
+                p.top10__info 4) Empreinte Thalia Bra (Encre Bleue)
+              .top10__item
+                .top10__image
+                  img(src="img/model-5.jpg", alt="")
+                p.top10__info 5) Curvy Kate Smoothie Soul Plunge Bra (Black)
+              .top10__item
+                .top10__image
+                  img(src="img/model-6.jpg", alt="")
+                p.top10__info 6) Freya Chi Bra (Grey)
+              .top10__item
+                .top10__image
+                  img(src="img/model-7.jpg", alt="")
+                p.top10__info 7) Curvy Kate Smoothie Soul Plunge Bra (Latte)
+              .top10__item
+                .top10__image
+                  img(src="img/model-8.jpg", alt="")
+                p.top10__info 8) Elomi Matilda (Cafe au Lait)
+              .top10__item
+                .top10__image
+                  img(src="img/model-9.jpg", alt="")
+                p.top10__info 9) Elomi Matilda (Red)
+              .top10__item
+                .top10__image
+                  img(src="img/model-10.jpg", alt="")
+                p.top10__info 10) Elomi Matilda (Black)
+              .top10__item
+                .top10__image
+                  img(src="img/model-1.jpg", alt="")
+                p.top10__info 1) Nessa Tatuaz (Black/Nude)
+              .top10__item
+                .top10__image
+                  img(src="img/model-2.jpg", alt="")
+                p.top10__info 2) Empreinte Carolyn (Caviar)
+          .top10__tab
+            p.top10__tab-title домашняя одежда
+            .top10__carousel(js-mobile-slider)
+              .top10__item
+                .top10__image
+                  img(src="img/model-5.jpg", alt="")
+                p.top10__info 5) Curvy Kate Smoothie Soul Plunge Bra (Black)
+              .top10__item
+                .top10__image
+                  img(src="img/model-6.jpg", alt="")
+                p.top10__info 6) Freya Chi Bra (Grey)
+              .top10__item
+                .top10__image
+                  img(src="img/model-7.jpg", alt="")
+                p.top10__info 7) Curvy Kate Smoothie Soul Plunge Bra (Latte)
+              .top10__item
+                .top10__image
+                  img(src="img/model-8.jpg", alt="")
+                p.top10__info 8) Elomi Matilda (Cafe au Lait)
+              .top10__item
+                .top10__image
+                  img(src="img/model-9.jpg", alt="")
+                p.top10__info 9) Elomi Matilda (Red)
+              .top10__item
+                .top10__image
+                  img(src="img/model-10.jpg", alt="")
+                p.top10__info 10) Elomi Matilda (Black)
+              .top10__item
+                .top10__image
+                  img(src="img/model-1.jpg", alt="")
+                p.top10__info 1) Nessa Tatuaz (Black/Nude)
+              .top10__item
+                .top10__image
+                  img(src="img/model-2.jpg", alt="")
+                p.top10__info 2) Empreinte Carolyn (Caviar)
+              .top10__item
+                .top10__image
+                  img(src="img/model-3.jpg", alt="")
+                p.top10__info 3) Empreinte Cassiopee Bra (Rose Sauvage)
+              .top10__item
+                .top10__image
+                  img(src="img/model-4.jpg", alt="")
+                p.top10__info 4) Empreinte Thalia Bra (Encre Bleue)
+  // END SECTION :: top10
 
-        .projects__item-slider
-          .projects__item
-            .projects__slider(js-projects-slider)
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-1.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-2.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-1.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-            .projects__info
-              .projects__row
-                p.projects__name cos 3
-                p.projects__kv 
-                  img(src="img/typical.svg", alt="")
-                  | 91 м²
-              .projects__line
-              .projects__row
-                p.projects__time от 2 месяцев
-                p.projects__price от 1 820 000 Р
+  // BEGIN SECTION :: main-grid
 
-        .projects__item-slider
-          .projects__item
-            .projects__slider(js-projects-slider)
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-1.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-2.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-1.jpg", alt="")
-              .projects__slider-item
-                .projects__image
-                  img(src="img/proj-3.jpg", alt="")
-            .projects__info
-              .projects__row
-                p.projects__name cos 3
-                p.projects__kv 
-                  img(src="img/typical.svg", alt="")
-                  | 91 м²
-              .projects__line
-              .projects__row
-                p.projects__time от 2 месяцев
-                p.projects__price от 1 820 000 Р
-      .projects__button
-        a.btn(href="#") смотреть все проекты
-  // END SECTION :: projects
-
-  // BEGIN SECTION :: scheme
-  section.scheme
+  section.main-grid
     .container
-      h2.scheme__title Схема создания
-        br
-        span ДОМА ТЕХНОНИКОЛЬ
-      .scheme__top
-        .scheme__left
-          p.scheme__number 1
-          p.scheme__desc Вы выбираете   
-            a(href="#") индивидуальный
-            |  или   
-            a(href="#")  типовой
-            |  проект дома
-        .scheme__right
-          p.scheme__number 5
-          p.scheme__desc Сдача ДОМА ТЕХНОНИКОЛЬ и оформление гарантии
-        .scheme__grid
-          .scheme__item
-            .scheme__head
-              p.scheme__number 2
-              p.scheme__desc Предоставляем проверенного и обученного подрядчика
-            p.scheme__info Специализированные подрядные организации и частные бригады, прошедшие обуение стандартам ДОМ ТЕХНОНИКОЛЬ.
-            p.scheme__info Все подрядчики проходят обязательную сертификацию и получают досуск на работы.
-            .scheme__links
-              a.scheme__link(href="#") 
-                span Каталог подрядчиков
-          .scheme__item
-            .scheme__head
-              p.scheme__number 3
-              p.scheme__desc Составляем смету, которая не изменится в течении строительства
-            p.scheme__info Подрядчик по вашему желанию скорректирует проект согласно стандартам ДОМ ТЕХНОНИКОЛЬ, чтобы подготовить подробную смету.
-            p.scheme__info Посмотрите проект в нашем каталоге и смету по нему.
-            .scheme__links
-              a.scheme__link(href="#") 
-                span Скачать смету
-              a.scheme__link(href="#") 
-                span Посмотреть проект
-          .scheme__item
-            .scheme__head
-              p.scheme__number 4
-              p.scheme__desc Осуществляем технадзор: контролируем подрядчика и проверяем соблюдение технологии строительства
-            p.scheme__info Помогаем заказчику следить за ходом строительства.
-            p.scheme__info Сами контролируем и обеспечиваем прозрачность процесса приёмки клиентом результатов работы — под каждый этап чёткая и простая инструкция, что и по каким критериям прнимать.
-            .scheme__links
-              a.scheme__link(href="#") 
-                span Подробнее о нас
+      .main-grid__grid
+        .main-grid__item
+          .main-grid__image-container
+            a(href="#")
+              img(src="img/item-1.jpg", alt="")
+        .main-grid__item.main-grid__item--big
+          .main-grid__image-container
+            a(href="#")
+              img(src="img/item-2.jpg", alt="")
+        .main-grid__item.main-grid__item--big
+          .main-grid__image-container
+            a(href="#")
+              img(src="img/item-3.jpg", alt="")
+        .main-grid__item
+          .main-grid__image-container
+            a(href="#")
+              img(src="img/item-4.jpg", alt="")
+        .main-grid__item
+          .main-grid__image-container
+            a(href="#")
+              img(src="img/item-5-1.jpg", alt="")
+          .main-grid__image-container
+            a(href="#")
+              img(src="img/item-5-2.jpg", alt="")
+        .main-grid__item.main-grid__item--big
+          .main-grid__image-container
+            a(href="#")
+              img(src="img/item-6.jpg", alt="")
 
-  // END SECTION :: scheme
+  // END SECTION :: main-grid
 
-
-  // BEGIN SECTION :: want-form
-  section.want-form
-    .want-form__container
-      .container
-        .want-form__lines
-          .want-form__top
-          .want-form__bottom
-        p.want-form__title Хотите узнать больше об энергоэфективном
-          br
-          | проекте 
-          span
-          | ДОМ ТЕХНОНИКОЛЬ?
-        form.js-form-want(action="#")
-          .want-form__grid
-            .input-container
-              input(type="text" name="name" placeholder="Имя*")
-            .input-container
-              input(type="text" name="phone" placeholder="Телефон*")
-            .input-container
-              input(type="text" name="mail" placeholder="Электронная почта")
-            .input-container
-              input.btn(type="submit" value="хочу все знать")
-          p.want-form__personal Отправляя данную форму, я даю  
-            a(href="#")  согласие на обработку персональных данных
-          
-
-  // END SECTION :: want-form
-
-  // BEGIN SECTION :: reviews
-  section.reviews
+  // BEGIN SECTION :: main-subscribe-form
+  section.main-form
     .container
-      p.reviews__title Отзывы клиентов
-      .reviews__slider(js-reviews-slider)
-        .reviews__item
-          .reviews__item-container
-            .reviews__review-container
-              p.reviews__review Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. 
-            .reviews__info
-              .reviews__top
-                p.reviews__name Петр Иванович Кондратенко
-                p.reviews__city Московская область
-              .reviews__photo
-                a.no-barba(href="img/proj-1.jpg" js-open-gallery data-effect="mfp-zoom-in")
-                  img(src="img/proj-1.jpg")
-                a.no-barba(href="img/proj-2.jpg" js-open-gallery data-effect="mfp-zoom-in")
-                  img(src="img/proj-2.jpg")
-                a.no-barba(href="img/proj-3.jpg" js-open-gallery data-effect="mfp-zoom-in")
-                  img(src="img/proj-3.jpg")
+      .main-form__grid
+        .main-form__image
+          .main-form__image-container
+            img(src="img/convert.png", alt="")
+        .main-form__info
+          p подпишитесь
+            br
+            span  и узнавайте о новинках первыми
+        .main-form__form
+          .input-container
+            input(type="text", name="" placeholder="Укажите свою электронную почту")
+          .input-container
+            input.btn(type="submit", value="Подписаться")
+        
 
-        .reviews__item
-          .reviews__item-container
-            .reviews__review-container
-              p.reviews__review Огромное спасибо ребятам из ДОМ ТЕХНОНИКОЛЬ за качественную работу, отличное отношение к своей работе. Они мне строили дом в Тульской области, все сделали быстро и качественно, нареканий нет. Вот у них руки действительно растут из плечей. Ребята, удачи вам в работе!!!
-            .reviews__info
-              .reviews__top
-                p.reviews__name Константин Константинопольский
-                p.reviews__city Тульская область
-              .reviews__photo
-                a.no-barba.video-link(href="https://www.youtube.com/watch?v=LTvFsTbyILg&t=6s" js-popup-video data-effect="mfp-zoom-in")
-                  img(src="img/proj-1.jpg")
-
-        .reviews__item
-          .reviews__item-container
-            .reviews__review-container
-              p.reviews__review Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. 
-            .reviews__info
-              .reviews__top
-                p.reviews__name Петр Иванович Кондратенко
-                p.reviews__city Московская область
-              .reviews__photo
-                a.no-barba(href="img/proj-1.jpg" js-open-gallery data-effect="mfp-zoom-in")
-                  img(src="img/proj-1.jpg")
-                a.no-barba(href="img/proj-2.jpg" js-open-gallery data-effect="mfp-zoom-in")
-                  img(src="img/proj-2.jpg")
-                a.no-barba(href="img/proj-3.jpg" js-open-gallery data-effect="mfp-zoom-in")
-                  img(src="img/proj-3.jpg")
-
-
-  // END SECTION :: reviews
-
-  // BEGIN SECTION :: blog
-  section.blog
-    .container
-      .blog__title Блог
-      .blog__slider(js-blog-slider)
-        .blog--page__item
-          .blog--page__item-container
-            .blog--page__image
-              img(src="img/blog-1.jpg", alt="")
-            .blog--page__info
-              .blog--page__head
-                a.blog--page__head-tab(href="/blog-help.html") полезные статьи
-                p.blog--page__head-date 10.11.2018
-              a.blog--page__i-title(href="#") 
-                span ТЕХНОНИКОЛЬ  
-                |  формирует «стандарты красоты» в частном домостроении домостроении домостроении домостроении домостроении домостроении 
-              a.btn(href="#") Читать далее
-                span
-        .blog--page__item
-          .blog--page__item-container
-            .blog--page__image
-              img(src="img/blog-2.jpg", alt="")
-            .blog--page__info
-              .blog--page__head
-                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
-                p.blog--page__head-date 30.10.2018
-              a.blog--page__i-title(href="#") 
-                span ДОМ ТЕХНОНИКОЛЬ 
-                |  открыл свои двери для журналистов
-              a.btn(href="#") Читать далее
-                span
-        .blog--page__item
-          .blog--page__item-container
-            .blog--page__image
-              img(src="img/blog-3.jpg", alt="")
-            .blog--page__info
-              .blog--page__head
-                a.blog--page__head-tab(href="/blog-faq.html") FAQ
-                p.blog--page__head-date 05.10.2018
-              a.blog--page__i-title(href="#")  Мифы каркасного домостроения.  Чему верить?
-              a.btn(href="#") Читать далее
-                span
-      a.blog__button(href="#") все статьи
-  // END SECTION :: blog
-
-  // BEGIN SECTION :: awards
-  section.awards
-    .container
-      p.awards__h-title(data-aos="fade-up") Наши награды
-      .awards__slider-container(data-aos="fade-up")
-        .awards__slider(js-awards-slider)
-          .awards__item
-            .awards__item-content
-              .awards__image-container
-                .awards__image
-                  img(src="img/awards-1.png", alt="")
-              p.awards__title ENES-2015
-              p.awards__info Лучший малоэтажный энергоэффективный жилой дом
-          .awards__item
-            .awards__item-content
-              .awards__image-container
-                .awards__image
-                  img(src="img/awards-2.png", alt="")
-              p.awards__title Конкурс на лучший инновационный проект 2016
-              p.awards__info Лучший проект с применением энергоэффективных решений
-          .awards__item
-            .awards__item-content
-              .awards__image-container
-                .awards__image
-                  img(src="img/awards-3.png", alt="")
-              p.awards__title Конкурс "Красивые деревянные дома 2017"
-              p.awards__info Лучший архитектурный объект по итогам онлайн голосования
-          .awards__item
-            .awards__item-content
-              .awards__image-container
-                .awards__image
-                  img(src="img/awards-4.png", alt="")
-              p.awards__title Благодарность от World Skills (WSI)
-              p.awards__info Международная ассоциация повышение статуса и стандартов профессиональной подготовки рабочих профессий
-          .awards__item
-            .awards__item-content
-              .awards__image-container
-                .awards__image
-                  img(src="img/awards-1.png", alt="")
-              p.awards__title ENES-2015
-              p.awards__info Лучший малоэтажный энергоэффективный жилой дом
-  // END SECTION :: awards
+  // END SECTION :: main-subscribe-form

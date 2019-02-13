@@ -1,0 +1,223 @@
+.top10
+  margin: 50px auto 30px
+  width: 100%
+  &__container
+    border: 1px solid #ede7e5
+    border-left: none
+    border-right: none
+    padding: 45px 0 35px
+  &__head
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 40px
+  &__title
+    font-size: 24px
+    color: #000
+    font-family: $book
+    line-height: 1
+    margin-right: 30px
+  &__buttons
+    a
+      display: inline-block
+      line-height: 1
+      padding: 15px
+      font-family: $demi
+      color: #000
+      font-size: 14px
+      text-transform: uppercase
+      background: #fdebf3
+      border-right: 1px solid #fff
+      transition: all $transitionSpeed $ease
+      &:hover
+        background: #f3d8e4
+      &.is-active
+        color: #fff
+        background: #904c96
+  &__tabs
+    position: relative
+    // padding-left: 25%
+  &__carousel
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-left: 25%
+    flex-wrap: wrap
+    position: relative
+    width: calc(100% + 40px)
+    margin: 0 -20px
+  &__item
+    width: 33.1%
+    padding: 9px 20px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    img
+      max-height: 114px
+      width: auto
+    &:nth-child(1)
+      width: 24%
+      position: absolute
+      left: 0
+      top: 0
+  &__info
+    font-size: 16px
+    color: #000
+    font-family: $book
+    padding-left: 20px
+  
+  &__text
+    position: absolute
+    left: 0
+    top: 170px
+    width: 24.8%
+    padding-right: 20px
+
+    p
+      font-size: 16px
+      color: #000
+      font-family: $light
+      line-height: 1.5
+  &__tab-title
+    display: none
+  &__tab
+    display: none
+    &.is-active
+      display: block
+
++r($desktop1068)
+  .top10
+    &__carousel
+      padding-left: 33.33333%
+    &__text
+      width: 33%
+      padding: 20px
+      left: -20px
+    &__item
+      width: 50%
+      &:nth-child(1)
+        width: 32%
+      img
+        height: auto
+        max-height: 90px
+
++r($desktop)
+  .top10
+    &__buttons
+      a
+        padding: 13px
+        font-size: 13px
+    &__title
+      margin-right: 15px
+
++r($tablet)
+  .top10
+    margin: 0
+    &__tab
+      padding-bottom: 40px
+    &__container
+      border: none
+      padding: 60px 0px 0px
+    &__title
+      font-size: 24px
+    &__buttons
+      display: none
+    &__head
+      margin-bottom: 30px
+    &__text
+      position: static
+      left: 0
+      top: 0
+      padding: 0
+      width: 100%
+      margin-bottom: 40px
+    &__carousel
+      position: relative
+      display: block
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      -ms-touch-action: pan-y
+      touch-action: pan-y
+      -webkit-tap-highlight-color: transparent
+      padding-left: 0
+      width: 100%
+      margin: 0 auto
+      padding-bottom: 30px
+    &__item
+      position: static
+      padding: 0
+      display: flex !important
+      justify-content: flex-start
+      padding: 10px
+      img
+        height: 116px
+        max-height: 116px
+      &:nth-child(1)
+        position: static
+        width: 100%
+    .slick-dots
+      position: absolute
+      margin: 0 auto
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+      line-height: 0
+      height: auto
+      font-size: 0
+      padding: 0
+      li
+        margin: 0 6px
+        &.slick-active
+          button
+            background: #f06eaa
+      button
+        font-size: 0
+        padding: 0
+        margin: 0
+        line-height: 0
+        background: #f7f0ed
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        border: none
+        transition: all $transitionSpeed $ease
+        cursor: pointer
+    .slick-arrow
+      position: absolute
+      width: 28px
+      height: 133px
+      background: none
+      font-size: 0
+      color: transparent
+      border: 0
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 10
+      cursor: pointer
+      &.slick-prev
+        background: url(../img/left-slide.png) center center no-repeat
+        left: 40px
+      &.slick-next
+        background: url(../img/right-slide.png) center center no-repeat
+        right: 40px
+    
+    &__tab-title
+      display: block
+      line-height: 1
+      padding: 15px
+      font-family: $demi
+      color: #000
+      font-size: 15px 20px
+      text-transform: uppercase
+      background: #fdebf3
+      width: calc(100% + 40px)
+      margin: 0 -20px 10px
+    &__tab
+      display: block !important
+      &:last-child
+        padding-bottom: 20px

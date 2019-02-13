@@ -1,0 +1,103 @@
+.main-form
+  margin-bottom: 120px
+  margin-top: 2px
+  &__grid
+    background: #904c96
+    padding: 53px 60px
+    display: flex
+    align-items: center
+  &__form
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    max-width: 547px
+    width: 48%
+    .input-container
+      &:first-child
+        width: 68.5%
+      &:last-child
+        width: 31.5%
+  &__image
+    max-width: 18.3%
+    width: 100%
+    position: relative
+    img
+      width: 100%
+  &__image-container
+    position: absolute
+    // top: -64px
+    bottom: -119px
+    left: -48px
+  &__info
+    margin: 0 auto
+    padding: 0 20px
+    text-align: center
+    min-width: 340px
+    p
+      font-family: $medium
+      color: #fff
+      font-size: 40px
+      line-height: 0.8
+      text-transform: uppercase
+      letter-spacing: 1px
+      span
+        font-family: $book
+        font-size: 20px
+        text-transform: lowercase
+
++r($desktop1068)
+  .main-form
+    &__grid
+      padding: 40px
+    &__info
+      text-align: left
+      padding-left: 0
+      margin: 0
+      min-width: 284px
+      p
+        font-size: 35px
+        span
+          font-size: 17px
+    &__form
+      width: 60%
+    &__image
+      display: none
+
++r($tablet)
+  .main-form
+    margin-top: 30px
+    margin-bottom: 50px
+    .container
+      padding: 0
+    &__grid
+      padding: 50px 20px
+      flex-wrap: wrap
+      position: relative
+    &__image
+      display: block
+      position: absolute
+      top: -35px
+      right: 20px
+      transform: scale(-1, 1)
+      width: 130px
+      max-width: 130px
+    &__image-container
+      position: static
+    &__info
+      width: 100%
+      max-width: 100%
+      p
+        font-size: 24px
+        span
+          font-size: 16px
+    &__form
+      margin-top: 20px
+      flex-wrap: wrap
+      max-width: 100%
+      width: 100%
+      .input-container
+        margin-top: 10px
+        &:first-child
+          width: 100%
+        &:last-child
+          width: 100%
