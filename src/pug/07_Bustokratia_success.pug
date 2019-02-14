@@ -1,0 +1,42 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Оформление заказа
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title Спасибо!
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: simple
+
+  section.simple
+    .container
+      .simple__wrapper
+        .simple__row
+          p Номер заказа:
+          p Белый
+        .simple__row
+          p Доставка:
+          p Курьером
+        .simple__row 
+          p Оплата:
+          p Наличными
+        p.simple__info Вы можете следить за выполнением своего заказа в 
+          a(href="#") Личном кабинете
+
+  // END SECTION :: simple

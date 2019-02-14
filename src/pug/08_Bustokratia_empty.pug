@@ -1,0 +1,36 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Корзина
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title Корзина
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: simple
+
+  section.simple
+    .container
+      .simple__wrapper
+        p.simple__title Ваша корзина пока пуста
+      
+        p.simple__info Начните выбор в 
+          a(href="#") каталоге  
+          | или воспользуйтесь поиском в меню.
+
+  // END SECTION :: simple

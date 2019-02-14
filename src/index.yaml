@@ -3,3 +3,7 @@ ProjectTitle: Bustokratia
 PageList:
 - file: homepage.html
   ready: 20
+- file: 07_Bustokratia_success.html
+  ready: 20
+- file: 08_Bustokratia_empty.html
+  ready: 20

@@ -1,0 +1,32 @@
+.breadcrumbs
+  padding: 16px
+  a
+    font-size: 14px
+    color: #959595
+    font-family: $book
+    transition: all $transitionSpeed $ease
+    margin-right: 24px
+    position: relative
+    letter-spacing: 0.7px
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      width: 5px
+      height: 5px
+      border: 2px solid #f49ac1
+      border-left: none
+      border-top: none
+      right: -14px
+      top: 50%
+      transform: translateY(-50%) rotate(-45deg)
+      pointer-events: none
+    &:last-child
+      &:before
+        display: none
+    &:hover
+      color: #333
+
++r($tablet)
+  .breadcrumbs
+    display: none
