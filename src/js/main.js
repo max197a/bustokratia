@@ -74,6 +74,11 @@ $(document).ready(function() {
       $(this).toggleClass("show-points");
     })
 
+    .on("click", ".sizes__table td", function(e) {
+      e.preventDefault();
+      $(this).toggleClass("is-active");
+    })
+
     /// можно удалять, для того  что бы показать цифры у иконок
     ///
 

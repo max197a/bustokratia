@@ -7,5 +7,7 @@ PageList:
   ready: 20
 - file: 08_Bustokratia_empty.html
   ready: 20
+- file: 14_Bustokratia_sizes.html
+  ready: 20
 - file: 22_Bustokratia_legal.html
   ready: 20
