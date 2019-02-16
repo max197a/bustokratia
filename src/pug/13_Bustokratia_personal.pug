@@ -1,0 +1,90 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Корзина
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      .head__grid
+        p.head__title Личный кабинет
+        .head__icons
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-pack.svg", alt="")
+            span Мои заказы
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-size.svg", alt="")
+            span Мои размеры
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-people.svg", alt="")
+            span Мой профиль
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: personal
+
+  section.personal
+    .container
+      form(action="#" method="#")
+        .personal__wrapper
+          p.personal__title Контактная информация
+          .personal__grid
+            .personal__item
+              .input-container
+                p Имя и фамилия
+                input(type="text" name="" placeholder="Марина Маринина")
+              .input-container
+                p Эл. почта
+                input(type="text" name="" placeholder="ваша@почта.ru")
+              .input-container
+                p Телефон
+                input(type="text" name="" placeholder="+7 (___) ___ - __ - __")
+            .personal__item.personal__item--editable
+              .input-container
+                p Выберите город
+                .input-grid
+                  .ui-checkbox
+                    input#c1(type="radio", name="group1")
+                    label(for="c1") Москва
+                  span или
+                  .input-city
+                    .ui-checkbox
+                      input#c2(type="radio", name="group1")
+                      label(for="c2" js-checkbox-label)
+                    input(type="text" name="" placeholder="другой город" js-checkbox)
+              .input-container
+                p Адрес
+                textarea(placeholder="Улица")
+          .personal__password
+            p.personal__title Изменение пароля
+            .personal__item
+              .input-container
+                p Новый пароль
+                p.symbol не менее 6 символов
+                input(type="password" name="" placeholder="******")
+              .input-container
+                p Подтверждение пароля
+                input(type="password" name="" placeholder="******")
+              .personal__info
+                p Если пароль менять не требуется, не заполняйте поля
+              .input-container
+                input.btn(type="submit", value="Сохранить")
+
+
+
+  // END SECTION :: personal

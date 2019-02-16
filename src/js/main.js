@@ -74,13 +74,33 @@ $(document).ready(function() {
       $(this).toggleClass("show-points");
     })
 
+    /// можно удалять, для того  что бы показать цифры у иконок
+    ///
+
+    ///
+    /// активная иконка в таблице на странице размеры
+
     .on("click", ".sizes__table td", function(e) {
       e.preventDefault();
       $(this).toggleClass("is-active");
     })
 
-    /// можно удалять, для того  что бы показать цифры у иконок
+    /// активная иконка в таблице на странице размеры
     ///
+
+    ///
+    /// на странице Personal клик по чекбоксу что бы выбрать другой город
+
+    .on("click", "[js-checkbox]", function(e) {
+      e.preventDefault();
+      $("[js-checkbox-label]").click();
+    })
+
+    /// на странице Personal клик по чекбоксу что бы выбрать другой город
+    ///
+
+    ///
+    /// табы
 
     .on("click", "[js-top-button]", function(e) {
       e.preventDefault();
@@ -95,6 +115,9 @@ $(document).ready(function() {
         .eq(tabIndex)
         .fadeIn();
     });
+
+  /// табы
+  ///
 
   function scrollToSection(el) {
     var headerHeight = $(".header").height();

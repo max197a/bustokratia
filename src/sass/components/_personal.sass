@@ -1,0 +1,133 @@
+.personal
+  &__wrapper
+    padding-top: 5px
+  &__title
+    font-size: 24px
+    font-family: $demi
+    line-height: 1
+    margin-bottom: 13px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+  &__item
+    max-width: 340px
+    width: 100%
+    margin-right: 40px
+    &--editable
+      max-width: 460px
+  .input-container
+    margin-top: 17px
+    p
+      font-size: 14px
+      font-family: $book
+      color: #000
+      margin-bottom: 4px
+      letter-spacing: 0.8px
+      &.symbol
+        position: absolute
+        color: #959595
+        right: 0
+        top: 0
+    input,
+    textarea
+      border: 1px solid #e1e1e1
+      padding: 9px 19px 10px
+      letter-spacing: 1.5px
+      &.btn
+        background: #904c96
+        border-color: #904c96
+        &:hover
+          background: #56205c
+          border-color: #56205c
+    textarea
+      min-height: 119px
+
+  &__password
+    padding-top: 40px
+    .personal__title
+      margin-bottom: 0
+    .input-container
+      margin-top: 16px
+    .personal__item
+      padding-top: 8px
+
+  &__info
+    padding-top: 11px
+    // padding-left: 20px
+    p
+      font-size: 14px
+      font-family: $book
+      color: #000
+      margin-bottom: 4px
+      letter-spacing: 0.8px
+      color: #959595
+      padding-left: 30px
+      position: relative
+      letter-spacing: 0.7px
+      &:before
+        display: block
+        position: absolute
+        content: 'i'
+        font-size: 16px
+        color: #fff
+        font-family: $book
+        min-width: 20px
+        min-height: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $pink
+        border-radius: 50%
+        left: 0px
+        top: -2px
+        text-align: center
+  .input-grid,
+  .input-city
+    display: flex
+    align-items: center
+    justify-content: flex-start
+  
+    span
+      font-size: 16px
+      color: #000
+      font-family: $book
+      margin: 0 20px
+  .input-city
+    width: 100%
+    input
+      width: 100%
+      cursor: pointer
+      pointer-events: all
+  
+
++r($tablet)
+  .personal
+    &__wrapper
+      border-top: 1px solid #e1e1e1
+      padding-top: 26px
+      margin-top: 4px
+    &__grid
+      flex-wrap: wrap
+    &__item
+      width: 100%
+      max-width: 100%
+      margin-right: 0
+      &--editable
+        max-width: 100%
+        padding-top: 10px
+    .input-grid
+      flex-wrap: wrap
+      span
+        display: none
+      .ui-checkbox
+        width: 100%
+        margin-top: 11px
+    .input-city
+      margin-top: 16px
+      margin-bottom: -5px
+      .ui-checkbox
+        width: auto
+        margin-top: 0
+    &__password
+      padding-top: 29px

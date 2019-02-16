@@ -21,43 +21,45 @@
 
 .input-container
   position: relative
-  label
-    position: absolute
-    font-size: 11px
-    color: #000
-    padding: 5px
-    font-family: $book
-    border: 1px solid #e4132f
-    background: #fff
-    top: -18px
-    left: 0
-    &:before
-      display: block
-      position: absolute
-      content: ''
-      width: 6px
-      height: 6px
-      border: 1px solid #e4132f
-      background: #fff
-      border-left: none
-      border-bottom: none
-      transform: rotate(135deg)
-      bottom: -4px
-      left: 13px
-    &:after
-      display: block
-      position: absolute
-      content: ''
-      width: 100%
-      height: 2px
-      bottom: 0
-      left: 0
-      background: #fff
+  
 
   &.has-error
+    label
+      position: absolute
+      font-size: 11px
+      color: #000
+      padding: 5px
+      font-family: $book
+      border: 1px solid #e4132f
+      background: #fff
+      top: -18px
+      left: 0
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 6px
+        height: 6px
+        border: 1px solid #e4132f
+        background: #fff
+        border-left: none
+        border-bottom: none
+        transform: rotate(135deg)
+        bottom: -4px
+        left: 13px
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        width: 100%
+        height: 2px
+        bottom: 0
+        left: 0
+        background: #fff
     input
       border-color: #e4132f
-  input
+  input,
+  textarea
     border: 1px solid #fff
     font-size: 15px
     font-family: $light
@@ -68,6 +70,7 @@
     width: 100%
     line-height: normal
     background: #fff
+    resize: none
     &::-webkit-input-placeholder
       color: #959595
     &::-moz-placeholder
@@ -91,6 +94,7 @@
 
 // Checkbox
 .ui-checkbox
+  position: relative
   input
     display: none
     width: 0.1px
@@ -102,7 +106,7 @@
     &:checked
       + label
         &::before
-          border-color: green
+          border-color: #904c96
         &::after
           transform: translateY(-50%) scale(1)
   label
@@ -110,6 +114,11 @@
     width: 100%
     position: relative
     cursor: pointer
+    padding-left: 26px
+    font-size: 16px
+    color: #000
+    font-family: $book
+    letter-spacing: 0.8px
     &::before
       position: absolute
       left: 0
@@ -117,23 +126,23 @@
       transform: translateY(-50%)
       display: inline-block
       content: ' '
-      size: 20px
+      size: 16px
       background-color: white
-      border: 1px solid #AFB7C0
-      border-radius: 4px
+      border: 1px solid #e1e1e1
+      border-radius: 50%
       cursor: pointer
       vertical-align: middle
       cursor: pointer
       transition: all $transitionSpeed ease-in-out
     &::after
       position: absolute
-      left: 6px
+      left: 4px
       top: 50%
       transform: translateY(-50%) scale(0)
       display: inline-block
       content: ' '
       size: 10px
-      background: green
+      background: #904c96
       border-radius: 50%
       // background-image: svg-load('../../images/svg/checkbox.svg')
       // background-repeat: no-repeat
