@@ -1,0 +1,235 @@
+.orders
+  &__buttons
+    display: flex
+    padding-top: 10px
+    padding-bottom: 29px
+
+    a
+      text-align: center
+      border-right: 1px solid #fff
+      background: #ebebeb
+      padding: 18px
+      font-size: 20px
+      font-family: $book
+      color: #000
+      transition: all $transitionSpeed $ease
+      cursor: pointer
+      width: 100%
+      letter-spacing: 0.9px
+      &:hover
+        background: #dbdada
+      &.is-active
+        color: #fff
+        background: #904c96
+      &:last-child
+        border-right: none
+  &__tab
+    display: none
+    &.is-active
+      display: block
+    &--cancel
+      a.cancel
+        display: none !important
+  &__item
+    padding: 24px 40px 26px
+    border-top: 1px solid #e1e1e1
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    width: 100%
+    &.waiting
+      a.btn
+        display: block
+    &:last-child
+      border-bottom: 1px solid #e1e1e1
+    p
+      font-size: 15px
+      color: #000
+      font-family: $book
+      line-height: 1.2
+      margin-top: 12px
+      letter-spacing: 0.8px
+      position: relative
+      &.title
+        font-size: 18px
+        font-family: $demi
+        margin-top: 0
+        margin-bottom: 11px
+        text-transform: uppercase
+        letter-spacing: 1px
+    a
+      font-size: 15px
+      color: #000
+      font-family: $book
+      line-height: 1.2
+      margin-top: 12px
+      letter-spacing: 0.8px
+      position: relative
+      color: #f06eaa
+    a.btn
+      position: absolute
+      top: 64%
+      transform: translateY(-50%)
+      left: 128px
+      padding: 10px 34px
+      letter-spacing: normal
+      margin-top: 0
+      line-height: 1
+      color: #fff
+      font-size: 14px
+      font-family: $demi
+      background: #904c96
+      transition: all $transitionSpeed $ease
+      display: none
+      &:hover
+        background: #834189
+      &:before
+        display: none
+  &__part
+    width: 33.3333%
+    &:first-child
+      width: 30%
+    &:nth-child(2)
+      padding: 0 25px
+      width: 40%
+    &:last-child
+      max-width: 160px
+      display: flex
+      flex-direction: column
+      align-self: center
+      a
+        display: flex
+        align-items: center
+        margin: 5px 0
+        i
+          font-style: normal
+        img
+          width: 20px
+          height: 20px
+          margin-right: 15px
+        span
+          font-size: 15px
+          color: #000
+          font-family: $book
+          position: relative
+          &:before
+            position: absolute
+            display: block
+            content: ''
+            width: 0
+            height: 1px
+            background: #000
+            left: 0
+            bottom: -1px
+            transition: all $transitionSpeed $ease
+        &:hover
+          span
+            &:before
+              width: 100%
+        &:last-child
+          span
+            color: #959595
+            &:before
+              background: #959595
+          img
+            width: 16px
+            height: 16px
+            margin: 2px 17px 2px 2px
+
+  &__row
+    display: flex
+    align-items: flex-start
+    position: relative
+    a
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 0
+        height: 1px
+        background: #f06eaa
+        left: 0
+        bottom: -1px
+        transition: all $transitionSpeed $ease
+      &:hover
+        &:before
+          width: 100%
+    p
+      &:first-child
+        min-width: 67px
+        padding-right: 15px
+
++r($desktop)
+  .orders
+    &__item
+      padding: 20px
+
++r($tablet)
+  .orders
+    &__buttons
+      position: relative
+      height: 43px
+      overflow: hidden
+      width: 100%
+      flex-wrap: wrap
+      padding-top: 0
+      margin-top: 13px
+      margin-bottom: 10px
+      z-index: 2
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 8px
+        height: 8px
+        border: 3px solid #fff
+        top: 50%
+        transform: translateY(-70%) rotate(45deg)
+        border-top: none
+        border-left: none
+        right: 15px
+        transition: all $transitionSpeed $ease
+        z-index: 3
+      &:hover
+        overflow: visible
+        &:before
+          transform: translateY(-30%) rotate(-135deg) 
+        a
+          position: static !important
+      a
+        width: 100%
+        border-right: none
+        font-size: 14px
+        font-family: $demi
+        text-transform: uppercase
+        padding: 15px
+        line-height: 1
+        &.is-active
+          top: 0
+          position: absolute
+          left: 0
+          z-index: 2
+    &__item
+      padding: 24px 0 19px
+      flex-wrap: wrap
+      a.btn
+        left: 153px
+        top: auto
+        transform: translateY(0)
+        bottom: 4px
+    &__part
+      width: 100%
+      &:first-child
+        width: 100%
+      &:nth-child(2)
+        padding: 22px 0 19px
+        width: 100%
+      &:last-child
+        width: 100%
+        max-width: 100%
+        flex-direction: row
+        justify-content: space-between
+        a
+          width: 40%
+          i
+            display: none

@@ -1,0 +1,315 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Заказы
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      .head__grid
+        p.head__title Личный кабинет
+        .head__icons
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-pack.svg", alt="")
+            span Мои заказы
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-size.svg", alt="")
+            span Мои размеры
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-people.svg", alt="")
+            span Мой профиль
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: orders
+
+  section.orders
+    .container
+      .orders__buttons
+        a.is-active(href="#" js-order-btn) Текущие заказы
+        a(href="#" js-order-btn) Доставленные заказы
+        a(href="#" js-order-btn) Отменённые заказы
+      .orders__tabs
+        .orders__tab.is-active
+          .orders__item.waiting
+            .orders__part
+              p.title заказ № 1020
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Принят, ожидается оплата
+            .orders__part
+              p.title 4 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+          .orders__item
+            .orders__part
+              p.title заказ № 1002
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Доставлен
+            .orders__part
+              p.title 1 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+          .orders__item
+            .orders__part
+              p.title заказ № 940
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Доставлен
+            .orders__part
+              p.title 24 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+          .orders__item
+            .orders__part
+              p.title заказ № 860
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Доставлен
+            .orders__part
+              p.title 14 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+        .orders__tab
+          .orders__item
+            .orders__part
+              p.title заказ № 1002
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Доставлен
+            .orders__part
+              p.title 1 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+          .orders__item
+            .orders__part
+              p.title заказ № 940
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Доставлен
+            .orders__part
+              p.title 24 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+          .orders__item
+            .orders__part
+              p.title заказ № 860
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Доставлен
+            .orders__part
+              p.title 14 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+        .orders__tab.orders__tab--cancel
+          .orders__item
+            .orders__part
+              p.title заказ № 1002
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Отменен
+            .orders__part
+              p.title 1 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a.cancel(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+          .orders__item
+            .orders__part
+              p.title заказ № 940
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Отменен
+            .orders__part
+              p.title 24 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a.cancel(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+          .orders__item
+            .orders__part
+              p.title заказ № 860
+              .order__info
+                .orders__row
+                  p Создан
+                  p 18 августа 2017 07:37
+                .orders__row
+                  p Статус
+                  p Отменен
+            .orders__part
+              p.title 14 200 Р
+              .orders__row
+                p 4 товара
+              .orders__row
+                a(href="#") Состав заказа
+                a.btn(href="#") Оплатить
+            .orders__part
+              a(href="#") 
+                img(src="img/icon-reset.svg", alt="")
+                span Повторить 
+                  i заказ
+              a.cancel(href="#") 
+                img(src="img/icon-close.svg", alt="")
+                span Отменить 
+                  i заказ
+
+      
+      
+      
+  // END SECTION :: orders

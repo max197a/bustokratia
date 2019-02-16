@@ -114,9 +114,29 @@ $(document).ready(function() {
         .css("display", "none")
         .eq(tabIndex)
         .fadeIn();
+    })
+
+    /// табы
+    ///
+
+    ///
+    /// табы на странице ORDERS
+
+    .on("click", "[js-order-btn]", function(e) {
+      e.preventDefault();
+      var $self = $(this),
+        tabIndex = $self.index();
+      $self.siblings().removeClass("is-active");
+      $self.addClass("is-active");
+      // $(".top10__tab").removeClass("is-active");
+      $(".orders__tab")
+        .removeClass("is-active")
+        .css("display", "none")
+        .eq(tabIndex)
+        .fadeIn();
     });
 
-  /// табы
+  /// табы на странице ORDERS
   ///
 
   function scrollToSection(el) {
