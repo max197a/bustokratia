@@ -42,6 +42,14 @@
         display: block
     &:last-child
       border-bottom: 1px solid #e1e1e1
+    &--editable
+      padding: 24px 0 26px
+      .orders__part
+        &:nth-child(1)
+          width: 28%
+        &:nth-child(2)
+          margin-right: auto
+          width: 50%
     p
       font-size: 15px
       color: #000
@@ -212,6 +220,14 @@
     &__item
       padding: 24px 0 19px
       flex-wrap: wrap
+      &--editable
+      padding: 24px 0 20px
+      .orders__part
+        &:nth-child(1)
+          width: 100%
+        &:nth-child(2)
+          margin-right: 0
+          width: 100%
       a.btn
         left: 153px
         top: auto

@@ -1,0 +1,170 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Заказ 1020
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      .head__grid
+        p.head__title Личный кабинет
+        .head__icons
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-pack.svg", alt="")
+            span Мои заказы
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-size.svg", alt="")
+            span Мои размеры
+          a(href="#")
+            .head__icons-icon
+              img(src="img/icon-people.svg", alt="")
+            span Мой профиль
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: orders
+
+  section.orders
+    .container
+      .orders-info
+        .orders__item.waiting.orders__item--editable
+          .orders__part
+            p.title заказ № 1020
+            .order__info
+              .orders__row
+                p Создан
+                p 18 августа 2017 07:37
+              .orders__row
+                p Статус
+                p Принят, ожидается оплата
+          .orders__part
+            p.title 4 200 Р
+            .orders__row
+              p 4 товара
+            .orders__row
+              a(href="#") Состав заказа
+              a.btn(href="#") Оплатить
+          .orders__part
+            a(href="#") 
+              img(src="img/icon-reset.svg", alt="")
+              span Повторить 
+                i заказ
+            a(href="#") 
+              img(src="img/icon-close.svg", alt="")
+              span Отменить 
+                i заказ
+      .orders-info__grid
+        .orders-info__item
+          p.title Контактная информация
+          .orders__row
+            p Имя
+            p Марина Маринина 
+          .orders__row
+            p Телефон
+            p +7 900 000-00-00
+          .orders__row
+            p Эл. почта
+            p marina@mailbox.ru
+          .orders__row
+            p Город
+            p Москва
+          .orders__row
+            p Адрес
+            p Ленинский проспект, д. 24
+        .orders-info__item
+          p.title Доставка и оплата
+          .orders__row
+            p Доставка
+            p Ожидает обработки
+          .orders__row
+            p Способ оплаты
+            p Банковская карта онлайн 
+              a(href="#") изменить
+          .orders__row
+            p Оплата
+            p Ожидает оплаты
+          .orders__row
+            p 
+            p 
+              a.btn(href="#") Оплатить
+      .orders-info__list
+        p.orders-info__list-title Состав заказа
+        .orders-info__head
+          .orders-info__part
+            p Товары в заказе
+          .orders-info__part
+            p Кол-во
+          .orders-info__part
+            p Сумма
+        .orders-info__list-item
+          .orders-info__part
+            .orders-info__image
+              img.desktop(src="img/orders-1.jpg", alt="")
+              img.mobile(src="img/orders-1-mobile.jpg", alt="")
+            .orders-info__info
+              p.title бюстгальтер freya sweet illusion
+              .orders-info__row
+                p Цвет
+                p Белый
+              .orders-info__row
+                p Размер
+                p 75B
+          .orders-info__part
+            p(mobile-title="Кол-во") 1
+          .orders-info__part
+            p(mobile-title="Сумма") 1 420 Р
+        .orders-info__list-item
+          .orders-info__part
+            .orders-info__image
+              img.desktop(src="img/orders-2.jpg", alt="")
+              img.mobile(src="img/orders-2-mobile.jpg", alt="")
+            .orders-info__info
+              p.title бюстгальтер freya REBEL REBEL
+              .orders-info__row
+                p Цвет
+                p Красный
+              .orders-info__row
+                p Размер
+                p 75B
+          .orders-info__part
+            p(mobile-title="Кол-во") 1
+          .orders-info__part
+            p(mobile-title="Сумма") 11 420 Р
+        .orders-info__list-item
+          .orders-info__part
+            .orders-info__image
+              img.desktop(src="img/orders-3.jpg", alt="")
+              img.mobile(src="img/orders-3-mobile.jpg", alt="")
+            .orders-info__info
+              p.title бюстгальтер freya Soire lace
+              .orders-info__row
+                p Цвет
+                p Чёрный
+              .orders-info__row
+                p Размер
+                p 75B
+          .orders-info__part
+            p(mobile-title="Кол-во") 1
+          .orders-info__part
+            p(mobile-title="Сумма") 19 820 Р
+
+        a.orders-info__list-link(href="#") 
+          img(src="img/back-arrow.png", alt="")
+          span Вернуться к списку заказов
+
+          
+  // END SECTION :: orders

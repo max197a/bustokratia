@@ -1,0 +1,306 @@
+.orders-info
+  padding-top: 9px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 34px 0
+  &__item
+    .orders__row
+      p
+        &:nth-child(1)
+          min-width: 93px
+          color: #959595
+    &:last-child
+      p
+        &:nth-child(1)
+          min-width: 135px
+    &:nth-child(1)
+      width: 28%
+      min-width: 300px
+    &:nth-child(2)
+      min-width: 300px
+      margin-right: auto
+      width: 50%
+      padding: 0 25px
+    p
+      font-size: 15px
+      color: #000
+      font-family: $book
+      line-height: 1.2
+      margin-top: 12px
+      letter-spacing: 0.8px
+      position: relative
+      &.title
+        font-size: 24px
+        font-family: $demi
+        margin-top: 0
+        margin-bottom: 19px
+        letter-spacing: 0.1px
+    a
+      font-size: 15px
+      color: #000
+      font-family: $book
+      line-height: 1.2
+      margin-top: 12px
+      letter-spacing: 0.8px
+      position: relative
+      color: #f06eaa
+    a.btn
+      display: block
+      position: static
+      padding: 10px 34px
+      letter-spacing: normal
+      margin-top: 14px
+      line-height: 1
+      color: #fff
+      font-size: 14px
+      font-family: $demi
+      background: #904c96
+      transition: all $transitionSpeed $ease
+      // display: none
+      &:hover
+        background: #834189
+      &:before
+        display: none
+  &__list
+    padding-top: 26px
+    &-title
+      font-size: 24px
+      font-family: $demi
+      color: #000
+    &-link
+      display: flex
+      align-items: center
+      max-width: 220px
+      margin-top: 39px
+      img
+        width: 20px
+        height: 7px
+        margin-right: 10px
+      span
+        font-size: 15px
+        color: #000
+        font-family: $book
+        line-height: 1
+        letter-spacing: 0.8px
+        position: relative
+        color: #f06eaa
+        position: relative
+        &:before
+          position: absolute
+          display: block
+          content: ''
+          width: 0
+          height: 1px
+          background: #f06eaa
+          left: 0
+          bottom: -1px
+          transition: all $transitionSpeed $ease
+      &:hover
+        span
+          &:before
+            width: 100%
+
+  &__list
+    max-width: 840px
+    width: 100%
+
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-bottom: 1px solid #e1e1e1
+    padding: 21px 0 16px
+    p
+      font-family: $light
+      color: #000
+      font-size: 16px
+  &__part
+    &:nth-child(1)
+      width: 100%
+    &:nth-child(2)
+      max-width: 90px
+      width: 100%
+      padding: 0 20px
+      margin-left: auto
+      text-align: center
+    &:nth-child(3)
+      max-width: 100px
+      margin-left: 5px
+      width: 100%
+      text-align: center
+  &__list-item
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    border-bottom: 1px solid #e1e1e1
+    padding: 19px 0 19px
+    p
+      font-family: $demi
+      color: #000
+      font-size: 16px
+      text-transform: uppercase
+      letter-spacing: 0.8px
+    .orders-info__part
+      padding-top: 24px
+      &:nth-child(1)
+        display: flex
+        padding-top: 0
+  &__image
+    position: relative
+    width: 85px
+    font-size: 0
+    cursor: pointer
+    &:hover
+      img
+        opacity: 0
+        &.mobile
+          opacity: 1
+    img
+      width: 83px
+      height: auto
+      opacity: 1
+      transition: all $transitionSpeed $ease
+      &.mobile
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 83px
+        height: auto
+        opacity: 0
+        z-index: 2
+
+  &__info
+    margin-left: 28px
+    padding-top: 24px
+  &__row
+    display: flex
+    align-items: center
+    margin-top: 12px
+    p
+      &:nth-child(1)
+        font-size: 15px
+        text-transform: none
+        font-family: $book
+        max-width: 68px
+        width: 100%
+        padding-right: 20px
+      &:nth-child(2)
+        font-family: $demi
+        text-transform: none
+
++r($tablet)
+  .orders-info
+    padding-top: 4px
+    &__grid
+      flex-wrap: wrap
+    &__item
+      a.btn
+        margin-top: 8px
+      p
+        margin-top: 18px
+        &.title
+          margin-bottom: 3px
+      .orders__row
+        p
+          &:nth-child(1)
+            min-width: 83px
+            color: #959595
+            max-width: 83px
+      &:last-child
+        margin-top: 30px
+        p
+          &.title
+            margin-bottom: 13px
+      &:nth-child(1)
+        width: 100%
+        min-width: 300px
+      &:nth-child(2)
+        min-width: 300px
+        margin-right: auto
+        width: 100%
+        padding: 0
+    &__list
+      padding-top: 0px
+      &-link
+        display: none
+    &__head
+      display: none
+    &__image
+      position: absolute
+      width: 83px
+      left: 0px
+      top: 62.8%
+      &:hover
+        img
+          &.mobile
+            opacity: 0
+          &.desktop
+            opacity: 1
+      img
+        &.mobile
+          position: static
+          transform: none
+          opacity: 1
+
+        &.desktop
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+          width: 83px
+          height: auto
+          opacity: 0
+          z-index: 2
+    &__list-item
+      flex-wrap: wrap
+      margin: 0 -20px
+      width: calc(100% + 40px)
+      padding: 28px 20px 24px
+
+    &__row
+      padding-left: 98px
+      margin-top: 13px
+      p
+        &:nth-child(1)
+          text-align: right
+          padding-left: 2px
+
+    &__list-title
+      margin-bottom: 4px
+
+    &__info
+      margin-left: 0
+      padding-top: 0
+    &__part
+      width: 100%
+      max-width: 100%
+      padding: 0
+      margin: 0
+      position: relative
+      &:nth-child(2),
+      &:nth-child(3)
+        width: 100%
+        max-width: 100%
+        padding: 0
+        margin: 0
+        padding-left: 101px
+        display: flex
+        margin-top: 13px
+        p
+          display: flex
+          &:before
+            display: inline-block
+            content: attr(mobile-title) ''
+            font-size: 15px
+            color: #000
+            text-transform: none
+            font-family: $book
+            max-width: 65px
+            width: 45px
+            padding-right: 20px
+            letter-spacing: 0.2px
+            margin-top: 1px
+      
