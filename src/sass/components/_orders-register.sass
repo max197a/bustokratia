@@ -1,0 +1,280 @@
+.register
+  .orders-info__list
+    padding-top: 0
+    margin-top: -35px
+    max-width: 840px
+    width: 68%
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__price
+    background: #f5f5f5
+    margin-top: 20px
+    padding: 36px 39px 40px
+    max-width: 351px
+    width: 28.5%
+  &__price-row
+    display: flex
+    align-items: center
+    margin-bottom: 13px
+    p
+      font-size: 18px
+      line-height: 1
+      font-family: $demi
+      letter-spacing: 0.7px
+      &:nth-child(1)
+        font-family: $book
+        font-size: 15px
+        max-width: 83px
+        padding-right: 20px
+        width: 100%
+  &__result
+    padding-top: 21px
+    font-family: $book
+    letter-spacing: 0.7px
+    font-size: 15px
+    color: #000
+    text-transform: uppercase
+    span
+      display: block
+      font-family: $demi
+      font-size: 36px
+      margin-top: 9px
+      letter-spacing: 1.8px
+  .btn
+    background: #904c96
+    font-size: 20px
+    font-family: $book
+    margin-top: 31px
+    letter-spacing: 0.7px
+    padding: 17px
+    text-align: center
+    &:hover
+      background: #834189
+
+  .input-container
+    margin-top: 17px
+    p
+      font-size: 14px
+      font-family: $book
+      color: #000
+      margin-bottom: 4px
+      letter-spacing: 0.8px
+      &.symbol
+        position: absolute
+        color: #959595
+        right: 0
+        top: 0
+    input,
+    textarea
+      border: 1px solid #e1e1e1
+      padding: 9px 19px 10px
+      letter-spacing: 1.5px
+      &.btn
+        background: #904c96
+        border-color: #904c96
+        &:hover
+          background: #56205c
+          border-color: #56205c
+    textarea
+      min-height: 119px
+    &.method
+      margin-top: 3px
+      input
+        position: absolute
+        width: 0
+        height: 0
+        padding: 0
+        margin: 0
+        opacity: 0
+        top: 0
+        left: -99999px
+        font-size: 0
+        letter-spacing: 0
+        pointer-events: none
+        &:checked
+          + label
+            background: #904c96
+            border-color: #904c96
+            p
+              color: #fff
+      label
+        display: inline-block
+        width: 100%
+        border: 1px solid #e1e1e1
+        padding: 27px 27px 26px
+        cursor: pointer
+        transition: all $transitionSpeed $ease
+        img
+          width: 100%
+          margin-top: 9px
+          margin-bottom: -11px
+        p
+          font-size: 14px
+          color: #000
+          font-family: $book
+          margin-bottom: 13px
+          i
+            font-style: normal
+          &:last-child
+            margin-bottom: 0
+          &.bold
+            font-size: 16px
+            font-family: $demi
+          a
+            display: inline-block
+            margin-left: 16px
+            color: #f06eaa
+            position: relative
+            &:before
+              position: absolute
+              display: block
+              content: ''
+              width: 0
+              height: 1px
+              background: #f06eaa
+              left: 0
+              bottom: -1px
+              transition: all $transitionSpeed $ease
+            &:hover
+              &:before
+                width: 100%
+
+  &__separator
+    padding-top: 56px
+    padding-bottom: 36px
+
+  .personal__item--grid
+    display: flex
+    justify-content: space-between
+    .input-container
+      width: 47.5%
+
+
+
+  .input-grid,
+  .input-city
+    display: flex
+    align-items: center
+    justify-content: flex-start
+  
+    span
+      font-size: 16px
+      color: #000
+      font-family: $book
+      margin: 0 20px
+  .input-city
+    width: 100%
+    input
+      width: 100%
+      cursor: pointer
+      pointer-events: all
+  
+  .personal__wrapper
+    margin-top: 61px
+    max-width: 840px
+  .personal__item--editable
+    margin-right: 0
+
+  &__description
+    margin-top: 27px
+    letter-spacing: 0.8px
+    font-size: 14px
+    color: #000
+    font-family: $book
+    line-height: 1.25
+
+  &__btn-container
+    a.btn
+      margin-top: 25px
+
+  .label-image
+    font-size: 0
+
++r($desktop)
+  .register
+    &__price
+      padding: 25px
+    &__result
+      span
+        font-size: 28px
+    .btn
+      font-size: 15px
+      padding: 14px
+
++r($tablet)
+  .register
+    .orders-info__list
+      padding-top: 0
+      margin-top: -23px
+      max-width: 840px
+      width: 100%
+    &__grid
+      flex-wrap: wrap
+    &__price
+      width: 100%
+      max-width: 200%
+      margin: 0 -20px
+      width: calc(100% + 40px)
+      padding: 27px 20px 30px
+    &__result
+      padding-top: 10px
+      span
+        font-size: 30px
+        margin-top: 1px
+    .btn
+      font-size: 20px
+      margin-top: 23px
+      padding: 17px 15px
+    .input-grid
+      flex-wrap: wrap
+      span
+        display: none
+      .ui-checkbox
+        width: 100%
+        margin-top: 11px
+    .input-city
+      margin-top: 16px
+      margin-bottom: -5px
+      .ui-checkbox
+        width: auto
+        margin-top: 0
+    .personal__wrapper
+      margin-top: 20px
+      border-top: none
+    .personal__item--editable
+      padding-top: 0
+    &__separator
+      padding-top: 42px
+      padding-bottom: 29px
+    .input-container
+      &.method
+        margin-top: 3px
+        margin-bottom: 6px
+        label
+          padding: 17px 20px 16px
+          p
+            i
+              display: none
+    .personal__item--grid
+      flex-wrap: wrap
+      .input-container
+        &.method
+          width: 100%
+          label
+            display: flex
+            align-items: center
+          p
+            margin-right: 10px
+            margin-bottom: 0
+            max-width: 150px
+          .label-image
+            max-width: 111px
+            img
+              margin: 0
+    &__description
+      margin-top: 12px
+    &__btn-container
+      a.btn
+        margin-top: 36px
