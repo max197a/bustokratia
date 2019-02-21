@@ -1,0 +1,361 @@
+.brand
+  &__top
+    display: flex
+    align-items: center
+    padding: 50px 0 87px
+  &__left
+    width: 32%
+    padding: 0 25px
+    text-align: center
+  &__image
+    font-size: 0
+    img
+      width: 100%
+      max-width: 294px
+      height: auto
+  &__carousel
+    display: flex
+    justify-content: space-between
+  &__item
+    width: 32%
+  &__item-image
+    font-size: 0
+    img
+      width: 100%
+      height: auto
+      &.desktop
+        display: block
+      &.mobile
+        display: none
+  &__right
+    width: 66%
+    margin-left: auto
+    p
+      font-size: 16px
+      font-family: $book
+      line-height: 1.85
+      margin-top: 40px
+      letter-spacing: 0.9px
+
+.brand-items
+  padding: 111px 0 0
+  &__buttons
+    display: flex
+    a
+      text-align: center
+      border-right: 1px solid #fff
+      background: #fdebf3
+      padding: 15px 24px 14px
+      line-height: 1
+      font-size: 14px
+      font-family: $demi
+      text-transform: uppercase
+      color: #000
+      transition: all $transitionSpeed $ease
+      cursor: pointer
+      letter-spacing: 0.9px
+      min-width: 161px
+      &:hover
+        background: #dbdada
+      &.is-active
+        color: #fff
+        background: #904c96
+  &__title
+    margin-top: 52px
+    font-size: 24px
+    text-transform: uppercase
+    font-family: $demi
+    color: #000
+    letter-spacing: 0.8px
+  &__row
+    display: flex
+    align-items: flex-start
+    margin: 0 -10px
+    width: calc(100% + 20px)
+    padding-bottom: 18px
+    &--full
+      flex-wrap: wrap
+      justify-content: center
+      .brand-items__item
+        min-width: 252px
+        margin: 30px auto 0
+  &__item-desc
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 4
+    &:before
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      content: ''
+      font-size: 10px
+      text-transform: uppercase
+      color: #fff
+      text-align: center
+      font-family: $demi
+      border-radius: 50%
+      width: 37px
+      height: 37px
+      top: 4px
+      right: 10px
+
+
+  &__item
+    margin-top: 30px
+    width: 20%
+    padding: 0 10px
+    position: relative
+    max-width: 252px
+    cursor: pointer
+    &--best
+      .brand-items__item-desc
+        &:before
+          background: #904c96
+          content: 'best'
+    &--new
+      .brand-items__item-desc
+        &:before
+          background: #f06eaa
+          content: 'new'
+    &:hover
+      z-index: 2
+      .brand-items__hover-item
+        opacity: 1
+        pointer-events: all
+  &__image
+    padding: 33px 0 28px
+    margin-bottom: 5px
+    width: 100%
+    text-align: center
+    min-height: 270px
+    img
+      max-height: 201px
+      width: 100%
+      max-width: 201px
+  &__price
+    padding-left: 25px
+    p
+      font-size: 14px
+      font-family: $demi
+
+  &__hover-item
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    background: #fff
+    padding: 20px
+    box-shadow: 0px 0px 20px 0px rgba(247,227,250,1)
+    width: 100%
+    opacity: 0
+    pointer-events: none
+    transition: all $transitionSpeed $ease
+    .brand-items__price
+      padding-left: 5px
+  &__hover-image
+    width: 100%
+    max-height: 247px
+    overflow: hidden
+    margin-bottom: 5px
+    img
+      width: 100%
+      height: auto
+  &__like
+    font-size: 19px
+    position: absolute
+    left: 20px
+    top: 20px
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $bgpink
+  &__hover-fast
+    position: absolute
+    top: 35%
+    left: 50%
+    transform: translateX(-50%)
+    padding: 8px
+    font-size: 14px
+    font-family: $book
+    border: 1px solid #e1e1e1
+    background: rgba(255,255,255,0.5)
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    text-align: center
+    display: block
+    &:hover
+      background: #fff
+  &__price-title
+    padding-top: 10px
+    text-align: left
+    p
+      font-size: 16px
+      color: #000
+      font-family: $demi
+      line-height: 1.25
+      letter-spacing: 0.7px
+  &__price-description
+    margin-top: 5px
+    text-align: left
+    p
+      font-size: 14px
+      color: #959595
+      font-family: $book
+      line-height: 1.25
+      letter-spacing: 0.7px
+
+  &__button
+    padding-top: 50px
+    a
+      max-width: 280px
+      margin: 0 auto
+      border: 1px solid #e1e1e1
+      background: #fff
+      color: $bgpink
+      font-size: 18px
+      &:hover
+        color: #fff
+
+
+      
+
+
++r($tablet)
+  .brand
+    &__top
+      flex-wrap: wrap
+      padding: 72px 0 44px
+    &__right
+      width: 100%
+      padding-top: 36px
+      p
+        line-height: 1.5
+        margin-top: 24px
+    &__left
+      width: 100%
+      padding: 0
+    &__image
+      img
+        max-width: 262px
+    &__carousel
+      width: calc(100% + 40px)
+      margin: 0 -20px
+    &__carousel
+      display: block
+    &__item-image
+      img
+        &.desktop
+          display: none
+        &.mobile
+          display: block
+    .slick-dots
+      margin: -4px auto 0
+      text-align: center
+      padding: 0
+      li
+        margin: 0 6px
+        padding: 0
+        font-size: 0
+        max-height: 9px
+        &.slick-active
+          button
+            background: $bgpink
+      button
+        font-size: 0
+        padding: 0
+        border: none
+        color: transparent
+        background: transparent
+        width: 9px
+        height: 9px
+        border-radius: 50%
+        background: #f7f0ed
+  .brand-items
+    padding-top: 32px
+    &__buttons
+      position: relative
+      height: 43px
+      overflow: hidden
+      width: 100%
+      flex-wrap: wrap
+      padding-top: 0
+      margin-top: 13px
+      margin-bottom: 10px
+      z-index: 2
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 8px
+        height: 8px
+        border: 3px solid #fff
+        top: 50%
+        transform: translateY(-70%) rotate(45deg)
+        border-top: none
+        border-left: none
+        right: 15px
+        transition: all $transitionSpeed $ease
+        z-index: 3
+      &:hover
+        overflow: visible
+        &:before
+          transform: translateY(-30%) rotate(-135deg) 
+        a
+          position: static !important
+      a
+        width: 100%
+        border-right: none
+        font-size: 14px
+        font-family: $demi
+        text-transform: uppercase
+        padding: 15px
+        line-height: 1
+        &.is-active
+          top: 0
+          position: absolute
+          left: 0
+          z-index: 2
+    &__row
+      display: block
+      align-items: center
+      margin: 0 auto
+      width: 100%
+      text-align: center
+    .slick-list
+      overflow: visible
+    &__hover-item
+      max-width: 220px
+    &__hover-image
+      max-height: 200px
+    &__image
+      text-align: center
+      img
+        margin: 0 auto
+    &__price
+      text-align: left
+    .slick-dots
+      margin: 20px auto -6px
+      text-align: center
+      padding: 0
+      li
+        margin: 0 6px
+        padding: 0
+        font-size: 0
+        max-height: 9px
+        &.slick-active
+          button
+            background: $bgpink
+      button
+        font-size: 0
+        padding: 0
+        border: none
+        color: transparent
+        background: transparent
+        width: 9px
+        height: 9px
+        border-radius: 50%
+        background: #f7f0ed
+    &__title
+      margin-top: 37px
+      font-size: 20px
