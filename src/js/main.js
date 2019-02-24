@@ -134,9 +134,47 @@ $(document).ready(function() {
         .css("display", "none")
         .eq(tabIndex)
         .fadeIn();
+    })
+
+    /// табы на странице ORDERS
+    ///
+
+    ///
+    /// открытие элемента фильтра на странице CATALOG LIST
+
+    .on("click", "[js-open-filter]", function(e) {
+      e.preventDefault();
+      $(this)
+        .parent()
+        .toggleClass("is-active");
+      $(this).toggleClass("is-active");
+    })
+
+    /// открытие элемента фильтра на странице CATALOG LIST
+    ///
+
+    ///
+    /// выбор элемента фильтра на странице CATALOG LIST
+
+    .on("click", "[js-choose-filter]", function(e) {
+      e.preventDefault();
+      $(this).toggleClass("is-active");
+    })
+
+    /// выбор элемента фильтра на странице CATALOG LIST
+    ///
+
+    ///
+    /// удаление элемента фильтра на странице CATALOG LIST
+
+    .on("click", "[js-remove-filter]", function(e) {
+      e.preventDefault();
+      $(this)
+        .parent()
+        .remove();
     });
 
-  /// табы на странице ORDERS
+  /// удаление элемента фильтра на странице CATALOG LIST
   ///
 
   function scrollToSection(el) {

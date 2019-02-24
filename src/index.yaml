@@ -3,6 +3,8 @@ ProjectTitle: Bustokratia
 PageList:
 - file: homepage.html
   ready: 20
+- file: 02_Bustokratia_catalog_list.html
+  ready: 20
 - file: 02_Bustokratia_brand.html
   ready: 20
 - file: 06_Bustokratia_order.html
