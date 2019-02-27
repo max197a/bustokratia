@@ -120,7 +120,7 @@ $(document).ready(function() {
     ///
 
     ///
-    /// табы на странице ORDERS
+    /// табы на странице ORDERS + CARD
 
     .on("click", "[js-order-btn]", function(e) {
       e.preventDefault();
@@ -136,7 +136,27 @@ $(document).ready(function() {
         .fadeIn();
     })
 
-    /// табы на странице ORDERS
+    /// табы на странице ORDERS + CARD
+    ///
+
+    ///
+    /// табы на странице CARD внизу страницы
+
+    .on("click", "[js-order-btn2]", function(e) {
+      e.preventDefault();
+      var $self = $(this),
+        tabIndex = $self.index();
+      $self.siblings().removeClass("is-active");
+      $self.addClass("is-active");
+      // $(".top10__tab").removeClass("is-active");
+      $(".card-bottom__tab")
+        .removeClass("is-active")
+        .css("display", "none")
+        .eq(tabIndex)
+        .fadeIn();
+    })
+
+    /// табы на странице CARD внизу страницы
     ///
 
     ///

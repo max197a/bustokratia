@@ -7,6 +7,8 @@ PageList:
   ready: 20
 - file: 02_Bustokratia_brand.html
   ready: 20
+- file: 04_Bustokratia_card.html
+  ready: 20
 - file: 06_Bustokratia_order.html
   ready: 20
 - file: 07_Bustokratia_success.html

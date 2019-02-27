@@ -1,0 +1,273 @@
+.card-bottom
+  padding-top: 95px
+  &__buttons
+    display: flex
+    padding-top: 10px
+    padding-bottom: 29px
+
+    a
+      text-align: center
+      border-right: 1px solid #fff
+      background: #ebebeb
+      padding: 18px
+      font-size: 20px
+      font-family: $book
+      color: #000
+      transition: all $transitionSpeed $ease
+      cursor: pointer
+      width: 100%
+      letter-spacing: 0.9px
+      &:hover
+        background: #dbdada
+      &.is-active
+        color: #fff
+        background: #904c96
+      &:last-child
+        border-right: none
+  &__tab
+    display: none
+    &.is-active
+      display: block
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    border-bottom: 1px solid #e1e1e1
+    padding-bottom: 45px
+  &__item
+    width: 32.5%
+    padding-left: 40px
+    p
+      font-size: 16px
+      color: #000
+      line-height: 1.25
+      font-family: $light
+      margin-top: 18px
+      letter-spacing: 0.8px
+      &.title
+        font-size: 20px
+        margin-top: 8px
+        font-family: $book
+      span
+        font-family: $demi
+    ul
+      margin: 0
+      padding: 18px 0 0
+      li
+        display: list-item
+        p
+          margin-top: 0px
+  &__link
+    position: relative
+    display: inline-block
+    font-family: $book
+    color: #f06eaa
+    margin-top: 22px
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: 0
+      height: 1px
+      left: 0
+      bottom: -1px
+      background: #f06eaa
+      transition: all $transitionSpeed $ease
+    &:hover
+      &:before
+        width: 100%
+
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    p
+      &:nth-child(1)
+        min-width: 80px
+        padding-right: 20px
+  &__button
+    width: 35%
+    margin-top: 11px
+    a.btn
+      background: #fff
+      color: #f06eaa
+      font-size: 16px
+      border: 1px solid #e1e1e1
+      max-width: 180px
+      margin: 0 auto
+      padding: 9px 10px
+      &:hover
+        background: #f06eaa
+        border-color: #f06eaa
+        color: #fff
+    &--middle
+      width: 100%
+      margin: 30px auto
+      a.btn
+        font-size: 18px
+        max-width: 270px
+        width: 100%
+  &__review
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding: 30px 20px 37px
+    border-bottom: 1px solid #e1e1e1
+    margin-bottom: 4px
+  &__person
+    max-width: 289px
+    min-width: 200px
+    width: 
+    width: 30%
+    text-align: right
+    p
+      font-size: 14px
+      color: #959595
+      line-height: 1.3
+      margin-top: 10px
+      letter-spacing: 0.8px
+      &.name
+        margin-top: 0
+        font-size: 24px
+        color: #000
+        font-family: $book
+        line-height: 1.3
+  &__info
+    padding-top: 3px
+    width: 70%
+    padding-left: 20px
+    p
+      font-size: 16px
+      color: #959595
+      font-family: $book
+      line-height: 1.9
+      letter-spacing: 0.6px
+  &__like
+    max-width: 100%
+    display: block
+    margin-right: auto
+    margin-top: 28px
+    fieldset
+      display: block
+      border: none
+      padding: 0
+      margin: 0
+      border: none
+      max-width: 100%
+      margin-right: auto
+    .rating
+      >
+        input
+          display: none
+        label:before
+          margin: 0 3px
+          font-size: 0
+          line-height: 1
+          display: inline-block
+          content: ""
+          cursor: pointer
+          width: 20px
+          height: 15px
+          background: url('../img/icon-heart.svg') center center no-repeat
+          background-size: contain
+        label
+          color: #ddd
+          float: right
+          height: 15px
+        input:checked ~ label
+          &:before
+            background: url('../img/icon-heart-choose.svg') center center no-repeat
+            background-size: contain
+      &:not(:checked) > label:hover
+        &:before
+          background: url('../img/icon-heart-choose.svg') center center no-repeat
+          background-size: contain
+        ~ label
+          &:before
+            background: url('../img/icon-heart-choose.svg') center center no-repeat
+            background-size: contain
+      >
+        input:checked
+          &:before
+            background: url(../img/icon-heart-choose.svg) center center no-repeat
+            background-size: contain
+          + label:hover, ~ label:hover
+            &:before
+              background: url(../img/icon-heart-choose.svg) center center no-repeat
+              background-size: contain
+        label:hover ~ input:checked ~ label, input:checked ~ label:hover ~ label
+          &:before
+            background: url(../img/icon-heart-choose.svg) center center no-repeat
+            background-size: contain
+
+
+
++r($tablet)
+  .card-bottom
+    padding-top: 55px
+    &__buttons
+      display: none
+    &__tab
+      display: block !important
+    &__grid
+      flex-wrap: wrap
+      padding-bottom: 35px
+      margin-bottom: 53px
+    &__item
+      width: 100%
+      padding-left: 0
+      padding-top: 10px
+      &:nth-child(2)
+        padding-top: 21px
+        p
+          margin-top: 19px
+          &.title
+            margin-top: 8px
+        a.card-bottom__link
+          margin-top: 22px
+      &:nth-child(3)
+        padding-top: 23px
+        a.card-bottom__link
+          margin-top: 22px
+    &__link
+      margin-top: 13px
+    &__button
+      max-width: 100%
+      text-align: center
+      width: 100%
+      margin: 31px auto 10px
+    &__review
+      padding: 20px 0
+      flex-wrap: wrap
+      flex-direction: column-reverse
+    &__person
+      width: 100%
+      max-width: 100%
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      margin-top: 20px
+      text-align: left
+    &__info
+      width: 100%
+      padding-left: 0
+      p
+        line-height: 1.55
+    &__person-part
+      p
+        margin-top: 2px
+        font-size: 14px
+        &.name
+          font-size: 16px
+    &__like
+      margin-top: 5px
+      margin-right: 0
+      .rating
+        >
+          input
+            display: none
+          label:before
+            width: 14px
+            height: 12px
+          label
+            height: 12px

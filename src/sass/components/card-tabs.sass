@@ -1,0 +1,135 @@
+.card-tabs
+  &__buttons
+    display: flex
+    padding-top: 10px
+    padding-bottom: 29px
+
+    a
+      text-align: center
+      border-right: 1px solid #fff
+      background: #ebebeb
+      padding: 18px
+      font-size: 20px
+      font-family: $book
+      color: #000
+      transition: all $transitionSpeed $ease
+      cursor: pointer
+      width: 100%
+      letter-spacing: 0.9px
+      display: flex
+      align-items: center
+      justify-content: center
+      &:hover
+        background: #dbdada
+      &.is-active
+        color: #fff
+        background: #904c96
+      &:last-child
+        border-right: none
+  &__title
+    display: none
+
+  .card-tabs__buttons
+    padding-bottom: 0
+  .orders__tab
+    padding-top: 20px
+    &--map
+      padding-top: 0
+      border-top: 1px solid #fff
+  &__map-container
+    display: flex
+    align-items: flex-start
+    flex: 1
+  &__map
+    width: 75%
+  &__city
+    width: 25.1%
+    border-right: 1px solid #e1e1e1
+    border-bottom: 1px solid #e1e1e1
+    max-height: 600px
+    height: 602px
+  &__city-item
+    position: relative
+    padding: 20px 20px 20px 45px
+    display: block
+    font-size: 15px
+    font-family: $book
+    color: #959595
+    line-height: 1.25
+    img
+      position: absolute
+      width: 17px
+      height: 25px
+      left: 17px
+      top: 12px
+    &.is-active
+      background: #fdf0f6
+    span
+      display: block
+      font-family: $demi
+      color: #000
+      
+        
+
++r($tablet)
+  .card-tabs
+    .orders__tab
+      padding-top: 0px
+      &--map
+        .card-tabs__title
+          margin-bottom: 0
+    &__map-container
+      margin: 0 -20px
+      width: calc(100% + 40px)
+      flex-wrap: wrap
+    &__map
+      width: 100%
+      font-size: 0
+      iframe
+        height: 320px
+    &__city
+      width: 100%
+      border-bottom: 1px solid #e1e1e1
+      height: auto
+      max-height: 100%
+      border-right: none
+    .slick-list
+      overflow: visible
+    .orders__tab
+      display: block !important
+      margin-top: 30px
+    &__title
+      display: block
+      line-height: 1
+      padding: 15px
+      font-family: $demi
+      color: #000
+      font-size: 15px 20px
+      text-transform: uppercase
+      background: #fdebf3
+      width: calc(100% + 40px)
+      margin: 0 -20px 10px
+    &__buttons
+      display: none
+    .slick-dots
+      margin: -4px auto 0
+      text-align: center
+      padding: 0
+      li
+        margin: 0 6px
+        padding: 0
+        font-size: 0
+        max-height: 9px
+        &.slick-active
+          button
+            background: $bgpink
+      button
+        font-size: 0
+        padding: 0
+        border: none
+        color: transparent
+        background: transparent
+        width: 9px
+        height: 9px
+        border-radius: 50%
+        background: #f7f0ed

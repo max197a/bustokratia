@@ -1,0 +1,55 @@
+.card-info
+  padding-top: 20px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__item
+    width: 31%
+    p
+      font-size: 16px
+      font-family: $light
+      color: #000000
+      line-height: 1.25
+      margin-top: 18px
+      letter-spacing: 0.9px
+      &.title
+        margin-top: 0
+        font-size: 24px
+        font-family: $book
+        padding-bottom: 11px
+    ul
+      padding: 0 0 12px 0
+      margin: 0
+      li
+        display: list-item
+        position: relative
+        padding-left: 37px
+        &:before
+          position: absolute
+          display: block
+          content: '—'
+          font-family: $book
+          font-size: 16px
+          line-height: 1
+          left: 0
+          top: 2px
+          color: #000
+
++r($tablet)
+  .card-info
+    padding-top: 17px
+    &__grid
+      flex-wrap: wrap
+    &__item
+      width: 100%
+      p
+        margin-top: 18px
+        &.title
+          font-size: 20px
+          margin-top: 28px
+          padding-bottom: 0px
+      ul
+        padding-bottom: 0
+        li
+          padding-left: 20px

@@ -1,0 +1,497 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Бюстгальтеры
+        a(href="#") Freya
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: card-tabs
+
+  section.card-tabs
+    .container
+      .card-tabs__buttons
+        a.is-active(href="#" js-order-btn) Завершите свой образ
+        a(href="#" js-order-btn) Похожие модели
+        a(href="#" js-order-btn) Вы недавно смотрели
+        a(href="#" js-order-btn) Наличие в магазинах
+      .orders__tabs
+        .orders__tab.is-active
+          .card-tabs__title Завершите свой образ
+          .brand-items__row(js-mobile-slider)
+            .brand-items__item.brand-items__item--best
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-1.jpg", alt="")
+                .brand-items__price
+                  p от 1 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 1 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 1
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+                
+
+            .brand-items__item.brand-items__item--best
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-2.jpg", alt="")
+                .brand-items__price
+                  p от 2 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 2 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 2
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item.brand-items__item--best
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-3.jpg", alt="")
+                .brand-items__price
+                  p от 3 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 3 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 3
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item.brand-items__item--best
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-4.jpg", alt="")
+                .brand-items__price
+                  p от 4 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 4 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 4
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item.brand-items__item--best
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-5.jpg", alt="")
+                .brand-items__price
+                  p от 5 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 5 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+        .orders__tab
+          .card-tabs__title Похожие модели
+          .brand-items__row(js-mobile-slider)
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-2.jpg", alt="")
+                .brand-items__price
+                  p от 2 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 2 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 2
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-1.jpg", alt="")
+                .brand-items__price
+                  p от 1 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 1 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 1
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-3.jpg", alt="")
+                .brand-items__price
+                  p от 3 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 3 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 3
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-4.jpg", alt="")
+                .brand-items__price
+                  p от 4 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 4 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 4
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-5.jpg", alt="")
+                .brand-items__price
+                  p от 5 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 5 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+        .orders__tab
+          .card-tabs__title Вы недавно смотрели
+          .brand-items__row(js-mobile-slider)
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-2.jpg", alt="")
+                .brand-items__price
+                  p от 2 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 2 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 2
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-4.jpg", alt="")
+                .brand-items__price
+                  p от 4 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 4 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 4
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-5.jpg", alt="")
+                .brand-items__price
+                  p от 5 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 5 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-1.jpg", alt="")
+                .brand-items__price
+                  p от 1 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 1 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 1
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+
+            .brand-items__item
+              .brand-items__item-desc
+              .brand-items__item-view
+                .brand-items__image
+                  img(src="img/bestseller-3.jpg", alt="")
+                .brand-items__price
+                  p от 3 390 Р
+              .brand-items__hover-item
+                a.brand-items__like(href="#")
+                  i(class="far fa-heart")
+                .brand-items__hover-image
+                  img(src="img/item-hover.jpg", alt="")
+                  p.brand-items__hover-fast Быстрый просмотр
+                .brand-items__price
+                  p от 3 390 Р
+                .brand-items__price-title
+                  p Freya Decor Amore 3
+                .brand-items__price-description
+                  p Бюстгальтер мягкая чашка балконет
+        .orders__tab.orders__tab--map
+          .card-tabs__title Наличие в магазинах
+          .card-tabs__map-container
+            .card-tabs__map
+              iframe(src="https://yandex.ua/map-widget/v1/?um=constructor%3A2f9da5d95a9152054d0a0d76e97a51fabffcaa815a13e13411bb074d06ed7315&amp;source=constructor" width="100%" height="600" frameborder="0")
+            .card-tabs__city
+              a.card-tabs__city-item.is-active(href="#") 
+                img(src="img/icon-pin.svg", alt="")
+                span Москва, Ленинский проспект, 12
+                | Станция метро: Октябрьская, Шаболовская
+              a.card-tabs__city-item(href="#") 
+                img(src="img/icon-pin.svg", alt="")
+                span Москва, 1-я Фрунзенская, 2
+                | Станция метро: Фрунзенская
+
+  // END SECTION :: card-tabs
+
+  // BEGIN SECTION :: card-info
+
+  section.card-info
+    .container
+      .card-info__grid
+        .card-info__item
+          p.title Бюстгальтер DKNY DK4002
+          ul
+            li
+              p Wireless contour/t-shirt bra supports for an even, smooth, rounded shape.
+            li
+              p Flexible, lightly padded cup has mesh trim at top cup edge.
+            li
+              p Plunge front is perfect under low-cut tops.
+            li
+              p Corded center panel.
+            li
+              p Two ply sides and back have covered elastic at edges.
+            li
+              p Elastic straps have DKNY logo print and fully adjust in back with coated metal hardware.
+            li
+              p Wide-set straps remove in back to convert to a crossed back.
+            li
+              p Coated metal hook-and-eye closure, see Fitter's Comments below for hook count.
+          p Smooth and comfortable, this lightweight, convertible flexible bra is wireless for a smooth, natural look. Made of nylon and spandex.
+        .card-info__item
+          p.title Комментарии бра-фиттера:
+          ul
+            li
+              p Contour, padded, wireless cup is free of removable padding.
+            li
+              p 1/8" thick cups.
+            li
+              p Center is 3/8" tall.
+            li
+              p Sides are 2-1/2" tall.
+            li
+              p Elastic straps are 3/8" wide and adjust in the back with coated metal hardware. Straps are removable in back.
+            li
+              p 2-row, 3-column coated metal hook-and-eye closure in back.
+            li
+              p Measurements taken from a size Small and may vary by size.
+        .card-info__item
+          p.title Параметры:
+          ul
+            li
+              p 79% nylon, 21% spandex
+            li
+              p Country of origin: Imported
+            li
+              p Care: Hand wash cold. Lay flat to dry
+          
+  // END SECTION :: card-info
+
+  // BEGIN SECTION :: card-bottom
+
+  section.card-bottom
+    .container
+      .card-bottom__buttons
+        a.is-active(href="#" js-order-btn2) Доставка и оплата
+        a(href="#" js-order-btn2) Отзывы покупателей
+        a(href="#" js-order-btn2) Задать вопрос
+      .card-bottom__tabs
+        .card-bottom__tab.is-active
+          .card-tabs__title Доставка и оплата
+          .card-bottom__grid
+            .card-bottom__item
+              p.title Доставка
+              .card-bottom__row
+                p Москва:
+                p бесплатно при заказе от 5000 рублей.
+              .card-bottom__row
+                p Регионы: 
+                p Почта России или курьерская служба (СДЭК, Боксберри, СПСР)
+              a.card-bottom__link(href="#") Всё о доставке
+            .card-bottom__item
+              p.title Самовывоз / Click & collect
+              p Вы можете приехать и померить все понравившиеся модели в нашем магазине по адресу:
+              p
+                span Москва, Ленинский проспект, 12
+              a.card-bottom__link(href="#") Схема проезда и график работы
+            .card-bottom__item
+              p.title Оплата
+              p При заказе на сайте или в магазине:
+              ul
+                li
+                  p — банковской картой
+                li
+                  p — наличные
+                li
+                  p — подарочным сертификатом
+              a.card-bottom__link(href="#") Всё об оплате
+
+        .card-bottom__tab
+          .card-tabs__title Отзывы покупателей
+          .card-bottom__button
+            a.btn(href="#") Оставить отзыв
+          .card-bottom__review
+            .card-bottom__person
+              .card-bottom__person-part
+                p.name Екатерина
+                p 30F
+                p 28 сен 2018
+              .card-bottom__like
+                fieldset.rating
+                  input#star5(type='radio', name='rating', value='5')
+                  label.full(for='star5', title='5 stars')
+                  input#star4(type='radio', name='rating', value='4')
+                  label.full(for='star4', title='4 stars')
+                  input#star3(type='radio', name='rating', value='3')
+                  label.full(for='star3', title='3 stars')
+                  input#star2(type='radio', name='rating', value='2')
+                  label.full(for='star2', title='2 stars')
+                  input#star1(type='radio', name='rating', value='1')
+                  label.full(for='star1', title='1 star')
+
+            .card-bottom__info
+              p Как бы ни был хорош сервис в моем салоне бельевого стайлинга на Тверской, я понимаю, что не каждая женщина может себе позволить белье премиальных марок, представленных там. А мне бы очень хотелось, чтобы у каждой было в гардеробе удобное белье с идеальной посадкой.
+          .card-bottom__review
+            .card-bottom__person
+              .card-bottom__person-part
+                p.name Вероника
+                p 38G
+                p 14 сен 2018
+              .card-bottom__like
+                fieldset.rating
+                  input#star1-5(type='radio', name='rating2', value='5')
+                  label.full(for='star1-5', title='5 stars')
+                  input#star1-4(type='radio', name='rating2', value='4')
+                  label.full(for='star1-4', title='4 stars')
+                  input#star1-3(type='radio', name='rating2', value='3')
+                  label.full(for='star1-3', title='3 stars')
+                  input#star1-2(type='radio', name='rating2', value='2')
+                  label.full(for='star1-2', title='2 stars')
+                  input#star1-1(type='radio', name='rating2', value='1')
+                  label.full(for='star1-1', title='1 star')
+                
+            .card-bottom__info
+              p В Бюстократии можно по желанию воспользоваться помощью стилиста, но сервис гораздо меньше по объему, чем в салоне на Тверской. В салоне на Тверской наша цель – научить вас за 1,5 часа, которые отводятся на сервис, выбирать белье самостоятельно, провести мастер-класс по обучению подбору идеально сидящего белья. Мы очень подробно отвечаем на все вопросы и даем такие инсайты, о которых вы не могли догадываться. В салоне на Тверской мы специально примеряем больше, чтобы вы увидели закономерности и сами поняли, чем удачные варианты отличаются от неудачных. Сервис на Тверской имеет образовательную и даже развлекательную ценность.
+          .card-bottom__button.card-bottom__button--middle
+            a.btn(href="#") Показать ещё
+
+        .card-bottom__tab
+
+
+  // END SECTION :: card-bottom
