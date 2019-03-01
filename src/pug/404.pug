@@ -1,0 +1,26 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+
+  // BEGIN SECTION :: simple
+
+  section.page404
+    .container
+      .page404__info
+        .page404__info-image
+          img.desktop(src="img/not-found.png", alt="")
+          img.mobile(src="img/not-found-mobile.png", alt="")
+        p Не правильно набран адрес
+          br
+          | или такой страницы не существует
+    .container.container--image
+      .page404__image
+        img(src="img/busto-404.png", alt="")
+      
+
+  // END SECTION :: simple
+
+block footer

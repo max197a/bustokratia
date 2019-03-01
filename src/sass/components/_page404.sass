@@ -1,0 +1,85 @@
+.page404
+  margin-bottom: -80px
+  // margin-top: auto
+  padding-top: 70px
+  flex: 1
+  display: flex
+  flex-direction: column
+  .container
+    position: relative
+    margin-bottom: auto
+    &--image
+      margin-bottom: 0
+      margin-top: auto
+      flex: 0
+  &__image
+    display: block
+    height: 90%
+    margin: 0 auto
+    text-align: center
+    margin-top: auto
+    padding-left: 70px
+    img
+      height: auto
+      width: 66%
+      max-width: 700px
+
+    font-size: 0
+  &__info
+    position: absolute
+    left: 40px
+    top: 80px
+    width: 28%
+    p
+      font-size: 18px
+      max-width: 300px
+      text-align: right
+      font-family: $book
+      color: #000
+      margin-top: 40px
+      width: 100%
+
+  &__info-image
+    font-size: 0
+    img
+      width: 100%
+      &.mobile
+        display: none
+
++r($desktop)
+  .page404
+    &__info
+      top: 30px
+
++r($tablet)
+  .page404
+    margin-bottom: -40px
+    padding-top: 20px
+    .container
+      &--image
+        margin-top: 30px
+        margin-top: 0
+    &__info
+      position: static
+      width: 100%
+      max-width: 100%
+      text-align: center
+      p
+        text-align: center
+        max-width: 100%
+        width: 100%
+        margin-top: 20px
+    &__info-image
+      text-align: center
+      img
+        max-width: 250px
+        width: 100%
+        margin: 0 auto
+        &.desktop
+          display: none
+        &.mobile
+          display: block
+    &__image
+      padding-left: 0
+      img
+        width: 80%
