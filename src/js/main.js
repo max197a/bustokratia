@@ -29,6 +29,7 @@ $(document).ready(function() {
     initValidations();
     initSlider();
     initPopup();
+    initQuantity();
   }
 
   // this is a master function which should have all functionality
@@ -197,6 +198,35 @@ $(document).ready(function() {
   /// удаление элемента фильтра на странице CATALOG LIST
   ///
 
+  ///
+  /// +/- на странице shop card
+
+  function initQuantity() {
+    _document.ready(function() {
+      $(".minus").click(function() {
+        var $input = $(this)
+          .parent()
+          .find("input");
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $(".plus").click(function() {
+        var $input = $(this)
+          .parent()
+          .find("input");
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
+  }
+
+  /// +/- на странице shop card
+  ///
+
   function scrollToSection(el) {
     var headerHeight = $(".header").height();
     var targetScroll = el.offset().top - headerHeight;
@@ -270,7 +300,7 @@ $(document).ready(function() {
   function initSlider() {
     $("[js-firstscreen-slider]").slick({
       dots: true,
-      true: false,
+      arrows: false,
       infinite: true,
       autoplay: true,
       autoplaySpeed: 5000,
@@ -279,6 +309,26 @@ $(document).ready(function() {
       speed: 500
       // fade: true,
       // cssEase: "linear"
+    });
+
+    $("[js-card-slider]").slick({
+      dots: false,
+      arrows: true,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 788,
+          settings: {
+            dots: true,
+            arrows: false
+          }
+        }
+      ]
     });
 
     $("[js-awards-slider]").slick({

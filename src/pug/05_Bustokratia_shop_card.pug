@@ -1,0 +1,236 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Корзина
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title Корзина
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: register
+
+  section.shop
+    .container
+      .shop__column
+        .orders-info__list
+          .orders-info__head
+            .orders-info__part
+              p Товары в заказе
+            .orders-info__part
+              p Скидка
+            .orders-info__part
+              p Стоимость
+            .orders-info__part
+              p Кол-во
+            .orders-info__part
+              p Сумма
+            .orders-info__part
+          .orders-info__list-item
+            .orders-info__part
+              .orders-info__image
+                img.desktop(src="img/orders-1.jpg", alt="")
+                img.mobile(src="img/orders-1-mobile.jpg", alt="")
+              .orders-info__info
+                p.title бюстгальтер freya sweet illusion
+                .orders-info__row
+                  p Цвет
+                  p Белый
+                .orders-info__row
+                  p Размер
+                  p 75B
+            .orders-info__part
+              p.pink(mobile-title="Скидка") 
+            .orders-info__part
+              p(mobile-title="Цена") 1 800 Р
+            .orders-info__part
+              .orders-info__counter(mobile-title="Кол-во")
+                .number
+                  span.minus -
+                  input(type='text', value='1')
+                  span.plus +
+            .orders-info__part
+              p(mobile-title="Сумма") 1 420 Р
+            .orders-info__part
+              a.like(href="#")
+                img.default(src="img/icon-like.svg", alt="")
+                img.hover(src="img/icon-like-hover.svg", alt="")
+              a.remove(href="#")
+                img.default(src="img/icon-close.svg", alt="")
+                img.hover(src="img/icon-close-hover.svg", alt="")
+          .orders-info__list-item
+            .orders-info__part
+              .orders-info__image
+                img.desktop(src="img/orders-2.jpg", alt="")
+                img.mobile(src="img/orders-2-mobile.jpg", alt="")
+              .orders-info__info
+                p.title бюстгальтер freya REBEL REBEL
+                .orders-info__row
+                  p Цвет
+                  p Красный
+                .orders-info__row
+                  p Размер
+                  p 75B
+            .orders-info__part
+              p.pink(mobile-title="Скидка") -11%
+            .orders-info__part
+              p.pink(mobile-title="Цена") 1 800 Р
+                span 2 200 Р
+            .orders-info__part
+              .orders-info__counter(mobile-title="Кол-во")
+                .number
+                  span.minus -
+                  input(type='text', value='1')
+                  span.plus +
+            .orders-info__part
+              p(mobile-title="Сумма") 11 420 Р
+            .orders-info__part
+              a.like(href="#")
+                img.default(src="img/icon-like.svg", alt="")
+                img.hover(src="img/icon-like-hover.svg", alt="")
+              a.remove(href="#")
+                img.default(src="img/icon-close.svg", alt="")
+                img.hover(src="img/icon-close-hover.svg", alt="")
+          .orders-info__list-item
+            .orders-info__part
+              .orders-info__image
+                img.desktop(src="img/orders-3.jpg", alt="")
+                img.mobile(src="img/orders-3-mobile.jpg", alt="")
+              .orders-info__info
+                p.title бюстгальтер freya REBEL REBEL
+                .orders-info__row
+                  p Цвет
+                  p Красный
+                .orders-info__row
+                  p Размер
+                  p 75B
+            .orders-info__part
+              p.pink(mobile-title="Скидка") 
+            .orders-info__part
+              p(mobile-title="Цена") 1 800 Р
+            .orders-info__part
+              .orders-info__counter(mobile-title="Кол-во")
+                .number
+                  span.minus -
+                  input(type='text', value='1')
+                  span.plus +
+            .orders-info__part
+              p(mobile-title="Сумма") 11 420 Р
+            .orders-info__part
+              a.like(href="#")
+                img.default(src="img/icon-like.svg", alt="")
+                img.hover(src="img/icon-like-hover.svg", alt="")
+              a.remove(href="#")
+                img.default(src="img/icon-close.svg", alt="")
+                img.hover(src="img/icon-close-hover.svg", alt="")
+        .orders-info__recommend
+          p.orders-info__recommend-title Рекомендуем
+          .orders-info__carousel(js-card-slider)
+            .item
+              .orders-info__list-item
+                .orders-info__part
+                  .orders-info__image
+                    img.desktop(src="img/recomm-1.png", alt="")
+                    img.mobile(src="img/recomm-1-mobile.png", alt="")
+                  .orders-info__info
+                    p.title Мешочек для стирки белья
+                    .orders-info__row
+                      p Цвет
+                      p Белый
+                .orders-info__part
+                  p.pink(mobile-title="Скидка") 
+                .orders-info__part
+                  p(mobile-title="Цена") 1 800 Р
+                .orders-info__part
+                  .orders-info__counter(mobile-title="Кол-во")
+                    .number
+                      span.minus -
+                      input(type='text', value='1')
+                      span.plus +
+                .orders-info__part
+                  p(mobile-title="Сумма") 1 420 Р
+                .orders-info__part
+                  a.btn(href="#") Добавить
+            .item
+              .orders-info__list-item
+                .orders-info__part
+                  .orders-info__image
+                    img.desktop(src="img/orders-2.jpg", alt="")
+                    img.mobile(src="img/orders-2-mobile.jpg", alt="")
+                  .orders-info__info
+                    p.title бюстгальтер freya REBEL REBEL
+                    .orders-info__row
+                      p Цвет
+                      p Красный
+                .orders-info__part
+                  p.pink(mobile-title="Скидка") -11%
+                .orders-info__part
+                  p.pink(mobile-title="Цена") 1 800 Р
+                    span 2 200 Р
+                .orders-info__part
+                  .orders-info__counter(mobile-title="Кол-во")
+                    .number
+                      span.minus -
+                      input(type='text', value='1')
+                      span.plus +
+                .orders-info__part
+                  p(mobile-title="Сумма") 11 420 Р
+                .orders-info__part
+                  a.btn(href="#") Добавить
+            .item
+              .orders-info__list-item
+                .orders-info__part
+                  .orders-info__image
+                    img.desktop(src="img/orders-3.jpg", alt="")
+                    img.mobile(src="img/orders-3-mobile.jpg", alt="")
+                  .orders-info__info
+                    p.title бюстгальтер freya REBEL REBEL
+                    .orders-info__row
+                      p Цвет
+                      p Красный
+                .orders-info__part
+                  p.pink(mobile-title="Скидка") 
+                .orders-info__part
+                  p(mobile-title="Цена") 1 800 Р
+                .orders-info__part
+                  .orders-info__counter(mobile-title="Кол-во")
+                    .number
+                      span.minus -
+                      input(type='text', value='1')
+                      span.plus +
+                .orders-info__part
+                  p(mobile-title="Сумма") 11 420 Р
+                .orders-info__part
+                  a.btn(href="#") Добавить
+        .shop__bottom
+          .shop__grid
+            .shop__bottom-item
+            .shop__bottom-item
+              .shop__cupon
+                p Купон на скидку
+                form(action="#")
+                  .shop__form
+                    .input-container
+                      input(type="text" placeholder="Введите промокод")
+                    button.btn Активировать
+            .shop__bottom-item
+              .shop__bottom-row
+                p Итого:
+                p
+                  span 4 640 Р
+              a.btn(href="#") Оформить заказ
+  // END SECTION :: register
