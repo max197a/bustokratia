@@ -24,17 +24,17 @@ block content
           .card__info-head
             p.card__info-title бюстгальтер sweet illusion с широкими бретелями
             p.card__info-desc freya
-          //- .card__image-thumbs
-          //-   .xzoom-thumbs
-          //-     a(href='img/card-model-1.jpg')
-          //-       img.xzoom-gallery(src='img/card-model-1.jpg', xpreview='img/card-model-1.jpg')
-          //-     a(href='img/card-model-2.jpg')
-          //-       img.xzoom-gallery(src='img/card-model-2.jpg')
-          //-     a(href='img/card-model-3.jpg')
-          //-       img.xzoom-gallery(src='img/card-model-3.jpg')
-          //- .card__image-main
-          //-   .card__image-zoom
-          //-     img.xzoom(src='img/card-model-1.jpg', xoriginal='img/card-model-1.jpg')
+          .xzoom-container
+            .xzoom-container-main-image
+              img#xzoom-default.xzoom(src='img/card-model-1.jpg', xoriginal='img/card-model-1.jpg')
+            .xzoom-container-thumbs
+              .xzoom-thumbs
+                a.is-active(href='img/card-model-1.jpg' js-thumb-toggle)
+                  img.xzoom-gallery(width='83', src='img/card-model-1.jpg', xpreview='img/card-model-1.jpg')
+                a(href='img/card-model-2.jpg' js-thumb-toggle)
+                  img.xzoom-gallery(width='83', src='img/card-model-2.jpg')
+                a(href='img/card-model-3.jpg' js-thumb-toggle)
+                  img.xzoom-gallery(width='83', src='img/card-model-3.jpg')
         .card__info
           .card__info-head
             p.card__info-title бюстгальтер sweet illusion с широкими бретелями

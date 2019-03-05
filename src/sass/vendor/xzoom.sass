@@ -1,0 +1,87 @@
+/* Compatibility styles for frameworks like bootstrap, foundation e.t.c
+
+.xzoom-source img, .xzoom-preview img, .xzoom-lens img
+  display: block
+  max-width: none
+  max-height: none
+  transition: none
+
+/* ---------------
+
+/* xZoom Styles below
+
+.xzoom-container
+  display: inline-block
+
+.xzoom-thumbs
+  text-align: center
+  margin-bottom: 12px
+
+.xzoom, .xzoom2, .xzoom3, .xzoom4, .xzoom5
+  // box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)
+  border: 1px solid #e1e1e1
+
+/* Thumbs
+
+.xzoom-gallery, .xzoom-gallery2, .xzoom-gallery3, .xzoom-gallery4, .xzoom-gallery5
+  border: 1px solid #e1e1e1
+  transition: all $transitionSpeed $ease
+
+// .xzoom-source
+//   display: block
+//   position: static
+//   float: none
+//   clear: both
+
+.xzoom-hidden
+  display: block
+  position: static
+  float: none
+  clear: both
+  overflow: hidden
+
+/* Everything out of border is hidden
+
+/* Preview
+
+.xzoom-preview
+  border: 10px solid #e1e1e1
+  background: #2f4f4f
+  position: absolute
+  // height: 400px !important
+  // overflow: hidden !important
+  // top: 348px !important
+  opacity: 1
+  img
+    width: 220% !important
+    height: auto !important
+
++r($desktop)
+  .xzoom-preview
+    top: 1px !important
+    left: 1px !important
+    img
+      width: 270% !important
+
+/* Lens
+
+.xzoom-lens
+  border: 3px solid #ececec
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)
+  cursor: crosshair
+
+/* Loading
+
+.xzoom-loading
+  background-position: center center
+  background-repeat: no-repeat
+  border-radius: 100%
+  opacity: .7
+  background: url(../img/xloading.gif)
+  width: 48px
+  height: 48px
+
+/* Additional class that applied to thumb when it is active
+
+.xactive
+  border: 1px solid #f06eaa
