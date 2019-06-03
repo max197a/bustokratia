@@ -7,13 +7,14 @@
   &.mfp-bg
     opacity: 0
     transition: all 0.3s ease-out
+    background: #fff
 
   &.mfp-ready
     .mfp-with-anim
       opacity: 1
       transform: scale(1) 
     &.mfp-bg
-      opacity: 0.8
+      opacity: 0.3
 
   &.mfp-removing
     .mfp-with-anim
@@ -35,7 +36,7 @@
 	-moz-transition: all 0.15s ease-out
 	transition: all 0.15s ease-out
 .mfp-fade.mfp-bg.mfp-ready
-	opacity: 0.8
+	opacity: 0.3
 .mfp-fade.mfp-bg.mfp-removing
 	opacity: 0
 .mfp-fade.mfp-wrap .mfp-content
@@ -47,3 +48,101 @@
 	opacity: 1
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content
 	opacity: 0
+
+.mfp-container
+  padding: 10px
+
+.popup
+  &__image
+    font-size: 0
+    margin-right: 25px
+    img
+      height: 29px
+      width: auto
+  &--thank
+    max-width: 650px
+    margin: auto
+    background: #fff
+    padding: 70px 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-bottom: 10px solid #f06eaa
+    box-shadow: 0 0 45px rgba(0,0,0,0.6)
+    .mfp-close
+      display: none
+    p
+      font-size: 24px
+      font-family: $demi
+      color: #000
+      line-height: 1.2
+
+  &__links
+    padding-top: 20px
+    display: flex
+    flex-direction: column
+    a
+      font-size: 24px
+      font-family: $demi
+      color: #f06eaa
+      display: inline-block
+      margin-top: 30px
+
+  &--review
+    max-width: 460px
+    padding: 60px
+    background: #fff
+    margin: auto
+    text-align: center
+    box-shadow: 0 0 45px rgba(0,0,0,0.6)
+    p.title
+      font-size: 30px
+      text-transform: uppercase
+      color: #000
+      font-family: $demi
+    .input-container
+      width: 100%
+      margin-top: 15px
+      text-align: left
+      input, textarea
+        border: 1px solid #e1e1e1
+        padding: 9px 19px 10px
+        letter-spacing: 1.5px
+      textarea
+        min-height: 100px
+      p
+        font-size: 14px
+        font-family: $book
+        color: #000
+        margin-bottom: 4px
+        letter-spacing: 0.8px
+    .btn
+      background: #904c96
+      border-color: #904c96
+      padding: 9px
+      width: 100%
+      max-width: 396px
+      font-size: 16px
+      margin: 25px auto 0
+      cursor: pointer
+      &:hover
+        background: #56205c
+        border-color: #56205c
+  .mfp-close
+    font-size: 0
+    width: 30px
+    right: 10px
+    top: 10px
+    height: 30px
+    background: url(../img/close.svg) center center no-repeat
+    background-size: 15px 15px
+    opacity: 1
+    cursor: pointer
+
+
+@media screen and (max-width: 768px)
+  .popup
+    &--thank
+      padding: 30px 20px
+      p
+        font-size: 20px

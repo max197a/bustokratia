@@ -292,33 +292,41 @@ $(document).ready(function() {
   ////////////////////
 
   function initPopup() {
-    // Image popups
-    $("[js-popup-image]").magnificPopup({
-      type: "image",
+    $("[js-popup]").magnificPopup({
       removalDelay: 500, //delay removal by X to allow out-animation
       callbacks: {
         beforeOpen: function() {
-          // just a hack that adds mfp-anim class to markup
-          this.st.image.markup = this.st.image.markup.replace(
-            "mfp-figure",
-            "mfp-figure mfp-with-anim"
-          );
           this.st.mainClass = this.st.el.attr("data-effect");
         }
       },
-      closeOnContentClick: true,
       midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
-
-    // Video popups
-    $("[js-popup-video]").magnificPopup({
-      disableOn: 700,
-      type: "iframe",
-      mainClass: "mfp-fade",
-      removalDelay: 160,
-      preloader: false,
-      fixedContentPos: false
-    });
+    // Image popups
+    // $("[js-popup-image]").magnificPopup({
+    //   type: "image",
+    //   removalDelay: 500, //delay removal by X to allow out-animation
+    //   callbacks: {
+    //     beforeOpen: function() {
+    //       // just a hack that adds mfp-anim class to markup
+    //       this.st.image.markup = this.st.image.markup.replace(
+    //         "mfp-figure",
+    //         "mfp-figure mfp-with-anim"
+    //       );
+    //       this.st.mainClass = this.st.el.attr("data-effect");
+    //     }
+    //   },
+    //   closeOnContentClick: true,
+    //   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    // });
+    // // Video popups
+    // $("[js-popup-video]").magnificPopup({
+    //   disableOn: 700,
+    //   type: "iframe",
+    //   mainClass: "mfp-fade",
+    //   removalDelay: 160,
+    //   preloader: false,
+    //   fixedContentPos: false
+    // });
   }
 
   ////////////////////
@@ -486,8 +494,8 @@ $(document).ready(function() {
   // Masked input
   function initMasks() {
     $("[js-dateMask]").mask("99.99.99", { placeholder: "ДД.ММ.ГГ" });
-    $("input[type='tel']").mask("(000) 000-0000", {
-      placeholder: "+7 (___) ___-____"
+    $("input[type='tel']").mask("+7 (000) 000-00-00", {
+      placeholder: "+7 (___) ___-__-__"
     });
   }
 
@@ -532,7 +540,7 @@ $(document).ready(function() {
           $(form).removeClass("loading");
           var data = $.parseJSON(response);
           if (data.status == "success") {
-            // do something I can't test
+            $("[js-open-thank]").click();
           } else {
             $(form)
               .find("[data-error]")
@@ -564,7 +572,7 @@ $(document).ready(function() {
     // REGISTRATION FORM
     ////////////////////
 
-    $(".js-form-want").validate({
+    $(".js-validation").validate({
       errorPlacement: validateErrorPlacement,
       highlight: validateHighlight,
       unhighlight: validateUnhighlight,
@@ -572,12 +580,14 @@ $(document).ready(function() {
       rules: {
         name: "required",
         phone: "required",
-        mail: "required"
+        mail: "required",
+        mess: "required"
       },
       messages: {
-        name: "Заполните это поле",
-        phone: "Заполните это поле",
-        mail: "Заполните это поле"
+        name: "Ошибка при заполнении",
+        phone: "Ошибка при заполнении",
+        mail: "Некорректный формат почты",
+        mess: "Ошибка при заполнении"
       }
     });
   }

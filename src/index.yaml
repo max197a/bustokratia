@@ -29,3 +29,11 @@ PageList:
   ready: 80
 - file: 22_Bustokratia_legal.html
   ready: 80
+- file: Bustokratia_About.html
+  ready: 80
+- file: Popups.html
+  ready: 80
+- file: 10_Bustokratia_search_emp.html
+  ready: 80
+- file: 18_Bustokratia_contacts.html
+  ready: 80

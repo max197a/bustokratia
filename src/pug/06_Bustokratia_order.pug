@@ -97,20 +97,20 @@ block content
           p.register__result Итого:
             span 4 640 Р
           a.btn(href="#") Отправить заказ
-      form(action="#" method="#")
+      form.js-validation(action="#" method="#")
         .personal__wrapper
           p.personal__title Контактная информация
           .personal__grid
             .personal__item
               .input-container
                 p Имя и фамилия
-                input(type="text" name="" placeholder="Марина Маринина")
+                input(type="text" name="name" placeholder="Марина Маринина")
               .input-container
                 p Эл. почта
-                input(type="text" name="" placeholder="ваша@почта.ru")
+                input(type="text" name="mail" placeholder="ваша@почта.ru")
               .input-container
                 p Телефон
-                input(type="text" name="" placeholder="+7 (___) ___ - __ - __")
+                input(type="tel" name="phone" placeholder="+7 (___) ___ - __ - __")
             .personal__item.personal__item--editable
               .input-container
                 p Выберите город
@@ -170,7 +170,7 @@ block content
                     img(src="img/visa.png", alt="")
           p.register__description Нажимая на кнопку, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с Соглашением
           .register__btn-container
-            a.btn(href="#") Отправить заказ
+            input.btn(type="submit", value="Отправить заказ")
 
 
           

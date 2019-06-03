@@ -557,7 +557,7 @@ block content
         .card-bottom__tab
           .card-tabs__title Отзывы покупателей
           .card-bottom__button
-            a.btn(href="#") Оставить отзыв
+            a.btn(href="#sendReview" data-effect="mfp-zoom-in" js-popup) Оставить отзыв
           .card-bottom__review
             .card-bottom__person
               .card-bottom__person-part
@@ -603,7 +603,28 @@ block content
           .card-bottom__button.card-bottom__button--middle
             a.btn(href="#") Показать ещё
 
-        .card-bottom__tab
+        .card-bottom__tab.card-bottom__tab--form
+          .card-tabs__title Задать вопрос
+          form.js-validation(action="#")
+            .card-bottom__form
+              .card-bottom__input
+                p Ваше имя
+                .input-container
+                  input(type="text" name="name" placeholder="Марина Маринина")
+              .card-bottom__input
+                p Эл. почта
+                .input-container
+                  input(type="text" name="mail" placeholder="ваша@почта.ru")
+              .card-bottom__input
+                p Телефон
+                .input-container
+                  input(type="tel" name="phone" placeholder="+7 ( ___ ) ___ - __ - __")
+              .card-bottom__input.card-bottom__input--full
+                p Вопрос
+                .input-container
+                  textarea(type="text" name="mess" placeholder="Сообщение")
+              .card-bottom__button
+                input.btn(type="submit", value="Отправить")
 
 
   // END SECTION :: card-bottom

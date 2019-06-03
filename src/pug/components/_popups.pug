@@ -1,0 +1,25 @@
+// POPUPS :: START
+
+
+#thankMess.popup.popup--thank.mfp-with-anim.mfp-hide
+  .popup__image
+    img(src="img/mail.png", alt="")
+  p Спасибо, ваше сообщение отправлено
+
+#sendReview.popup.popup--review.mfp-with-anim.mfp-hide
+  form.js-validation(action="#")
+    p.title ОСТАВИТЬ оТЗЫВ
+    .input-container
+      p Ваше имя
+      input(type="text" name="name" placeholder="Марина Маринина")
+    .input-container
+      p Эл. почта
+      input(type="text" name="mail" placeholder="ваша@почта.ru")
+    .input-container
+      p Отзыв
+      textarea(name="mess" placeholder="Сообщение")
+    .submit-btn
+      input.btn(type="submit", value="Отправить")
+
+
+// POPUPS :: END

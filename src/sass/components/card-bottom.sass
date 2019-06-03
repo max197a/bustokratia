@@ -200,15 +200,59 @@
             background: url(../img/icon-heart-choose.svg) center center no-repeat
             background-size: contain
 
-
+  &__form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__input
+    width: 32%
+    max-width: 404px
+    margin-top: 20px
+    &--full
+      width: 100%
+      max-width: 100%
+    p
+      font-size: 14px
+      font-family: $book
+      color: #000
+      margin-bottom: 4px
+      letter-spacing: 0.8px
+    .input-container
+      input,
+      textarea
+        border: 1px solid #e1e1e1
+        padding: 9px 19px 10px
+        letter-spacing: 1.5px
+      textarea
+        max-height: 41px
+  &__button
+    width: 100%
+    text-align: center
+    .btn
+      background: #904c96
+      border-color: #904c96
+      padding: 9px
+      width: 100%
+      max-width: 396px
+      font-size: 16px
+      margin: 0 auto
+      cursor: pointer
+      &:hover
+        background: #56205c
+        border-color: #56205c
 
 +r($tablet)
   .card-bottom
     padding-top: 55px
+    &__input
+      width: 100%
+      max-width: 100%
     &__buttons
       display: none
     &__tab
       display: block !important
+      &--form
+        margin-top: 31px
     &__grid
       flex-wrap: wrap
       padding-bottom: 35px

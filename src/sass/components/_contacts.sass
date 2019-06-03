@@ -1,0 +1,135 @@
+.contacts
+  &__grid
+    display: flex
+    justify-content: space-between
+  &__left
+    max-width: 420px
+    width: 42%
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__right
+    width: 57.4%
+    max-width: 735px
+  &__column
+    display: flex
+    flex-direction: column
+    width: 49%
+    a
+      font-size: 16px
+      font-family: $book
+      display: inline-block
+      margin-top: 12px
+      &:first-child
+        margin-top: 6px
+    p
+      font-size: 16px
+      font-family: $book
+      display: inline-block
+      margin-top: 12px
+      &:first-child
+        margin-top: 0
+      &.bold
+        font-family: $medium
+  &__form
+    display: flex
+    flex-wrap: wrap
+    // margin-top: -8px
+    justify-content: space-between
+    p
+      font-size: 14px
+      font-family: $book
+      color: #000
+      margin-bottom: 4px
+      letter-spacing: 0.8px
+    .input-container
+      width: 100%
+      &--submit
+        display: flex
+        textarea
+          width: 100%
+        .btn
+          max-width: 156px
+      input,
+      textarea
+        border: 1px solid #e1e1e1
+        padding: 9px 19px 10px
+        letter-spacing: 1.5px
+        &.btn
+          background: #904c96
+          border-color: #904c96
+          &:hover
+            background: #56205c
+            border-color: #56205c
+      textarea
+        max-height: 41px
+    .input-row
+      display: flex
+      input,
+      textarea
+        border: 1px solid #e1e1e1
+        padding: 9px 19px 10px
+        letter-spacing: 1.5px
+        &.btn
+          background: #904c96
+          border-color: #904c96
+          max-height: 41px
+          &:hover
+            background: #56205c
+            border-color: #56205c
+  &__row
+    width: 48%
+    margin-bottom: 16px
+    &:last-child
+      margin-bottom: 0
+      width: 100%
+
+  &__adress
+    display: flex
+    margin-top: 50px
+    margin-bottom: 30px
+    p
+      font-family: $book
+      font-size: 15px
+      color: #000
+      margin-right: 50px
+      span
+        font-family: $demi
+        color: #ff0000
+        font-size: 22px
+        line-height: 10px
+      &:last-child
+        margin-right: 0
+  &__map
+    margin-bottom: -80px
+    font-size: 0
+    
+
+@media screen and (max-width: 768px)
+  .contacts
+    &__grid
+      flex-direction: column
+    &__left
+      max-width: 100%
+      width: 100%
+    &__right
+      max-width: 100%
+      width: 100%
+    &__row
+      width: 100%
+    &__form
+      margin-top: 40px
+    .input-row
+      flex-direction: column
+      textarea
+        min-height: 100px
+        max-height: 100px
+      input.btn
+        margin-top: 30px
+    &__adress
+      flex-direction: column
+      p
+        margin-right: 0
+        margin-top: 15px
+    &__map
+      margin-bottom: -40px

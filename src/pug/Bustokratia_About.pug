@@ -1,0 +1,33 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: about
+
+  section.about
+    .about__carousel(js-mobile-slider)
+      .about__item
+        .about__item-image
+          img.desktop(src="img/about-1.jpg", alt="")
+      .about__item
+        .about__item-image
+          img.desktop(src="img/about-2.jpg", alt="")
+      .about__item
+        .about__item-image
+          img.desktop(src="img/about-3.jpg", alt="")
+      .about__item
+        .about__item-image
+          img.desktop(src="img/about-4.jpg", alt="")
+
+    .container
+      .about__grid
+        .about__info
+          p.title Наша философия
+          p.info Хлопоты с подбором белья на свадьбу, корпоратив или выпускной способны испортить все удовольствие от праздника. Вечернее платье может доставить массу проблем, если у него открытая спина, глубокое декольте, необычный вырез и к нему сложно подобрать белье так, чтобы оно было незаметно окружающим. 
+        .about__info
+          p.title Наши ценности
+          p.info Не нужно быть голливудской звездой, чтобы обрести идеальную фигуру — магия корректирующего белья доступно любой женщине. Даже стройные женщины носят его и не скрывают, потому что только корректирующее белье способно создать идеально гладкий силуэт “без складочек” 
+
+  // END SECTION :: about

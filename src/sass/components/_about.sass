@@ -1,0 +1,91 @@
+.about
+	&__carousel
+		display: flex
+		width: calc(100% + 6%)
+	&__item
+		width: 28%
+		margin-left: -5.6%;
+
+		&-image
+			font-size: 0
+			img
+				width: 100%
+				height: auto
+		&:nth-child(even)
+			margin-top: 145px
+		&:first-child
+			margin-left: 0
+	&__grid
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		margin-top: 105px
+		margin-bottom: 30px
+	&__info
+		width: 48%
+		max-width: 582px
+		p
+			color: #000000
+			&.title
+				font-size: 24px
+				font-family: $demi
+			&.info
+				padding-left: 16%
+				margin-top: 27px
+				font-size: 16px
+				font-family: $book
+				line-height: 1.9
+
+@media screen and (max-width: 768px)
+	.about
+		&__carousel
+			width: 100%
+		&__item
+			width: 100%
+			text-align: center
+			margin-left: 0
+			&:nth-child(even)
+				margin-top: 0
+			&:first-child
+				margin-left: 0
+			&-image
+				max-width: 450px
+				margin: 0 auto
+		&__grid
+			flex-direction: column
+			margin-top: 0
+			margin-bottom: 0
+		&__info
+			width: 100%
+			max-width: 100%
+			margin-top: 40px
+			p
+				&.info
+					line-height: 1.6
+					padding-left: 40px
+					margin-top: 15px
+		.slick-dots
+			text-align: center
+			padding: 0
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			bottom: 10px
+			li
+				margin: 0 6px
+				padding: 0
+				font-size: 0
+				max-height: 9px
+				&.slick-active
+				  button
+				    background: $bgpink
+			button
+				font-size: 0
+				padding: 0
+				border: none
+				color: transparent
+				background: transparent
+				width: 9px
+				height: 9px
+				border-radius: 50%
+				background: #fff

@@ -1,0 +1,37 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Результаты поиска по запросу «Красный лифчик»
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title По вашему запросу ничего не найдено
+
+      .head__form
+        .input-container
+          input(type="text" name="" value="Красный лифчик")
+        
+        input.btn(type="submit", value="Найти")
+
+      .head__list
+        p — Проверьте, правильно ли введен запрос, нет ли опечаток, например «булза» вместо «блуза»
+        p — Попробуйте ввести синоним или схожий запрос
+        p — Попробуйте использовать более общий запрос, например «Женская обувь» при поиске категории «Сапоги». Позже Вы сможете отфильтровать результаты
+
+  
+  // END SECTION :: head
+
+  

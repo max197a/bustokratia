@@ -40,20 +40,20 @@ block content
 
   section.personal
     .container
-      form(action="#" method="#")
+      form.js-validation(action="#" method="#")
         .personal__wrapper
           p.personal__title Контактная информация
           .personal__grid
             .personal__item
               .input-container
                 p Имя и фамилия
-                input(type="text" name="" placeholder="Марина Маринина")
+                input(type="text" name="name" placeholder="Марина Маринина")
               .input-container
                 p Эл. почта
-                input(type="text" name="" placeholder="ваша@почта.ru")
+                input(type="text" name="name" placeholder="ваша@почта.ru")
               .input-container
                 p Телефон
-                input(type="text" name="" placeholder="+7 (___) ___ - __ - __")
+                input(type="tel" name="phone" placeholder="+7 (___) ___ - __ - __")
             .personal__item.personal__item--editable
               .input-container
                 p Выберите город

@@ -1,0 +1,65 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Контакты
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title Контактная информация
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: contacts
+
+  section.contacts
+    .container
+      .contacts__grid
+        .contacts__left
+          .contacts__column
+            a(href="#") +7 (495) 150 65 86
+            a(href="#") +7 (495) 150 65 86
+            a(href="#") info@bustokratia.ru
+          .contacts__column
+            p.bold График работы магазина:
+            p с 9:00 до 21:00
+            p Без выходных
+        .contacts__right
+          form.js-validation(action="#")
+            .contacts__form
+              .contacts__row
+                p Ваше имя
+                .input-container
+                  input(type="text" name="name" placeholder="Марина Маринина")
+              .contacts__row
+                p Эл. почта
+                .input-container
+                  input(type="text" name="mail" placeholder="ваша@почта.ru")
+              .contacts__row
+                p Сообщение
+                .input-row
+                  .input-container
+                    textarea(name="mess" placeholder="Текст сообщения")
+                  input.btn(type="submit" value="Отправить")
+      .contacts__adress
+        p Москва, Ленинский проспект, 12
+        p 
+          span М 
+          | Октябрьская / Шаболовская
+    .contacts__map
+      iframe(src="https://yandex.ua/map-widget/v1/?um=constructor%3A527de61590c98f23dc7ee28690610fd557029278a50c4f0de49a0863a8f563cb&amp;source=constructor" width="100%" height="555" frameborder="0")
+        
+
+  // BEGIN END :: contacts
