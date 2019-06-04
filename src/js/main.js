@@ -236,6 +236,98 @@ $(document).ready(function() {
     ///
 
     ///
+    /// иконка like
+
+    .on("click", "[js-like-item]", function(e) {
+      e.preventDefault();
+      $(this).toggleClass("is-active");
+    })
+
+    /// иконка like
+    ///
+
+    ///
+    /// открытие поиска
+
+    .on("click", "[js-open-search]", function(e) {
+      e.preventDefault();
+      $(this)
+        .parent()
+        .toggleClass("active");
+      $(this).toggleClass("active");
+    })
+
+    /// открытие поиска
+    ///
+
+    ///
+    /// открытие поиска
+
+    .on("click", "[js-close-search]", function(e) {
+      e.preventDefault();
+      $(this)
+        .parent()
+        .removeClass("active");
+      $(".search__btn").removeClass("active");
+    });
+
+  /// открытие поиска
+  ///
+
+  _document.on(
+    "keyup",
+    "[js-search-input]",
+    debounce(function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      // enter is reserved for selecting first child
+      if (e.keyCode === 13) return;
+
+      var postValue = $(this).val();
+      var $sContainer = $(this).closest(".js-search");
+      // var requestEndpoint = $sContainer.data("url");
+      var $hintContainer = $sContainer.find(".search-site__hint");
+
+      // 3 symbols are minimum
+      // if (postValue.length >= 3) {
+      //     $hintLoader.addClass("is-loading");
+      // }
+
+      if (postValue.length >= 3) {
+        $hintLoader.addClass("is-loading");
+      }
+
+      setTimeout(function() {
+        // 3 symbols are minimum
+        if (postValue.length <= 2) {
+          $hintContainer.removeClass("is-active");
+          _overlay.removeClass("is-visible");
+          $hintLoader.removeClass("is-loading");
+          $hintLoader.removeClass("is-active");
+          return;
+        } else {
+          $hintContainer.addClass("is-active");
+          _overlay.addClass("is-visible");
+          $hintLoader.removeClass("is-loading");
+          $hintLoader.addClass("is-active");
+        }
+      }, 3000);
+    })
+  );
+
+  _document
+    .on("click", function(e) {
+      if (
+        !$(e.target).closest(".js-search").length > 0 ||
+        !$(e.target).closest(".search-site__hint").length > 0
+      ) {
+        $(".search-site__hint").removeClass("is-active");
+        $(".search-site__loader").removeClass("is-active");
+      }
+    })
+
+    ///
     /// удаление элемента фильтра на странице CATALOG LIST
 
     .on("click", "[js-remove-filter]", function(e) {
@@ -365,6 +457,13 @@ $(document).ready(function() {
         Xoffset: 15
       });
 
+      // $(".xzoom3, .xzoom-gallery").xzoom({
+      //   position: "lens",
+      //   lensShape: "circle",
+      //   bg: true,
+      //   sourceClass: "xzoom-hidden"
+      // });
+
       //Integration with hammer.js
       var isTouchSupported = "ontouchstart" in window;
 
@@ -374,7 +473,12 @@ $(document).ready(function() {
           var xzoom = $(this).data("xzoom");
           xzoom.eventunbind();
         });
+        // $(".xzoom, .xzoom3").each(function() {
+        //   var xzoom = $(this).data("xzoom");
+        //   xzoom.eventunbind();
+        // });
 
+        // $(".xzoom, .xzoom3").each(function() {
         $(".xzoom").each(function() {
           var xzoom = $(this).data("xzoom");
           $(this)

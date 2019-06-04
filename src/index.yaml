@@ -37,3 +37,5 @@ PageList:
   ready: 80
 - file: 18_Bustokratia_contacts.html
   ready: 80
+- file: 09_Bustokratia_search_ok.html
+  ready: 80

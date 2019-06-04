@@ -164,10 +164,36 @@
       height: auto
   &__like
     font-size: 19px
+    line-height: 1
     position: absolute
     left: 20px
     top: 20px
     transition: all $transitionSpeed $ease
+    // position: relative
+    display: block
+    cursor: pointer
+    &-icon
+      height: 19px
+      width: 19px
+      img
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        transition: all $transitionSpeed $ease
+        cursor: pointer
+        &.default
+          opacity: 1
+      &:hover
+        img
+          &.default
+            opacity: 0
+          &.hover
+            opacity: 1
+    &.is-active
+      img.active
+        opacity: 1 !important
+
     &:hover
       color: $bgpink
   &__hover-fast

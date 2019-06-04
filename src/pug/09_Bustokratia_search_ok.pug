@@ -9,7 +9,7 @@ block content
     .container
       .breadcrumbs__list
         a(href="#") Главная
-        a(href="#") Бюстгальтеры
+        a(href="#") Результаты поиска по запросу «Красный бюстгалтер»
     
   // END SECTION :: breadcrumbs
 
@@ -28,8 +28,8 @@ block content
         .catalog__sidebar
           .catalog__sidebar-form
             form(action="#")
-              .catalog__sidebar-item
-                a.catalog__sidebar-title(href="#" js-open-filter) цена
+              .catalog__sidebar-item.is-active
+                a.catalog__sidebar-title.is-active(href="#" js-open-filter) цена
                 .catalog__sidebar-content
                   .catalog__inputs
                     .input-container
@@ -38,8 +38,8 @@ block content
                     .input-container
                       input(type="text" value="1500")
 
-              .catalog__sidebar-item
-                a.catalog__sidebar-title(href="#" js-open-filter) бренды
+              .catalog__sidebar-item.is-active
+                a.catalog__sidebar-title.is-active(href="#" js-open-filter) бренды
                 .catalog__sidebar-content
                   ul
                     li
@@ -63,8 +63,8 @@ block content
                     li
                       a(href="#" js-choose-filter) Stefi L
                   a.catalog__sidebar-more(href="#") Посмотреть все
-              .catalog__sidebar-item
-                a.catalog__sidebar-title(href="#" js-open-filter) Тип
+              .catalog__sidebar-item.is-active
+                a.catalog__sidebar-title.is-active(href="#" js-open-filter) Тип
                 .catalog__sidebar-content
                   ul
                     li
@@ -81,8 +81,8 @@ block content
                       a(href="#" js-choose-filter) Корректирующе бельё
                     
                   a.catalog__sidebar-more(href="#") Посмотреть все
-              .catalog__sidebar-item
-                a.catalog__sidebar-title(href="#" js-open-filter) Размер
+              .catalog__sidebar-item.is-active
+                a.catalog__sidebar-title.is-active(href="#" js-open-filter) Размер
                 .catalog__sidebar-content
                   table
                     tr
@@ -114,8 +114,8 @@ block content
                         a(href="#" js-choose-filter) 65DD
                   a.catalog__sidebar-more(href="#") Выбрать свой размер
                     span ?
-              .catalog__sidebar-item
-                a.catalog__sidebar-title(href="#" js-open-filter) Цвет
+              .catalog__sidebar-item.is-active
+                a.catalog__sidebar-title.is-active(href="#" js-open-filter) Цвет
                 .catalog__sidebar-content.catalog__sidebar-content--color
                   ul
                     li
@@ -133,17 +133,17 @@ block content
                 
               .catalog__button
                 button.btn Показать
-          .catalog__sidebar-images
-            a.catalog__sidebar-link(href="#")
-              img(src="img/sidebar-1.jpg", alt="")
-            a.catalog__sidebar-link(href="#")
-              img(src="img/sidebar-2.jpg", alt="")
-            a.catalog__sidebar-link(href="#")
-              img(src="img/sidebar-3.jpg", alt="")
+          //- .catalog__sidebar-images
+          //-   a.catalog__sidebar-link(href="#")
+          //-     img(src="img/sidebar-1.jpg", alt="")
+          //-   a.catalog__sidebar-link(href="#")
+          //-     img(src="img/sidebar-2.jpg", alt="")
+          //-   a.catalog__sidebar-link(href="#")
+          //-     img(src="img/sidebar-3.jpg", alt="")
 
 
         .catalog__main
-          p.head__title бюстгальтеры
+          p.head__title Товары по запросу «красный бюстгалтер»
           .catalog__head
             .catalog__filter
               p Фильтры:
@@ -536,5 +536,104 @@ block content
               img(src="img/sidebar-2.jpg", alt="")
             a.catalog__sidebar-link(href="#")
               img(src="img/sidebar-3.jpg", alt="")
+          
+          .catalog__main
+            p.head__title.head__title--middle Товары, временно отсутствующие в продаже
+            .brand-items__row.brand-items__row--full
+              .brand-items__item
+                .brand-items__item-desc
+                .brand-items__item-view
+                  .brand-items__image
+                    img(src="img/full-1.jpg", alt="")
+                  .brand-items__price
+                    p от 1 390 Р
+                .brand-items__hover-item
+                  a.brand-items__like(href="#" js-like-item)
+                    .brand-items__like-icon
+                      img.default(src="img/like-default.svg", alt="")
+                      img.hover(src="img/like-hover.svg", alt="")
+                      img.active(src="img/like-active.svg", alt="")
+                    //- i(class="far fa-heart")
+                  .brand-items__hover-image
+                    img(src="img/item-hover.jpg", alt="")
+                    a.brand-items__hover-fast(href="#detailCard" data-effect="mfp-zoom-in" js-popup) Быстрый просмотр
+                  .brand-items__price
+                    p от 1 390 Р
+                  .brand-items__price-title
+                    p Freya Decor Amore 1
+                  .brand-items__price-description
+                    p Бюстгальтер мягкая чашка балконет
+                  
+              .brand-items__item
+                .brand-items__item-desc
+                .brand-items__item-view
+                  .brand-items__image
+                    img(src="img/full-2.jpg", alt="")
+                  .brand-items__price
+                    p от 2 390 Р
+                .brand-items__hover-item
+                  a.brand-items__like(href="#" js-like-item)
+                    .brand-items__like-icon
+                      img.default(src="img/like-default.svg", alt="")
+                      img.hover(src="img/like-hover.svg", alt="")
+                      img.active(src="img/like-active.svg", alt="")
+                    //- i(class="far fa-heart")
+                  .brand-items__hover-image
+                    img(src="img/item-hover.jpg", alt="")
+                    a.brand-items__hover-fast(href="#detailCard" data-effect="mfp-zoom-in" js-popup) Быстрый просмотр
+                  .brand-items__price
+                    p от 2 390 Р
+                  .brand-items__price-title
+                    p Freya Decor Amore 2
+                  .brand-items__price-description
+                    p Бюстгальтер мягкая чашка балконет
+
+              .brand-items__item
+                .brand-items__item-desc
+                .brand-items__item-view
+                  .brand-items__image
+                    img(src="img/full-3.jpg", alt="")
+                  .brand-items__price
+                    p от 3 390 Р
+                .brand-items__hover-item
+                  a.brand-items__like(href="#" js-like-item)
+                    .brand-items__like-icon
+                      img.default(src="img/like-default.svg", alt="")
+                      img.hover(src="img/like-hover.svg", alt="")
+                      img.active(src="img/like-active.svg", alt="")
+                    //- i(class="far fa-heart")
+                  .brand-items__hover-image
+                    img(src="img/item-hover.jpg", alt="")
+                    a.brand-items__hover-fast(href="#detailCard" data-effect="mfp-zoom-in" js-popup) Быстрый просмотр
+                  .brand-items__price
+                    p от 3 390 Р
+                  .brand-items__price-title
+                    p Freya Decor Amore 3
+                  .brand-items__price-description
+                    p Бюстгальтер мягкая чашка балконет
+              
+              .brand-items__item
+                .brand-items__item-desc
+                .brand-items__item-view
+                  .brand-items__image
+                    img(src="img/full-4.jpg", alt="")
+                  .brand-items__price
+                    p от 4 390 Р
+                .brand-items__hover-item
+                  a.brand-items__like(href="#" js-like-item)
+                    .brand-items__like-icon
+                      img.default(src="img/like-default.svg", alt="")
+                      img.hover(src="img/like-hover.svg", alt="")
+                      img.active(src="img/like-active.svg", alt="")
+                    //- i(class="far fa-heart")
+                  .brand-items__hover-image
+                    img(src="img/item-hover.jpg", alt="")
+                    a.brand-items__hover-fast(href="#detailCard" data-effect="mfp-zoom-in" js-popup) Быстрый просмотр
+                  .brand-items__price
+                    p от 4 390 Р
+                  .brand-items__price-title
+                    p Freya Decor Amore 4
+                  .brand-items__price-description
+                    p Бюстгальтер мягкая чашка балконет
 
   // END SECTION :: catalog

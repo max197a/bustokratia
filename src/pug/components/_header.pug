@@ -61,9 +61,21 @@ header.header
           img(src="img/sale.png", alt="")
         .header__search
           .search__box
-            input.search__field(type='text' placeholder='Поиск')
-            button.search__btn
+            a.search__close(href="#" js-close-search)
+              img(src="img/close.svg", alt="")
+            input.search__field(type='text' placeholder='Поиск' js-search-input)
+            button.search__btn(js-open-search)
               img(src="img/search-black.svg", alt="")
+              img.active(src="img/search-pink.svg", alt="")
+            //- .search-site__hint
+            //-   .search-site__wrapper
+            //-     .search-site__scroll
+            //-       a.search-site__item(href="#") Бюстгальтеры красные
+            //-       a.search-site__item(href="#") Бюстгальтеры белые
+            //-       a.search-site__item(href="#") Бюстгальтеры невидимка
+            //-       a.search-site__item(href="#") Бюстгальтеры без бретелей
+            //-       a.search-site__item(href="#") Бюстгальтеры pushup
+            //-       a.search-site__item(href="#") Бюстгальтеры без косточек
       
 
 // HEADER :: END
