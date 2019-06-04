@@ -195,7 +195,7 @@
         &:before
           width: 2000px
         .search__field
-          width: 250px
+          width: 380px
           border-color: #e1e1e1
           color: #000
           padding: 7px 10px
@@ -538,3 +538,124 @@
         &:hover
           .search__field
             width: 100%
+
+.search-site__hint
+  position: absolute
+  top: 33px
+  right: 2px
+  background: #fff
+  padding: 0
+  width: calc(100% - 4px)
+  opacity: 0
+  pointer-events: none
+  transition: all $transitionSpeed $ease
+  &.is-active
+    opacity: 1
+    pointer-events: all
+
+@media only screen and (max-width: 1260px)
+  .search-site__hint
+    border-top: none
+    z-index: 0
+
+@media only screen and (max-width: 767px)
+  .search-site__hint
+    display: none
+
+.search-site__hint--error
+  z-index: 2
+  padding-top: 18px
+  padding-bottom: 18px
+  border-top: 0
+  p
+    line-height: 1
+    color: rgba(254, 39, 39, 0.85)
+    font-size: 14px
+    font-weight: 500
+
+.search-site__wrapper
+  overflow: hidden
+  width: 100%
+  padding: 10px 0
+
+.search-site__scroll
+  max-height: 250px
+  overflow: hidden
+  overflow-y: scroll
+  width: calc(100% + 26px)
+  padding-right: 11px
+
+
+.search-site__item
+  width: 100%
+  padding: 10px 30px
+  display: inline-block
+  font-size: 15px
+  color: #000
+  font-family: $book
+  margin-right: 0
+  text-transform: none !important
+  &:hover
+    background: #fdebf3
+  &:before
+    display: none !important
+
+.search-site__loader
+  position: absolute
+  right: 35px
+  top: 7px
+  transition: all $transitionSpeed $ease
+  opacity: 0
+  padding: 10px 5px
+  z-index: 100
+  &.is-loading
+    opacity: 1
+
+.search__box
+  input:focus ~ .search-site__loader, &:hover .search-site__loader
+    background: #fff
+  .loader
+    display: flex
+    flex-direction: row
+    justify-content: center
+    margin: 0 auto
+  .loader__item
+    display: block
+    margin-left: 2px
+    margin-right: 2px
+    border-radius: 50%
+    font-size: 6px
+    height: 4px
+    width: 4px
+    background: #f06eaa
+    animation: loadingFade 1s infinite
+    &:nth-child(1)
+      -webkit-animation-delay: 0s
+      animation-delay: 0s
+    &:nth-child(2)
+      -webkit-animation-delay: 0.1s
+      animation-delay: 0.1s
+    &:nth-child(3)
+      -webkit-animation-delay: 0.3s
+      animation-delay: 0.3s
+
+@-webkit-keyframes loadingFade
+  0%
+    opacity: 0
+
+  50%
+    opacity: 0.8
+
+  100%
+    opacity: 0
+
+
+@keyframes loadingFade
+  0%
+    opacity: 0
+
+  50%
+    opacity: 0.8
+
+  100%
+    opacity: 0

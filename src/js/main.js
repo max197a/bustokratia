@@ -285,9 +285,10 @@ $(document).ready(function() {
       if (e.keyCode === 13) return;
 
       var postValue = $(this).val();
-      var $sContainer = $(this).closest(".js-search");
+      var $sContainer = $(this).closest(".search__box");
       // var requestEndpoint = $sContainer.data("url");
       var $hintContainer = $sContainer.find(".search-site__hint");
+      var $hintLoader = $sContainer.find(".search-site__loader");
 
       // 3 symbols are minimum
       // if (postValue.length >= 3) {
@@ -302,13 +303,11 @@ $(document).ready(function() {
         // 3 symbols are minimum
         if (postValue.length <= 2) {
           $hintContainer.removeClass("is-active");
-          _overlay.removeClass("is-visible");
           $hintLoader.removeClass("is-loading");
           $hintLoader.removeClass("is-active");
           return;
         } else {
           $hintContainer.addClass("is-active");
-          _overlay.addClass("is-visible");
           $hintLoader.removeClass("is-loading");
           $hintLoader.addClass("is-active");
         }
