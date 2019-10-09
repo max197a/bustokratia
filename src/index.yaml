@@ -27,6 +27,10 @@ PageList:
   ready: 80
 - file: 14_Bustokratia_sizes.html
   ready: 80
+- file: 15_Bustokratia_payment.html
+  ready: 80
+- file: 16_Bustokratia_delivery.html
+  ready: 80
 - file: 22_Bustokratia_legal.html
   ready: 80
 - file: Bustokratia_About.html
@@ -38,4 +42,14 @@ PageList:
 - file: 18_Bustokratia_contacts.html
   ready: 80
 - file: 09_Bustokratia_search_ok.html
+  ready: 80
+- file: 24_Bustokratia_info.html
+  ready: 80
+- file: 25_Bustokratia_info_in.html
+  ready: 80
+- file: 26_Bustokratia_reg.html
+  ready: 80
+- file: 27_Bustokratia_pass1.html
+  ready: 80
+- file: 27_Bustokratia_pass2.html
   ready: 80

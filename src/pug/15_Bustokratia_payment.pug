@@ -1,0 +1,61 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Оплата
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title Оплата
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: payment
+
+  section.payment
+    .container
+      .payment__item
+        .payment__image
+          img(src="img/payment1.svg" width="53" alt="")
+        .payment__info
+          p.title Наличный расчёт
+          .payment__image
+            img(src="img/payment1.svg" width="53" alt="")
+          p Заказ оплачивается наличными при получении в пункте выдачи или курьеру. Вместе с заказом выдаётся кассовый чек.
+      .payment__item
+        .payment__image
+          img(src="img/payment2.svg" width="44" alt="")
+        .payment__info
+          .payment__image
+            img(src="img/payment2.svg" width="44" alt="")
+          p.title Банковской картой при получении
+          p Принимаются банковские карты Visa, MasterCard и Maestro.
+          p При оформлении заказа со способом доставки курьером выберите способ оплаты «Банковской картой при получении».
+          p Если способ оплаты не предложен, значит оплата картой при получении для выбранного способа доставки или вашего города недоступна.
+      .payment__item
+        .payment__image
+          img(src="img/payment3.svg" width="60" alt="")
+        .payment__info
+          p.title Банковской картой на сайте
+          .payment__image
+            img(src="img/payment3.svg" width="60" alt="")
+          p Оплатите заказ банковской картой онлайн.
+          p.mt30 Принимаем к оплате банковские карты, у которых 16, 18, 19 цифр в номере:
+          p — VISA, MasterCard, American Express;
+          p — VISA Electron/Plus, Cirrus/Maestro при наличии кода CVC2 и CVV2 (в верхнем правом углу полосы для подписи);
+          p — МИР.
+          p.mt30 Минимальная сумма платежа — 20 рублей.
+
+  // END SECTION :: payment

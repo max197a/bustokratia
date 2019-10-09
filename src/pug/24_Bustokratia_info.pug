@@ -1,0 +1,302 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Статьи
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title статьи
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: head
+
+  section.articles
+    .container
+      p.articles__title популярное
+      .articles__border
+    .articles__slider-container
+      .articles__slider(js-articles-slider)
+        .articles__article
+          a.articles__item(href="#")
+            img(src="img/article-1.jpg", alt="")
+            .articles__item-info
+              .articles__item-line
+              .articles__item-name Что такое сестирнские размеры?
+              .articles__item-views
+                img(src="img/icon-eye-white.png", alt="")
+                p 130
+        .articles__article
+          a.articles__item(href="#")
+            img(src="img/article-2.jpg", alt="")
+            .articles__item-info
+              .articles__item-line
+              .articles__item-name бельё из натуральных ткагней: за и против
+              .articles__item-views
+                img(src="img/icon-eye-white.png", alt="")
+                p 32
+        .articles__article
+          a.articles__item(href="#")
+            img(src="img/article-3.jpg", alt="")
+            .articles__item-info
+              .articles__item-line
+              .articles__item-name Что такое сестирнские размеры?
+              .articles__item-views
+                img(src="img/icon-eye-white.png", alt="")
+                p 130
+        .articles__article
+          a.articles__item(href="#")
+            img(src="img/article-4.jpg", alt="")
+            .articles__item-info
+              .articles__item-line
+              .articles__item-name Что такое субмаммарная складка?
+              .articles__item-views
+                img(src="img/icon-eye-white.png", alt="")
+                p 41
+        .articles__article
+          a.articles__item(href="#")
+            img(src="img/article-4.jpg", alt="")
+            .articles__item-info
+              .articles__item-line
+              .articles__item-name Что такое субмаммарная складка?
+              .articles__item-views
+                img(src="img/icon-eye-white.png", alt="")
+                p 41
+    .container
+      p.articles__title.articles__title--new свежие статьи
+      .articles__border
+      .articles__grid
+        .articles__left
+          .ar__grid
+            .ar__item.ar__item--info
+              .ar__content
+                .articles__article
+                  p.font 
+                    span.lines ” 
+                    | Правильно подобранное белье подарит вам королевскую осанку и соблазнительное декольте. 
+            .ar__item
+              .ar__content
+                .articles__article
+                  a.articles__item(href="#")
+                    img(src="img/new-1.jpg", alt="")
+                    .articles__item-info
+                      .articles__item-line
+                      .articles__item-name книга алины: лучший гладкий бюстгальтер на каждый день
+                      .articles__item-views
+                        img(src="img/icon-eye-white.png", alt="")
+                        p 78
+            .ar__item
+              .ar__content
+                .articles__article
+                  a.articles__item(href="#")
+                    img(src="img/new-2.jpg", alt="")
+                    .articles__item-info
+                      .articles__item-line
+                      .articles__item-name КАК ПОНЯТЬ, ЧТО БЮСТГАЛЬТЕР УМЕР: 12 признаков того, что вам пора обновить бельевой гардероб 
+                      .articles__item-views
+                        img(src="img/icon-eye-white.png", alt="")
+                        p 120
+            .ar__item
+              .ar__content
+                .articles__article
+                  a.articles__item(href="#")
+                    img(src="img/new-3.jpg", alt="")
+                    .articles__item-info
+                      .articles__item-line
+                      .articles__item-name Беременным нужен специальный бюстгальтер?
+                      .articles__item-views
+                        img(src="img/icon-eye-white.png", alt="")
+                        p 420
+            .ar__item
+              .ar__content
+                .articles__article
+                  a.articles__item(href="#")
+                    img(src="img/article-4.jpg", alt="")
+                    .articles__item-info
+                      .articles__item-line
+                      .articles__item-name Что такое субмаммарная складка?
+                      .articles__item-views
+                        img(src="img/icon-eye-white.png", alt="")
+                        p 130
+            .ar__item
+              .ar__content
+                .articles__article
+                  a.articles__item(href="#")
+                    img(src="img/new-4.jpg", alt="")
+                    .articles__item-info
+                      .articles__item-line
+                      .articles__item-name книга алины: из какой ткани должен быть бюстгальтер
+                      .articles__item-views
+                        img(src="img/icon-eye-white.png", alt="")
+                        p 8130
+            .ar__item
+              .ar__content
+                .articles__article
+                  a.articles__item(href="#")
+                    img(src="img/article-2.jpg", alt="")
+                    .articles__item-info
+                      .articles__item-line
+                      .articles__item-name бельё из натуральных ткагней: за и против
+                      .articles__item-views
+                        img(src="img/icon-eye-white.png", alt="")
+                        p 130
+            .ar__item
+              .ar__content
+                .articles__article
+                  a.articles__item(href="#")
+                    img(src="img/article-3.jpg", alt="")
+                    .articles__item-info
+                      .articles__item-line
+                      .articles__item-name Что такое сестирнские размеры?
+                      .articles__item-views
+                        img(src="img/icon-eye-white.png", alt="")
+                        p 130
+        .articles__right
+          .articles__person
+            .articles__person-img
+              img(src="img/alina.png", alt="")
+            p.articles__person-title Давайте
+              br
+              | познакомимся
+            p.articles__person-sub-title Алина Гизатуллина
+            a.articles__person-link(href="#")
+              span
+
+          .articles__person
+            .articles__person-quan
+              p.f-quan 50
+              p.f-read самых читаемых статей
+            p.articles__person-sub-title Читать подробнее
+            a.articles__person-link(href="#")
+              span
+
+          .articles__person.articles__person--editable
+            p.articles__title сортировать
+            .articles__person-select
+              select
+                option(value="v1") по дате
+                option(value="v2") по популярности
+
+          .articles__person.articles__person--editable
+            p.articles__title темы
+            .articles__person-links
+              a(href="#") Мнение Алины
+              a(href="#") Рейтинг
+              a(href="#") Как все устроено
+              a(href="#") Жизнь салона
+              a(href="#") Новичкам
+              a(href="#") Выбор Алины
+              a(href="#") Ликбез
+
+          .articles__person.articles__person--editable
+            p.articles__title теги
+            .articles__person-tags
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text 5 почему (4)
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text азбука бра-фиттинга (34)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text бельевой гардероб (19)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text бельевые бренды (5)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text бельевые мифы (16)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text большая грудь (5)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text виды бюстгальтеров (9)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text выбор Алины (1)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text жизнь салона (15)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text здоровье груди (21)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text инструкция (12)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text как все устроено (21)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text книга Алины (7)
+              
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text ликбез (7)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text маленькая грудь (5)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text мнение Алины (11)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text правильное бельё (24)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text словарь бра-фиттера (5)
+
+              .articles__person-tag
+                label.checkbox
+                  input(type='checkbox')
+                  .checkbox__text уход (4) 
+
+            
+  // END SECTION :: articles

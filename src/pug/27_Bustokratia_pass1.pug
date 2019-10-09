@@ -1,0 +1,39 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Восстановление пароля
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title восстановление пароля
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: simple
+
+  section.simple
+    .container
+      p.simple__title.simple__title--reset Если вы забыли пароль, введите свой адрес электронной почты, на который будет отправлена ссылка для смены пароля.
+      form(action="#")
+        //- p.simple__info.simple__info--reset 
+        .simple__reset-form
+          .input-container
+            p Электронная почта
+            input(type="text" name="" placeholder="ваша@почта.ru")
+          .input-container
+            input.btn(type="submit" value="Отправить")
+
+  // END SECTION :: simple

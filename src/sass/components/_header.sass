@@ -17,6 +17,7 @@
     align-items: center
     justify-content: space-between
     padding: 34px 0 32px
+    position: relative
   .hamburger
     display: none
   &__left
@@ -282,6 +283,58 @@
   .header__sale
     display: none
 
+  &__enter
+    background: #fff
+    padding: 26px 40px 32px
+    max-width: 400px
+    width: 100%
+    box-shadow: 0 0 40px rgba(0,0,0,0.4)
+    position: absolute
+    top: 100%
+    z-index: 2
+    right: 0
+    opacity: 0
+    pointer-events: none
+    transition: all $transitionSpeed $ease
+    &.is-open
+      opacity: 1
+      pointer-events: all
+    &-head
+      display: flex
+      align-items: flex-end
+      padding-bottom: 7px
+    p
+      font-size: 18px
+      text-transform: uppercase
+      font-family: $demi
+      color: #000000
+      line-height: 1
+    a
+      display: inline-block
+      margin-left: auto
+      color: #000000
+      font-size: 16px
+      font-family: $book
+      line-height: 1
+    .input-container
+      input
+        border: 1px solid #e1e1e1
+        padding: 9px 19px 10px
+        letter-spacing: 1.5px
+        margin-top: 20px
+      .btn
+        margin-top: 20px
+        background: #904c96
+        border-color: #904c96
+        &:hover
+          background: #56205c
+          border-color: #56205c
+    &-bottom
+      display: flex
+      align-items: center
+      padding-top: 16px
+
+
 +r($wide)
   .header
     &__nav-wrapper
@@ -538,6 +591,8 @@
         &:hover
           .search__field
             width: 100%
+    &__enter
+      top: calc(100% + 63px)
 
 .search-site__hint
   position: absolute

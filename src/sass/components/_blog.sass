@@ -1,0 +1,45 @@
+.blog
+  padding-top: 2px
+  &__image
+    max-width: 1040px
+    width: 100%
+  &__content
+    padding-top: 68px
+    h2
+      font-size: 30px
+      color: #000000
+      line-height: 1.2
+      font-family: $book
+      letter-spacing: 0.8px
+    h3
+      font-size: 24px
+      font-family: $book
+      margin-top: 47px
+      letter-spacing: 0.65px
+      &.pink
+        color: #f06eaa
+    p
+      margin-top: 26px
+      font-family: $book
+      font-size: 16px
+      letter-spacing: 0.45px
+      line-height: 1.5
+      a
+        color: #f06eaa
+        font-family: $book
+      &.tags
+        margin-top: 50px
+
++r($tablet)
+  .blog
+    &__content
+      padding-top: 40px
+      h2
+        font-size: 24px
+      h3
+        margin-top: 30px
+        font-size: 20px
+      p
+        margin-top: 20px
+        &.tags
+          margin-top: 35px

@@ -9,6 +9,10 @@
     font-family: $book
     margin-top: 10px
     letter-spacing: 0.9px
+    &--reset
+      margin-top: -5px
+      max-width: 475px
+      font-size: 16px
   &__row
     margin-top: 12px
     display: flex
@@ -34,6 +38,43 @@
     letter-spacing: 0.8px
     a
       color: $bgpink
+    // &--reset
+    //   margin-top: 22px
+  &__reset
+    &-form
+      max-width: 342px
+      input
+        border: 1px solid #e1e1e1
+        padding: 9px 19px 10px
+        letter-spacing: 1.5px
+        margin-top: 3px
+      .input-container
+        margin-top: 22px
+        .btn
+          margin-top: 20px
+          background: #904c96
+          border-color: #904c96
+          &:hover
+            background: #56205c
+            border-color: #56205c
+        p
+          font-size: 14px
+          font-family: "Futura PT Book"
+          color: #000
+          margin-bottom: 4px
+          letter-spacing: 0.8px
+    &-politic
+      text-align: center
+      margin-top: 20px
+      p
+        font-size: 12px
+        color: #898989
+        line-height: 1.3
+      a
+        display: inline
+        text-decoration: underline
+        &:hover
+          text-decoration: none
 
 +r($tablet)
   .simple
@@ -45,3 +86,5 @@
       p
         &:first-child
           max-width: 118px
+    &__reset-form
+      max-width: 100%

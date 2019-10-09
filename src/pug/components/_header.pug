@@ -21,19 +21,36 @@ header.header
           a.show-points(href="#" js-show-points)
             .header__icons-points 2
             img(src="img/icon-like.svg", alt="")
-          a(href="#")
+          a(href="#" js-enter-form)
             //- .header__icons-points 250
             img(src="img/icon-people.svg", alt="")
       .hamburger.hamburger--slider(js-hamburger)
         .hamburger-box
           .hamburger-inner
+      .header__enter#enter-form
+        .header__enter-head
+          p Войти
+          a(href="#") Зарегистрироваться
+        .header__enter-form
+          .input-container
+            input(type="text" name="" placeholder="Эл. почта")
+          .input-container
+            input(type="password" name="" placeholder="Пароль")
+          .input-container
+            input.btn(type="submit" value="Войти")
+        .header__enter-bottom
+          .ui-checkbox.ui-checkbox--enter
+            input#c1(type="checkbox", name="")
+            label(for="c1")
+              span Запомнить
+          a(href="#") Забыли пароль?
   nav
     .container
       .header__icons
         a.show-points(href="#" js-show-points)
           .header__icons-points 2
           img(src="img/icon-like.svg", alt="")
-        a(href="#")
+        a(href="#" js-enter-form)
           img(src="img/icon-people.svg", alt="")
       .header__nav-wrapper
         .header__left

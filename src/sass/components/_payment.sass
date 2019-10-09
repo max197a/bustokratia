@@ -1,0 +1,92 @@
+.payment,
+.delivery
+
+  &__item
+    margin-top: 40px
+    display: flex
+    align-items: flex-start
+    &:first-child
+      margin-top: 20px
+  &__image
+    margin-right: 50px
+    min-width: 109px
+    min-height: 109px
+    width: 109px
+    height: 109px
+    border-radius: 50%
+    background: #feb0c0
+    position: relative
+    font-size: 0
+    img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
+  &__info
+    padding-top: 15px
+    width: 100%
+    .payment__image,
+    .delivery__image
+      display: none
+    table
+      border-collapse: collapse
+      border-spacing: 0
+      tr
+        &:first-child
+          td
+            padding-bottom: 16px
+            border-bottom: 1px solid #d5d5d5
+        &:nth-child(2)
+          td
+            padding-top: 16px
+      td
+        font-size: 15px
+        padding: 7px 0
+        font-family: $book
+        &:first-child
+          padding-right: 30px
+    p
+      font-size: 15px
+      line-height: 1.35
+      font-family: $book
+      color: #000000
+      a
+        color: $bgpink
+      &.title
+        font-family: $demi
+        font-size: 24px
+        margin-bottom: 25px
+        line-height: 1.2
+    .mt30
+      margin-top: 25px
+
++r($tablet)
+  .payment,
+  .delivery
+    &__item
+      margin-top: 25px
+      flex-direction: column
+      position: relative
+      &:first-child
+        margin-top: 0
+    &__image
+      display: none
+      min-width: 60px
+      min-height: 60px
+      width: 60px
+      height: 60px
+      img
+        transform: translate(-50%, -50%) scale(0.6)
+    &__info
+      padding-top: 0
+      .payment__image,
+      .delivery__image
+        display: flex
+        margin-bottom: 15px
+      p
+        &.title
+          font-size: 22px
+          margin-bottom: 15px
+      .mt30
+        margin-top: 15px

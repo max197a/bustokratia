@@ -1,0 +1,40 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Восстановление пароля
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title восстановление пароля
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: simple
+
+  section.simple
+    .container
+      form(action="#")
+        .simple__reset-form
+          .input-container
+            p Новый пароль
+            input(type="password" name="" placeholder="******")
+          .input-container
+            p Подтверждение пароля
+            input(type="password" name="" placeholder="******")
+          .input-container
+            input.btn(type="submit" value="Отправить")
+
+  // END SECTION :: simple

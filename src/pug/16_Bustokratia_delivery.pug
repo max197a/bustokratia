@@ -1,0 +1,70 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Доставка
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title Доставка
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: DELIVERY
+
+  section.delivery
+    .container
+      .delivery__item
+        .delivery__image
+          img(src="img/delivery1.svg" width="59" alt="")
+        .delivery__info
+          p.title Курьерская доставка по Москве
+          .delivery__image
+            img(src="img/delivery1.svg" width="59" alt="")
+          table
+            tr
+              td Сумма заказа
+              td Стоимость доставки
+            tr
+              td менее 2000 Р
+              td 350 Р
+            tr
+              td 2000 — 5000 Р
+              td 99 Р
+            tr
+              td больше 5000 Р
+              td Бесплатно
+      .delivery__item
+        .delivery__image
+          img(src="img/delivery2.svg" width="52" alt="")
+        .delivery__info
+          .delivery__image
+            img(src="img/delivery2.svg" width="52" alt="")
+          p.title Самовывоз из фирменного магазина в Москве
+          p Вы можете самостоятельно забрать свой заказ в нашем фирменном магазине на Ленинском проспекте.
+          p Заказ со статусом "Ожидает в магазине" можно забрать с 9:00 до 21:00, без выходных.
+          p Проверить статус заказа можно в 
+            a(href="#") Личном кабинете
+      .delivery__item
+        .delivery__image
+          img(src="img/delivery3.svg" width="63" alt="")
+        .delivery__info
+          p.title Курьерская доставка в другие города
+          .delivery__image
+            img(src="img/delivery3.svg" width="63" alt="")
+          p Мы доставляем заказы в любой город России курьерской службой. Стоимость доставки зависит от выбранного города. 
+          p Рассчитать точную стоимость доставки можно у менеджеров по телефону: +7 495 888-88-88 
+
+  // END SECTION :: DELIVERY

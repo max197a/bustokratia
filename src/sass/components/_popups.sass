@@ -53,6 +53,41 @@
   padding: 10px
 
 .popup
+  &--sizes
+    background: #fff
+    max-width: 1240px
+    margin: auto
+    position: relative
+    overflow: hidden
+    box-shadow: 0 0 45px rgba(0,0,0,0.6)
+    padding-top: 40px
+    .sizes__table
+      margin-top: 0
+      border: none
+      padding-top: 0
+    .sizes__bg-rows
+      top: 65px
+    &-item
+      margin: 0 25px
+    &-row
+      display: flex
+      justify-content: center
+      text-align: center
+      margin-bottom: 30px
+      p
+        font-size: 16px
+        color: #000
+        span
+          display: inline-block
+          padding: 4px
+          line-height: 1
+          &.pink
+            color: #ea86b1
+          &.grey
+            color: #959595
+          &.full
+            background: #bf8fc4
+            color: #fff
   &__image
     font-size: 0
     margin-right: 25px
@@ -116,6 +151,23 @@
         color: #000
         margin-bottom: 4px
         letter-spacing: 0.8px
+      &--size
+        max-width: 80px
+        margin-right: 40px
+        input
+          text-align: center
+      &--rating
+        margin-top: 15px
+        p
+          font-size: 14px
+          font-family: $book
+          color: #000
+          margin-bottom: 4px
+          letter-spacing: 0.8px
+        .card-bottom__like
+          margin-top: 16px
+
+
     .btn
       background: #904c96
       border-color: #904c96
@@ -128,6 +180,9 @@
       &:hover
         background: #56205c
         border-color: #56205c
+  .input-row
+    display: flex
+    align-items: flex-start
   .mfp-close
     font-size: 0
     width: 30px
@@ -175,3 +230,6 @@
       padding: 30px 20px
       p
         font-size: 20px
+    &--sizes
+      &-row
+        flex-direction: column

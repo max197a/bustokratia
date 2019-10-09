@@ -31,6 +31,7 @@ $(document).ready(function() {
     initPopup();
     initQuantity();
     initZoom();
+    initMasonry();
   }
 
   // this is a master function which should have all functionality
@@ -386,7 +387,12 @@ $(document).ready(function() {
     $("[js-popup]").magnificPopup({
       removalDelay: 500, //delay removal by X to allow out-animation
       callbacks: {
+        change: function() {
+          console.log("xzoom removed");
+          $(".xzoom-source").remove();
+        },
         beforeOpen: function() {
+          // $(".xzoom-source").remove();
           this.st.mainClass = this.st.el.attr("data-effect");
         }
       },
@@ -510,6 +516,39 @@ $(document).ready(function() {
     });
   }
 
+  function initMasonry() {
+    function resizeGridItem(item) {
+      grid = document.getElementsByClassName("ar__grid")[0];
+      rowHeight = parseInt(
+        window.getComputedStyle(grid).getPropertyValue("grid-auto-rows")
+      );
+      rowGap = parseInt(
+        window.getComputedStyle(grid).getPropertyValue("grid-row-gap")
+      );
+      rowSpan = Math.ceil(
+        (item.querySelector(".ar__content").getBoundingClientRect().height +
+          rowGap) /
+          (rowHeight + rowGap)
+      );
+      item.style.gridRowEnd = "span " + rowSpan;
+    }
+
+    function resizeAllGridItems() {
+      allItems = document.getElementsByClassName("ar__item");
+      for (x = 0; x < allItems.length; x++) {
+        resizeGridItem(allItems[x]);
+      }
+    }
+
+    function resizeInstance(instance) {
+      item = instance.elements[0];
+      resizeGridItem(item);
+    }
+
+    window.onload = resizeAllGridItems();
+    window.addEventListener("resize", resizeAllGridItems);
+  }
+
   function initSlider() {
     $("[js-firstscreen-slider]").slick({
       dots: true,
@@ -579,6 +618,48 @@ $(document).ready(function() {
         }
       ]
     });
+
+    $("[js-articles-slider]").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      infinite: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1168,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 550,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
   }
 
   // HAMBURGER TOGGLER
@@ -588,6 +669,11 @@ $(document).ready(function() {
     $(".header__calc").toggleClass("is-open");
     $("body").toggleClass("is-fixed");
     $("html").toggleClass("is-fixed");
+  });
+
+  // LOGIN BUTTON TOGGLER
+  _document.on("click", "[js-enter-form]", function() {
+    $(".header__enter").toggleClass("is-open");
   });
 
   ////////////////////

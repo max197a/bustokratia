@@ -1,0 +1,49 @@
+---
+title: Bustokratia
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: breadcrumbs
+  section.breadcrumbs
+    .container
+      .breadcrumbs__list
+        a(href="#") Главная
+        a(href="#") Восстановление пароля
+    
+  
+  // END SECTION :: breadcrumbs
+
+  // BEGIN SECTION :: head
+
+  section.head
+    .container
+      p.head__title регистрация
+  
+  // END SECTION :: head
+
+  // BEGIN SECTION :: simple
+
+  section.simple
+    .container
+      form(action="#")
+        .simple__reset-form
+          .input-container
+            p Электронная почта
+            input(type="text" name="" placeholder="ваша@почта.ru")
+          .input-container
+            p Пароль
+            input(type="password" name="" placeholder="******")
+          .input-container
+            p Повторите пароль
+            input(type="password" name="" placeholder="******")
+          .input-container
+            p Имя
+            input(type="text" name="" placeholder="Ваше имя")
+          .input-container
+            input.btn(type="submit" value="Зарегистрироваться")
+          .simple__reset-politic
+            p Нажимая кнопку Зарегистироваться Вы соглашаетесь с 
+              a(href="#") Политикой обработки персональных данных
+
+  // END SECTION :: simple
