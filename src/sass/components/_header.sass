@@ -1,6 +1,7 @@
 /* HEADER
 .header
-  position: fixed
+  // position: fixed
+  position: absolute
   top: 0
   right: 0
   left: 0
@@ -334,6 +335,192 @@
       align-items: center
       padding-top: 16px
 
+  &__sizes
+    // overflow: auto
+    // max-height: 750px
+    padding-bottom: 40px
+    border-bottom: 1px solid #e1e1e1
+    left: 50%
+    transform: translateX(-50%) translateY(-150%)
+    width: 100%
+    background: #fff
+    position: absolute
+    transition: all $transitionSpeed $ease
+    opacity: 0
+    &.is-open
+      opacity: 1
+      transform: translateX(-50%) translateY(0)
+    .sizes__bg-rows
+      left: -50%
+      width: 200%
+    &-head
+      display: flex
+      align-items: center
+      padding: 20px 0
+    &-buttons
+      a
+        display: inline-block
+        font-size: 13px
+        font-family: $demi
+        text-transform: uppercase
+        color: #000000
+        padding: 12px 20px
+        line-height: 1
+        border-right: 1px solid #fff
+        background: #faf3fa
+        transition: all $transitionSpeed $ease
+        &:lasat-child
+          border-right: none
+        &:hover
+          background: #ecdeec
+        &.is-active
+          color: #fff
+          background: #bf8fc4
+    &-close
+      display: block
+      margin-left: auto
+      width: 30px
+      height: 30px
+      background: url(../img/close.svg) center center no-repeat
+      background-size: 15px 15px
+      opacity: 1
+      cursor: pointer
+    &-tab
+      display: none
+      &.is-active
+        display: block
+      .sizes__table
+        margin-top: 0
+        overflow: visible
+        border: none
+    &-button
+      text-align: center
+      position: relative
+      z-index: 2
+      a
+        display: inline-block
+        padding: 20px
+        max-width: 585px
+        width: 100%
+        background: #904c96
+        font-family: $book
+        font-size: 18px
+        color: #fff
+        cursor: pointer
+        transition: all $transitionSpeed $ease
+        &:hover
+          background: #7d4482
+
+  &__busts
+    padding: 30px 0
+    border-bottom: 1px solid #e1e1e1
+    left: 50%
+    transform: translateX(-50%) translateY(-200%)
+    width: 100%
+    background: #fff
+    position: absolute
+    transition: all $transitionSpeed $ease
+    opacity: 1
+    &.is-open
+      opacity: 1
+      transform: translateX(-50%) translateY(0)
+    &-grid
+      display: flex
+    &-buttons
+      display: none
+    &-all
+      width: 44%
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &-types
+      width: 26%
+    &-close
+      display: block
+      margin-left: auto
+      width: 30px
+      height: 30px
+      background: url(../img/close.svg) center center no-repeat
+      background-size: 15px 15px
+      opacity: 1
+      cursor: pointer
+      margin-top: 5px
+    &-item
+      width: 48%
+      max-width: 250px
+      display: flex
+      align-items: flex-start
+      overflow: hidden
+      margin: 13px 0
+      &:hover
+        img
+          opacity: 0
+          &.hover
+            opacity: 1
+        .header__busts-image-hover
+          opacity: 1
+          img
+            opacity: 1
+    &-image
+      min-width: 50px
+      width: 50px
+      height: auto
+      font-size: 0
+      position: relative
+      margin-right: 15px
+      img
+        width: 50px
+        height: auto
+        transition: all $transitionSpeed $ease
+        &.hover
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+          z-index: 2
+          opacity: 0
+      &-hover
+        width: 100%
+        height: 100%
+        background: #fff
+        position: absolute
+        left: 0
+        top: 0
+        opacity: 0
+        transition: all $transitionSpeed $ease
+    &-info
+      p
+        font-size: 14px
+        font-family: $book
+        color: #959595
+        margin-top: 5px
+        line-height: 1.3
+        &.title
+          font-size: 16px
+          font-family: $demi
+          color: #000
+          margin-top: 0
+    &-types
+      padding-top: 10px
+      padding-left: 50px
+      p
+        font-size: 16px
+        color: #000
+        text-transform: uppercase
+        font-family: $demi
+      ul
+        margin: 0
+        padding: 0
+      li
+        display: block
+        margin-top: 18px
+      a
+        font-size: 16px
+        font-family: $book
+        color: #000000
+
+
+
 
 +r($wide)
   .header
@@ -593,6 +780,133 @@
             width: 100%
     &__enter
       top: calc(100% + 63px)
+
+    &__sizes
+      // overflow: auto
+      // max-height: 750px
+      border-top: 1px solid #e1e1e1
+      padding-bottom: 30px
+      border-bottom: 1px solid #e1e1e1
+      &-head
+        display: flex
+        align-items: center
+        padding: 20px 0
+      &-buttons
+        position: relative
+        width: 100%
+        z-index: 3
+        min-height: 46px
+        &:after
+          display: block
+          position: absolute
+          content: ''
+          width: 5px
+          height: 5px
+          border: 2px solid #fff
+          top: 50%
+          right: 15px
+          z-index: 3
+          transform: translateY(-50%) rotate(45deg)
+          border-top: none
+          border-left: none
+          transition: all $transitionSpeed $ease
+        &:hover
+          &:after
+            top: 55%
+            transform: translateY(-50%) rotate(225deg)
+          a
+            pointer-events: all
+            opacity: 1
+            &:nth-child(1)
+              top: 0
+            &:nth-child(2)
+              transform: translateY(47px)
+            &:nth-child(3)
+              transform: translateY(94px)
+
+        a
+          z-index: 2
+          display: block
+          font-size: 14px
+          text-align: center
+          color: #fff
+          background: #904c96
+          padding: 16px 20px
+          line-height: 1
+          border-right: none
+          position: absolute
+          left: 0
+          top: 0
+          opacity: 0
+          pointer-events: none
+          width: 100%
+          border-bottom: 1px solid #fff
+          &:hover
+            background: #7d4482
+          &.is-active
+            color: #fff
+            background: #904c96
+            top: 0
+            opacity: 1
+            pointer-events: all
+            z-index: 2
+            border-bottom: none
+
+      &-close
+        display: none
+      &-tab
+        .sizes__table
+          overflow: hidden
+          overflow-x: auto
+          height: auto
+      &-button
+        margin-top: 15px
+        a
+          font-size: 18px
+          padding: 15px
+    &__busts
+      padding: 0 0 30px
+      border-top: 1px solid #e1e1e1
+      border-bottom: 1px solid #e1e1e1
+      &-buttons
+        display: flex
+        border-bottom: 1px solid #e1e1e1
+        width: calc(100% + 40px)
+        margin: 0 -20px
+        a
+          width: 50%
+          display: inline-block
+          font-size: 15px
+          text-transform: uppercase
+          font-family: $demi
+          text-align: center
+          padding: 12px
+          &.is-hidden
+            display: none
+      &-all
+        width: 100%
+
+      &-close
+        display: none
+
+      &-types
+        display: none
+        padding-left: 0
+        width: 100%
+        p
+          display: none
+
+      &-block
+        display: none
+        padding: 15px 0 5px
+        &.is-active
+          display: flex
+
++r($mobile)
+  .header__busts
+    &-item
+      width: 100%
+      max-width: 100%
 
 .search-site__hint
   position: absolute
