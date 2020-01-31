@@ -47,6 +47,10 @@ PageList:
   ready: 80
 - file: 25_Bustokratia_info_in.html
   ready: 80
+- file: 25_Bustokratia_info_in_1.html
+  ready: 80
+- file: 25_Bustokratia_info_in_2.html
+  ready: 80
 - file: 26_Bustokratia_reg.html
   ready: 80
 - file: 27_Bustokratia_pass1.html
