@@ -57,3 +57,5 @@ PageList:
   ready: 80
 - file: 27_Bustokratia_pass2.html
   ready: 80
+- file: Bustokratia_soglashenie.html
+  ready: 80
