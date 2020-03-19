@@ -624,10 +624,10 @@ $(document).ready(function() {
     function initSlider() {
         $("[js-firstscreen-slider]").slick({
             dots: true,
-            arrows: false,
+            arrows: true,
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 7000,
             pauseOnHover: false,
             pauseOnFocus: false,
             speed: 500
