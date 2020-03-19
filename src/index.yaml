@@ -59,3 +59,5 @@ PageList:
   ready: 80
 - file: Bustokratia_soglashenie.html
   ready: 80
+- file: Bustokratia_About2.html
+  ready: 80
