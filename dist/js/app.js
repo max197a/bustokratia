@@ -457,11 +457,13 @@ $(document).ready(function() {
     ////////////////////
 
     function initPopup() {
-        $("[js-popup]").magnificPopup({
+
+        $(document).magnificPopup({
+            delegate: '[js-popup]',
             removalDelay: 500, //delay removal by X to allow out-animation
             callbacks: {
                 change: function() {
-                    console.log("xzoom removed");
+                    // console.log("xzoom removed");
                     $(".xzoom-source").remove();
                 },
                 beforeOpen: function() {
@@ -470,33 +472,8 @@ $(document).ready(function() {
                 }
             },
             midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-        });
-        // Image popups
-        // $("[js-popup-image]").magnificPopup({
-        //   type: "image",
-        //   removalDelay: 500, //delay removal by X to allow out-animation
-        //   callbacks: {
-        //     beforeOpen: function() {
-        //       // just a hack that adds mfp-anim class to markup
-        //       this.st.image.markup = this.st.image.markup.replace(
-        //         "mfp-figure",
-        //         "mfp-figure mfp-with-anim"
-        //       );
-        //       this.st.mainClass = this.st.el.attr("data-effect");
-        //     }
-        //   },
-        //   closeOnContentClick: true,
-        //   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-        // });
-        // // Video popups
-        // $("[js-popup-video]").magnificPopup({
-        //   disableOn: 700,
-        //   type: "iframe",
-        //   mainClass: "mfp-fade",
-        //   removalDelay: 160,
-        //   preloader: false,
-        //   fixedContentPos: false
-        // });
+        }); 
+
     }
 
     ////////////////////
